@@ -1,0 +1,60 @@
+{
+	"font_size": 11,
+	"font_face": "Consolas",
+	"word_wrap": true,
+	"highlight_line": true,
+	"show_full_path": false,
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": true,
+	"always_show_minimap_viewport": true,
+	"enable_tab_scrolling": false,
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
+	"caret_extra_width": 1,
+	"show_definitions": false,
+	"show_encoding": true,
+	"show_errors_inline": false,
+	"highlight_modified_tabs": true,
+	"file_exclude_patterns": ["*.pyc", "*.pyo", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.sublime-workspace"],
+
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+
+	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
+	"theme": "Boxy Tomorrow.sublime-theme",
+	"theme_accent_mono": true,
+	"theme_autocomplete_item_selected_colored": true,
+	"theme_bar": true,
+	"theme_bar_colored": true,
+	"theme_bar_logo_materialized": true,
+	"theme_icons_materialized": true,
+	"theme_minimap_viewport_opacity_hg": true,
+	"theme_panel_switcher_materialized": true,
+	"theme_sidebar_folder_materialized": true,
+	"theme_sidebar_indent_top_level_disabled": true,
+	"theme_sidebar_indent_xl": true,
+	"theme_sidebar_size_xs": true,
+	"theme_statusbar_colored": true,
+	"theme_tab_font_sm": true,
+	"theme_tab_selected_underlined": true,
+	"theme_tab_separator": true,
+	"theme_tab_size_lg": true,
+	"theme_tab_width_auto": true,
+	"theme_unified": true,
+
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": "/",
+			"selector": "string.quoted.double.html,string.quoted.single.html, source.css"
+		}
+	]
+}

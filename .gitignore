@@ -1,0 +1,11 @@
+.DS_Store
+.vscode
+.idea
+.env
+.private
+.gitconfig
+._*
+*.pyc
+Desktop.ini
+Thumbs.db
+README.html

@@ -1,0 +1,18 @@
+# Unix
+alias ll="ls -al"
+alias ln="ln -v"
+alias mkdir="mkdir -p"
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# Bundler
+alias b="bundle"
+
+alias b='browser-sync start --server --directory --files "**/*"'
+alias rm="rm -i"
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

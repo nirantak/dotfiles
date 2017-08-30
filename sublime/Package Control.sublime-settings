@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"All Autocomplete",
+		"AutoFileName",
+		"Boxy Theme",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Emmet",
+		"ExportHtml",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Package Control",
+		"Seti_UI",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"Terminal"
+	]
+}

@@ -1,0 +1,4 @@
+[
+	{ "keys": ["ctrl+shift+i"], "command": "reindent" },
+	{ "keys": ["alt+m"], "command": "markdown_preview_select", "args": {"target": "browser"} }
+]

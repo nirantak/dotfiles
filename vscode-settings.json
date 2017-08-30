@@ -1,0 +1,8 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.fontSize": 15,
+    "window.zoomLevel": 0,
+    "editor.wordWrap": "on",
+    "editor.fontSize": 15
+}
