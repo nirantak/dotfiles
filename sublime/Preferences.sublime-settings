@@ -1,7 +1,4 @@
 {
-	"word_wrap": true,
-	"ensure_newline_at_eof_on_save": true,
-	"trim_trailing_white_space_on_save": true,
 	"always_show_minimap_viewport": true,
 	"auto_complete_triggers":
 	[
@@ -17,8 +14,9 @@
 	"caret_extra_bottom": 1,
 	"caret_extra_top": 1,
 	"caret_extra_width": 1,
-	"enable_tab_scrolling": false,
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
+	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -46,8 +44,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Package Control",
 		"Vintage"
 	],
+	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
 	"show_definitions": true,
@@ -74,4 +74,6 @@
 	"theme_tab_size_lg": true,
 	"theme_tab_width_auto": true,
 	"theme_unified": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }

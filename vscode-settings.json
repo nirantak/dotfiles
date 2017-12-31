@@ -4,5 +4,6 @@
     "terminal.integrated.fontSize": 15,
     "window.zoomLevel": 0,
     "editor.wordWrap": "on",
-    "editor.fontSize": 15
+    "editor.fontSize": 15,
+    "editor.renderWhitespace": "boundary",
 }
