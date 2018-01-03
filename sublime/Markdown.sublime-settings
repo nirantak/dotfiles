@@ -1,0 +1,5 @@
+// These settings override both User and Default settings for the Markdown syntax
+{
+	"color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme",
+	"spell_check": true,
+}

@@ -6,6 +6,7 @@
 .gitconfig
 ._*
 *.pyc
-Desktop.ini
 Thumbs.db
 README.html
+dotfiles_old/
+backup.sh

@@ -1,0 +1,26 @@
+[user]
+	name = Nirantak Raghav
+	email =
+
+[core]
+	editor = vim
+	excludesfile = /home/nirantak/.gitignore_global
+	autocrlf = input
+
+[color]
+	diff = auto
+	status = auto
+	ui = auto
+
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold	# line info
+	old = red		# deletions
+	new = green		# additions
+
+[alias]
+	pm= "!git push -u origin master"
+	c = commit -m
+	a = add .
+
