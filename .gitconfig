@@ -1,17 +1,16 @@
 [user]
-	name = Nirantak Raghav
-	email =
+	name = Full Name
+	email = user@email.com
 
 [core]
 	editor = vim
-	excludesfile = /home/nirantak/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
 
 [color]
 	diff = auto
 	status = auto
 	ui = auto
-
 
 [color "diff"]
 	meta = yellow bold
@@ -23,4 +22,3 @@
 	pm= "!git push -u origin master"
 	c = commit -m
 	a = add .
-

@@ -1,20 +1,28 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "terminal.integrated.fontSize": 14,
     "window.zoomLevel": 0,
     "editor.wordWrap": "on",
     "editor.fontSize": 14,
     "editor.renderWhitespace": "boundary",
-    
+
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontFamily": "'Liberation Mono for Powerline', 'Ubuntu Mono', monospace",
+    "terminal.integrated.fontSize": 14,
+
     // Controls whether the prompt will show
     "sublimeTextKeymap.promptV3Features": true,
-
     // Changes the multi cursor mouse binding
     "editor.multiCursorModifier": "ctrlCmd",
-
     // Specifies the location of snippets in the suggestion widget
     "editor.snippetSuggestions": "top",
-
     // Controls whether format on paste is on or off
-    "editor.formatOnPaste": true
+
+    "editor.formatOnPaste": true,
+    "files.insertFinalNewline": true,
+
+    "emmet.includeLanguages": {
+        "edge": "html",
+        "jsx": "html",
+        "blade": "html"
+    }
 }

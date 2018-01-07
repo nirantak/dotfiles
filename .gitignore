@@ -1,12 +1,37 @@
-.DS_Store
-.vscode
-.idea
-.env
+private
 .private
-.gitconfig
-._*
-*.pyc
-Thumbs.db
+.env
+.extra
 README.html
 dotfiles_old/
-backup.sh
+
+# Git credential file
+.gitconfig
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+*~
+*.cache
+__pycache__
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Compiled files
+*.pyc
+*.class
+
+# npm & bower
+bower_components
+node_modules
+npm-debug.log
+
+# IDEs stuff
+.vscode
+.idea

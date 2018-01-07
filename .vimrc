@@ -12,14 +12,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " plugins
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-repeat'
 Plugin 'mattn/emmet-vim'
@@ -28,8 +29,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'nvie/vim-flake8'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
@@ -44,6 +43,8 @@ let python_highlight_all=1
 set autoindent
 set bg=dark
 set backspace=indent,eol,start
+set cursorline
+" hi CursorLine term=bold cterm=bold guibg=Grey40
 set expandtab
 set ignorecase
 set incsearch
@@ -74,11 +75,11 @@ highlight ColorColumn ctermbg=black
 set colorcolumn=80
 
 "CtrlP
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map='<c-p>'
 
 "Airline
 let g:airline_theme='tomorrow'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 "NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -96,21 +97,21 @@ set guioptions-=Lo
 
 "nerd-commenter settings
 " Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims=1
 
 " Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
+let g:NERDCompactSexyComs=1
 
 " Align line-wise comment delimiters flush left instead of following code
 " indentation
-let g:NERDDefaultAlign = 'left'
+let g:NERDDefaultAlign='left'
 
 " Allow commenting and inverting empty lines (useful when commenting a
 " region)
-let g:NERDCommentEmptyLines = 1
+let g:NERDCommentEmptyLines=1
 
 " Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
+let g:NERDTrimTrailingWhitespace=1
 
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -126,3 +127,4 @@ if has("gui_running")
         colorscheme iceberg
     endif
 endif
+

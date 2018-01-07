@@ -1,0 +1,7 @@
+# ls ~/.vscode/extensions/ > ~/dotfiles/vscode/extensions.txt
+
+CoenraadS.bracket-pair-colorizer-0.10.14
+ms-python.python-0.9.1
+ms-vscode.cpptools-0.14.5
+ms-vscode.sublime-keybindings-3.0.3
+robertohuertasm.vscode-icons-7.19.0

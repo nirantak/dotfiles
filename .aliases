@@ -5,11 +5,18 @@ alias b='browser-sync start --server --files="**/*"'
 alias cd..="cd .."
 alias ..="cd .."
 alias ...="cd ../.."
-alias l='ls -la'
+alias l='ls -lh'
+alias ll='ls -AlF'
+alias la='ls -a'
 alias rm='rm -i'
 
+# Python
+alias python='python3'
+alias pip='pip3'
+alias pipup="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
+
 # tmux
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color-bce tmux -u"
 alias tm="tmux new-session"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
@@ -22,3 +29,7 @@ alias edittmux="vim ~/dotfiles/.tmux.conf"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# Wget
+alias dl="wget -r -e robots=off -nc -np"
+alias dl2="wget -r -m -nc -np"
