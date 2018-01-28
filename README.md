@@ -7,16 +7,17 @@
 * [References](#references)
 
 ### Installation
-Clone the git repository:
-```bash
-$ git clone https://github.com/nirantak/dotfiles.git ~/dotfiles
-```
-
 Install necessary dependencies
 ```bash
 $ sudo apt update
 $ sudo apt install git curl wget vim zsh tmux
 ```
+
+Clone the git repository:
+```bash
+$ git clone https://github.com/nirantak/dotfiles.git ~/dotfiles
+```
+
 
 Install additional software
 * [Sublime Text 3](https://www.sublimetext.com/3)

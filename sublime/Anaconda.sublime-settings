@@ -3,11 +3,13 @@
 	"autoformat_ignore":
 	[
 		"E309",
+		"E501",
 		"W191"
 	],
 	"pep8_ignore":
 	[
 		"E309",
+		"E501",
 		"W191"
 	],
 	"validate_imports": false,

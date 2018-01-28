@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"AdvancedNewFile",
 		"All Autocomplete",
 		"Anaconda",
 		"AutoFileName",
@@ -19,7 +20,7 @@
 		"Markdown Preview",
 		"MarkdownEditing",
 		"Package Control",
-		"SideBarEnhancements",
+		"SideBarTools",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-jshint",

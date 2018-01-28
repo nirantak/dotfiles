@@ -3,6 +3,8 @@
     "window.zoomLevel": 0,
     "editor.wordWrap": "on",
     "editor.fontSize": 14,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.renderWhitespace": "boundary",
 
     "terminal.integrated.cursorStyle": "line",
@@ -20,9 +22,45 @@
     "editor.formatOnPaste": true,
     "files.insertFinalNewline": true,
 
+    "markdownlint.config": {
+        "default": true,
+        "MD001": false,
+        "MD007": {
+            "indent": 4
+        },
+        "no-hard-tabs": false
+    },
+
     "emmet.includeLanguages": {
         "edge": "html",
         "jsx": "html",
         "blade": "html"
-    }
+    },
+    "emmet.excludeLanguages": [],
+
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "sync.gist": "251126d55d60f6da6981f15f6ca1ef44",
+    "sync.lastUpload": "2018-01-28T17:10:08.660Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
 }
