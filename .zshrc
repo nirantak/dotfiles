@@ -31,3 +31,7 @@ done;
 unset file;
 
 eval "$(direnv hook zsh)"
+
+# heroku autocomplete setup
+# printf "$(heroku autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
+CLI_ENGINE_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/completions/zsh_setup && test -f $CLI_ENGINE_AC_ZSH_SETUP_PATH && source $CLI_ENGINE_AC_ZSH_SETUP_PATH;

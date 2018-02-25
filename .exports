@@ -31,7 +31,10 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less';
 export PAGER='less';
 
-export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$PATH"
+export CUDA_HOME=/usr/local/cuda-9.1
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
+
+export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$PATH:${CUDA_HOME}/bin"
 eval "$(rbenv init -)"
 
 # export SSH_KEY_PATH="~/.ssh/rsa_id"'

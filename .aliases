@@ -9,11 +9,15 @@ alias l='ls -lh'
 alias ll='ls -AlF'
 alias la='ls -a'
 alias rm='rm -i'
+alias clip='xsel --clipboard'
+alias note="gapplication launch org.gnome.gedit ~/Documents/notes.txt"
+alias note2="gapplication launch org.gnome.gedit ~/Downloads/PD/Notes/notes.txt"
 
 # Python
 alias python='python3'
 alias pip='pip3'
-alias pipup="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
+alias pipup="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 sudo -H pip3 install -U"
+alias py="pipenv run python"
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux -u"
@@ -22,7 +26,7 @@ alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 
 # edit dotfiles
-alias dotfiles="cd ~/dotfiles && git status"
+alias dotfiles="cd ~/dotfiles && git status && subl ."
 alias editzshrc="vim ~/dotfiles/.zshrc"
 alias editvimrc="vim ~/dotfiles/.vimrc"
 alias edittmux="vim ~/dotfiles/.tmux.conf"
