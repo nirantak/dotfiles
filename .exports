@@ -34,7 +34,10 @@ export PAGER='less';
 export CUDA_HOME=/usr/local/cuda-9.1
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 
+export JAVA_HOME=/usr/lib/jvm/java-9-openjdk-amd64
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$PATH:${CUDA_HOME}/bin"
 eval "$(rbenv init -)"
-
-# export SSH_KEY_PATH="~/.ssh/rsa_id"'

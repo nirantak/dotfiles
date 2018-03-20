@@ -3,12 +3,10 @@
 alias u='sudo apt update && sudo apt upgrade'
 alias b='browser-sync start --server --files="**/*"'
 alias cd..="cd .."
-alias ..="cd .."
-alias ...="cd ../.."
 alias l='ls -lh'
 alias ll='ls -AlF'
 alias la='ls -a'
-alias rm='rm -i'
+alias rm='rm -I'
 alias clip='xsel --clipboard'
 alias note="gapplication launch org.gnome.gedit ~/Documents/notes.txt"
 alias note2="gapplication launch org.gnome.gedit ~/Downloads/PD/Notes/notes.txt"
@@ -21,15 +19,9 @@ alias py="pipenv run python"
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux -u"
-alias tm="tmux new-session"
-alias tl="tmux list-sessions"
-alias ta="tmux attach -t"
 
 # edit dotfiles
 alias dotfiles="cd ~/dotfiles && git status && subl ."
-alias editzshrc="vim ~/dotfiles/.zshrc"
-alias editvimrc="vim ~/dotfiles/.vimrc"
-alias edittmux="vim ~/dotfiles/.tmux.conf"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'

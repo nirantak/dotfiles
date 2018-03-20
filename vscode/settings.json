@@ -16,16 +16,18 @@
     "editor.multiCursorModifier": "ctrlCmd",
     // Specifies the location of snippets in the suggestion widget
     "editor.snippetSuggestions": "top",
-
+    
     // Editor Settings
     "editor.formatOnPaste": true,
     "editor.formatOnSave": false,
     "files.insertFinalNewline": true,
-
+    
     // Python Settings
+    "python.pythonPath": "python3",
     "python.linting.maxNumberOfProblems": 50,
     "python.linting.pylintEnabled": false,
     "python.linting.pep8Enabled": true,
+    "python.linting.pep8Path": "pycodestyle",
 
     // Plugin Settings
     "markdownlint.config": {
@@ -61,9 +63,17 @@
     "sync.autoUpload": false,
     "sync.lastDownload": "",
     "sync.forceDownload": false,
-    "sync.anonymousGist": false,
     "sync.host": "",
     "sync.pathPrefix": "",
     "sync.quietSync": false,
     "sync.askGistName": false,
+    "gitlens.keymap": "alternate",
+
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.respectShebang": true,
+    "code-runner.saveFileBeforeRun": true,
+    "files.associations": {
+        "*.lock": "json",
+        "Pipfile": "toml"
+    },
 }
