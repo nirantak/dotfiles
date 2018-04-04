@@ -50,6 +50,11 @@
 	],
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		79,
+		120
+	],
 	"save_on_focus_lost": false,
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
