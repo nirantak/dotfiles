@@ -16,7 +16,6 @@ POWERLEVEL9K_PYTHON_ICON='\u2695' # get_icon_names
 POWERLEVEL9K_RUBY_ICON='\xF0\x9F\x92\x8E'
 POWERLEVEL9K_SERVER_ICON='\xF0\x9F\x96\xA5'
 POWERLEVEL9K_HOME_ICON='\xF0\x9F\x97\x80'
-POWERLEVEL9K_HOME_SUB_ICON='\xF0\x9F\x93\x81'
 POWERLEVEL9K_FOLDER_ICON='\xF0\x9F\x96\xBF'
 POWERLEVEL9K_DISK_ICON='\xF0\x9F\x92\xBE'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='233' # spectrum_ls
@@ -41,9 +40,8 @@ setopt inc_append_history # To save every command before it is executed
 setopt share_history # share history between open terminals
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(git command-not-found colorize python pip z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git command-not-found colorize python pip zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,6 +93,3 @@ function extract() {
 		echo "'$1' is not a valid file"
 	fi
 }
-
-bindkey "$terminfo[kcuu1]" history-beginning-search-backward
-bindkey "$terminfo[kcud1]" history-beginning-search-forward

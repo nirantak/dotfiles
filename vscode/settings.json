@@ -22,6 +22,9 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+    },
 
     // Python Settings
     "python.pythonPath": "python3",
@@ -100,4 +103,6 @@
     },
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
 }
