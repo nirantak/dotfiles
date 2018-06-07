@@ -16,7 +16,6 @@ export NODE_REPL_MODE='sloppy';
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
-export PYTHONDONTWRITEBYTECODE=1;
 
 if [ -n "$BASH" ]; then
 	# Increase Bash history size. Allow 32³ entries; the default is 500.
@@ -41,5 +40,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="$HOME/.local/bin:$HOME/.rbenv/bin:$PATH:${CUDA_HOME}/bin"
+export NVM_DIR="$HOME/.nvm"
+
 eval "$(rbenv init -)"
-eval $(thefuck --alias)
