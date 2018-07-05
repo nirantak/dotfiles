@@ -16,8 +16,6 @@ alias up="ping 8.8.8.8 -c 3"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Python
-alias python="python3"
-alias pip="pip3"
 alias pipup="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 sudo -H pip3 install -U"
 alias py="pipenv run python"
 

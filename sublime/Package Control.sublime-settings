@@ -21,8 +21,10 @@
 		"MarkdownPreview",
 		"Package Control",
 		"SideBarTools",
+		"StandardFormat",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-contrib-standard",
 		"SublimeLinter-jshint",
 		"Terminal"
 	]

@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 
 #Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv nvm pyenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
@@ -22,6 +22,8 @@ POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='233' # spectrum_ls
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='075'
 POWERLEVEL9K_DIR_HOME_BACKGROUND='013'
 POWERLEVEL9K_PYTHON_BACKGROUND='071'
+POWERLEVEL9K_NVM_BACKGROUND='002'
+POWERLEVEL9K_PYENV_BACKGROUND='002'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='005'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
@@ -59,9 +61,6 @@ done;
 unset file;
 unsetopt RM_STAR_SILENT; # ask before executing rm with a star
 
-# eval "$(direnv hook zsh)"
-eval "$(pipenv --completion)"
-
 # heroku autocomplete setup
 # printf "$(heroku autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
 CLI_ENGINE_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/completions/zsh_setup && test -f $CLI_ENGINE_AC_ZSH_SETUP_PATH && source $CLI_ENGINE_AC_ZSH_SETUP_PATH;
@@ -94,9 +93,8 @@ function extract() {
 	fi
 }
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 # Autoload node version from .nvmrc
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -118,3 +116,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# eval "$(direnv hook zsh)"
