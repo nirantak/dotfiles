@@ -62,8 +62,7 @@ unset file;
 unsetopt RM_STAR_SILENT; # ask before executing rm with a star
 
 # heroku autocomplete setup
-# printf "$(heroku autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
-CLI_ENGINE_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/completions/zsh_setup && test -f $CLI_ENGINE_AC_ZSH_SETUP_PATH && source $CLI_ENGINE_AC_ZSH_SETUP_PATH;
+HEROKU_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # Tree - display file hierarchy
 function t() {

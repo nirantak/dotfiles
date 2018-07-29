@@ -16,8 +16,8 @@
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
 	"editor.formatOnPaste": true,
-	"editor.formatOnSave": false,
-	"files.autoSave": "off",
+	"editor.formatOnSave": true,
+	"files.autoSave": "onWindowChange",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
@@ -27,11 +27,10 @@
 		"Pipfile": "toml",
 		".envrc": "shellscript"
 	},
-
 	// Language Settings
 	"python.pythonPath": "python3",
 	"python.linting.maxNumberOfProblems": 50,
-	"python.formatting.provider": "autopep8",
+	"python.formatting.provider": "black",
 	"python.linting.pylintEnabled": false,
 	"python.linting.flake8Enabled": true,
 	"python.linting.ignorePatterns": [
@@ -59,7 +58,6 @@
 	"[markdown]": {
 		"files.trimTrailingWhitespace": false,
 	},
-
 	// Plugin Settings
 	"prettier.tabWidth": 2,
 	"prettier.useTabs": true,

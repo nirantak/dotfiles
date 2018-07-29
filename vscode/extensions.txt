@@ -1,12 +1,13 @@
 # code --list-extensions > ~/dotfiles/vscode/extensions.txt
 
-CoenraadS.bracket-pair-colorizer
-DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 aaron-bond.better-comments
 alefragnani.Bookmarks
 bungcip.better-toml
 christian-kohler.npm-intellisense
+CoenraadS.bracket-pair-colorizer
+cssho.vscode-svgviewer
+DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 donjayamanne.githistory
 dsznajder.es7-react-js-snippets
