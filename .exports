@@ -21,20 +21,24 @@ if [ -n "$BASH" ]; then
 	# Increase Bash history size. Allow 32³ entries; the default is 500.
 	export HISTSIZE="32768";
 	export HISTFILESIZE="${HISTSIZE}";
-	# Omit duplicates and commands that begin with a space from history.
 	export HISTCONTROL="ignoreboth:erasedups";
 fi
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
-
+export LESS="-iR"
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 3) # start blink - yellow
+export LESS_TERMCAP_md=$(tput bold; tput setaf 2) # start bold - green
+export LESS_TERMCAP_me=$(tput sgr0) # turn off bold, blink and underline
+# export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 6) # start standout - yellow on cyan
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0) # stop standout
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7) # start underline - white
+export LESS_TERMCAP_ue=$(tput rmul; tput sgr0) # stop underline
 export MANPAGER="less";
 export PAGER="less";
 
 export PYENV_ROOT="$HOME/.pyenv";
+export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.pyenv/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"

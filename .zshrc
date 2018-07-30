@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+# Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 #Theme
@@ -27,11 +27,8 @@ POWERLEVEL9K_PYENV_BACKGROUND='002'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='005'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
-# How often to auto-update (in days).
 export UPDATE_ZSH_DAYS=5
-# Enable command auto-correction.
 ENABLE_CORRECTION="true"
-# Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
