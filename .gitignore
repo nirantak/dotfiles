@@ -4,6 +4,7 @@ private
 .extra
 README.html
 dotfiles_old/
+backup.sh
 
 # Git credential file
 .gitconfig

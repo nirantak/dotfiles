@@ -1,5 +1,6 @@
 {
 	"workbench.iconTheme": "vscode-icons",
+	"workbench.colorTheme": "Default Dark+",
 	"window.zoomLevel": 0,
 	"telemetry.enableTelemetry": false,
 	"telemetry.enableCrashReporter": false,
@@ -16,7 +17,8 @@
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
 	"editor.formatOnPaste": true,
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
+	"breadcrumbs.enabled": true,
 	"files.autoSave": "onWindowChange",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
@@ -25,7 +27,8 @@
 	"files.associations": {
 		"*.lock": "json",
 		"Pipfile": "toml",
-		".envrc": "shellscript"
+		".envrc": "shellscript",
+		"*.dat": "CSV (pipe)",
 	},
 	// Language Settings
 	"python.pythonPath": "python3",
@@ -40,7 +43,9 @@
 		"**/__pycache__/**",
 		"**/node_modules/**"
 	],
+	"python.jediEnabled": false,
 	"[python]": {
+		"editor.formatOnPaste": false,
 		"editor.formatOnSave": true,
 		"editor.rulers": [
 			79,
