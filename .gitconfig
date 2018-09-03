@@ -1,16 +1,17 @@
 [user]
 	name = Full Name
 	email = user@email.com
+	signingkey = xxxxxxxxxxxxxxxx
 
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/dotfiles/global.gitignore
 	autocrlf = input
 
 [color]
 	diff = auto
 	status = auto
-	ui = auto
+	ui = true
 
 [color "diff"]
 	meta = yellow bold
@@ -20,5 +21,14 @@
 
 [alias]
 	pm= "!git push -u origin master"
-	c = commit -m
+	c = commit -S -m
 	a = add .
+
+[commit]
+	gpgsign = true
+
+[push]
+	default = current
+
+[log]
+	date = relative

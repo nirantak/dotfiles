@@ -40,5 +40,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.pyenv/bin:$HOME/.rbenv/bin:$HOME/.local/bin:$PATH"
 
+export GPG_TTY=$(tty)
+
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
