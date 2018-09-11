@@ -24,7 +24,3 @@ alias dotfiles="cd ~/dotfiles && git status && subl ."
 
 # Pretty print the path
 alias path="echo $PATH | tr -s ':' '\n'"
-
-# Wget
-alias dl="wget -r -e robots=off -nc -np"
-alias dl2="wget -r -m -nc -np"

@@ -15,6 +15,7 @@ eamodio.gitlens
 ecmel.vscode-html-css
 eg2.vscode-npm-script
 esbenp.prettier-vscode
+mechatroner.rainbow-csv
 ms-python.python
 ms-vscode.cpptools
 ms-vscode.Go
@@ -22,6 +23,7 @@ ms-vscode.sublime-keybindings
 robertohuertasm.vscode-icons
 shinnn.stylelint
 streetsidesoftware.code-spell-checker
+VisualStudioExptTeam.vscodeintellicode
 wix.vscode-import-cost
 xabikos.JavaScriptSnippets
 yzhang.markdown-all-in-one

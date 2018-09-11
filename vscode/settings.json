@@ -1,6 +1,7 @@
 {
-	"workbench.iconTheme": "vscode-icons",
 	"workbench.colorTheme": "Default Dark+",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.settings.editor": "json",
 	"window.zoomLevel": 0,
 	"telemetry.enableTelemetry": false,
 	"telemetry.enableCrashReporter": false,
@@ -31,7 +32,7 @@
 		"*.dat": "CSV (pipe)",
 	},
 	// Language Settings
-	"python.pythonPath": "python3",
+	"python.pythonPath": "python",
 	"python.linting.maxNumberOfProblems": 50,
 	"python.formatting.provider": "black",
 	"python.linting.pylintEnabled": false,
