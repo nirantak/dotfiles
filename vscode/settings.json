@@ -28,8 +28,11 @@
 	"files.associations": {
 		"*.lock": "json",
 		"Pipfile": "toml",
+		".env": "shellscript",
 		".envrc": "shellscript",
 		"*.dat": "CSV (pipe)",
+		".slugignore": "ignore",
+		".flake8": "ini",
 	},
 	// Language Settings
 	"python.pythonPath": "python",
@@ -68,6 +71,8 @@
 	"prettier.tabWidth": 2,
 	"prettier.useTabs": true,
 	"prettier.singleQuote": true,
+	"prolog.format.insertSpaces": false,
+	"prolog.linter.run": "onSave",
 	"markdownlint.config": {
 		"default": true,
 		"MD001": false,
