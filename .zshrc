@@ -51,13 +51,6 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 
-# Load the shell dotfiles, and then some:
-for file in ~/.{exports,aliases}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-unsetopt RM_STAR_SILENT; # ask before executing rm with a star
-
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
@@ -114,3 +107,8 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 # eval "$(direnv hook zsh)"
+eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+
+# Load Shell aliases
+[ -r ~/.aliases ] && [ -f ~/.aliases ] && source ~/.aliases;

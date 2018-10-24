@@ -46,7 +46,6 @@ export PYTHONIOENCODING="UTF-8";
 alias u="sudo apt update && sudo apt upgrade"
 alias b="browser-sync start --server --files='**/*'"
 alias h="cd /mnt/sdcard/Download"
-alias cd..="cd .."
 alias l="ls -lh"
 alias ll="ls -AlF"
 alias la="ls -a"

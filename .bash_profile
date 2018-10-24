@@ -55,3 +55,8 @@ fi
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "firefox chrome sleep rhythmbox spotify slack mailspring" killall;
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi

@@ -1,8 +1,8 @@
 # code --list-extensions > ~/dotfiles/vscode/extensions.txt
 
-EditorConfig.EditorConfig
 aaron-bond.better-comments
 alefragnani.Bookmarks
+arthurwang.vsc-prolog
 bungcip.better-toml
 christian-kohler.npm-intellisense
 CoenraadS.bracket-pair-colorizer
@@ -13,6 +13,7 @@ donjayamanne.githistory
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 ecmel.vscode-html-css
+EditorConfig.EditorConfig
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 mechatroner.rainbow-csv
