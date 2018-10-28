@@ -29,7 +29,6 @@ Plugin 'tpope/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'nvie/vim-flake8'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on

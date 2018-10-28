@@ -1,3 +1,6 @@
+# Profiling ZSH Performance
+# zmodload zsh/zprof
+
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -112,3 +115,6 @@ eval "$(pyenv init -)"
 
 # Load Shell aliases
 [ -r ~/.aliases ] && [ -f ~/.aliases ] && source ~/.aliases;
+
+# Profiling ZSH Performance
+# zprof

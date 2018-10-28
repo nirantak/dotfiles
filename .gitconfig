@@ -19,16 +19,19 @@
 	old = red		# deletions
 	new = green		# additions
 
+[commit]
+	gpgsign = true
+
 [alias]
 	pm= "!git push -u origin master"
 	c = commit -S -m
 	a = add .
 
-[commit]
-	gpgsign = true
+[log]
+	date = relative
+
+[fetch]
+	prune = true
 
 [push]
 	default = current
-
-[log]
-	date = relative

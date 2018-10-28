@@ -2,7 +2,6 @@
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update
-sudo apt dist-upgrade
 sudo apt upgrade
 sudo snap refresh
 
@@ -22,4 +21,4 @@ cd "$ZSH"/custom/plugins/zsh-autosuggestions && git pull
 cd "$ZSH"/custom/plugins/zsh-syntax-highlighting && git pull
 
 echo -e "\n \e[32m Updating Pyenv \e[0m"
-cd "$PYENV_ROOT" && git pull
+pyenv update
