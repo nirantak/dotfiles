@@ -43,13 +43,16 @@ export NODE_REPL_HISTORY_SIZE="32768";
 export NODE_REPL_MODE="sloppy";
 export PYTHONIOENCODING="UTF-8";
 
+alias h="cd /mnt/sdcard/Download"
 alias u="sudo apt update && sudo apt upgrade"
 alias b="browser-sync start --server --files='**/*'"
-alias h="cd /mnt/sdcard/Download"
 alias l="ls -lh"
 alias ll="ls -AlF"
 alias la="ls -a"
+alias cp="cp -i"
 alias rm="rm -I"
+alias mkdir="mkdir -p"
+alias cls="clear"
 alias clip="xsel --clipboard"
 alias up="ping 8.8.8.8 -c 3"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"

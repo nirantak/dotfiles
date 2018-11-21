@@ -1,25 +1,33 @@
 # aliases
 
 alias u="sudo apt update && sudo apt upgrade"
-alias b="browser-sync start --server --files='**/*'"
 alias l="ls -lh"
 alias ll="ls -AlF"
 alias la="ls -a"
+alias cp="cp -i"
 alias rm="rm -I"
+alias df="df -h"
+alias free="free -m"
+alias mkdir="mkdir -p"
+alias cls="clear"
 alias clip="xsel --clipboard"
-alias note="vim +startinsert ~/Documents/notes.txt"
-alias note-pd="vim +startinsert ~/Downloads/PD/Notes/notes.txt"
-alias ngrok="~/ngrok"
-alias dman="~/dotfiles/scripts/dman.sh"
+alias path="echo $PATH | tr -s ':' '\n'"
+
 alias up="ping 8.8.8.8 -c 3"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
 
-# tmux
+alias note="vim +startinsert ~/Documents/notes.txt"
+alias note-pd="vim +startinsert ~/Downloads/PD/Notes/notes.txt"
 alias tmux="TERM=screen-256color-bce tmux -u"
 
-# edit dotfiles
-alias dotfiles="cd ~/dotfiles && git status && subl ."
+alias b="browser-sync start --server --files='**/*'"
 
-# Pretty print the path
-alias path="echo $PATH | tr -s ':' '\n'"
+alias ngrok="~/tools/ngrok"
+alias jq="~/tools/jq-linux64"
+alias jid="~/tools/jid_linux_amd64"
+alias dman="~/dotfiles/scripts/dman.sh"
+alias wrk="~/tools/wrk/wrk"
+alias gotop="~/tools/gotop/gotop -p -c monokai"
+
+alias dotfiles="cd ~/dotfiles && git status && subl ."

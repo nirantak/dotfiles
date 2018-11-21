@@ -9,7 +9,7 @@ echo -e "\n \e[32m Updating NPM Packages \e[0m"
 sudo npm update -g
 
 echo -e "\n \e[32m Updating Python Packages \e[0m"
-pip install --upgrade pip pipenv requests black flake8 rope numpy pandas matplotlib jupyterlab
+pip install --upgrade pip pipenv requests black flake8 rope numpy ipython httpie
 
 echo -e "\n \e[32m Updating rbenv \e[0m"
 cd "$(rbenv root)" && git pull
