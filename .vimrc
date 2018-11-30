@@ -94,6 +94,10 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=Lo
 
+
+" Ctrl + c to copy
+:vmap <C-C> "+y
+
 "nerd-commenter settings
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims=1
@@ -126,4 +130,3 @@ if has("gui_running")
         colorscheme iceberg
     endif
 endif
-

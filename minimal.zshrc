@@ -24,6 +24,9 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 function t() {
 	tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -ahC $2
 }
+function cht() {
+	curl https://cheat.sh/$1
+}
 
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
