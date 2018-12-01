@@ -43,7 +43,7 @@ setopt share_history # share history between open terminals
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(git command-not-found colorize python pip zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git command-not-found colorize python pip z zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +56,10 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# FZF Fuzzy Search
+[ -f "$HOME/.fzf/shell/completion.zsh" ] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
+# source "$HOME/.fzf/shell/key-bindings.zsh"
 
 # Tree - display file hierarchy
 function t() {

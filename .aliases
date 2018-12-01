@@ -31,3 +31,4 @@ alias wrk="~/tools/wrk/wrk"
 alias gotop="~/tools/gotop/gotop -p -c monokai"
 
 alias dotfiles="cd ~/dotfiles && git status && subl ."
+alias freq_cmd="history | awk '{print $4}' | sort | uniq -c | sort -nr | head -10"
