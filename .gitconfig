@@ -1,37 +1,37 @@
 [user]
-	name = Full Name
-	email = user@email.com
-	signingkey = xxxxxxxxxxxxxxxx
+    name = Full Name
+    email = user@email.com
+    signingkey = xxxxxxxxxxxxxxxx
 
 [core]
-	editor = vim
-	excludesfile = ~/dotfiles/global.gitignore
-	autocrlf = input
+    editor = vim
+    excludesfile = ~/dotfiles/global.gitignore
+    autocrlf = input
 
 [color]
-	diff = auto
-	status = auto
-	ui = true
+    diff = auto
+    status = auto
+    ui = true
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold	# line info
-	old = red		# deletions
-	new = green		# additions
+    meta = yellow bold
+    frag = magenta bold     # line info
+    old = red               # deletions
+    new = green             # additions
 
 [commit]
-	gpgsign = true
+    gpgsign = true
 
 [alias]
-	pm= "!git push -u origin master"
-	c = commit -S -m
-	a = add .
+    pm= "!git push -u origin master"
+    c = commit -S -m
+    a = add .
 
 [log]
-	date = relative
+    date = relative
 
 [fetch]
-	prune = true
+    prune = true
 
 [push]
-	default = current
+    default = current

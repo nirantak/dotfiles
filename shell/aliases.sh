@@ -30,5 +30,5 @@ alias dman="~/dotfiles/scripts/dman.sh"
 alias wrk="~/tools/wrk/wrk"
 alias gotop="~/tools/gotop/gotop -p -c monokai"
 
-alias dotfiles="cd ~/dotfiles && git status && subl ."
+alias dotfiles="cd ~/dotfiles && git status && code ."
 alias freq_cmd="history | awk '{print $4}' | sort | uniq -c | sort -nr | head -10"

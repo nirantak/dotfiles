@@ -34,12 +34,16 @@ export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# http://zsh.sourceforge.net/Guide/zshguide02.html#l17
 HIST_STAMPS="dd.mm.yyyy"
+HISTSIZE=100000
+SAVEHIST=100000
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
-setopt inc_append_history # To save every command before it is executed
-setopt share_history # share history between open terminals
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
@@ -60,21 +64,6 @@ HEROKU_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/autocomplete/zsh_setup && 
 # FZF Fuzzy Search
 [ -f "$HOME/.fzf/shell/completion.zsh" ] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
 # source "$HOME/.fzf/shell/key-bindings.zsh"
-
-# Tree - display file hierarchy
-function t() {
-	tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -ahC $2
-}
-
-# Cheatsheets https://github.com/chubin/cheat.sh
-function cht() {
-	curl https://cheat.sh/$1
-}
-
-# Markdown Viewer
-function mdv () {
-  pandoc $1 | lynx -stdin -underline_links -use_mouse
-}
 
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -103,8 +92,11 @@ function mdv () {
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
-# Load Shell aliases
-[ -r ~/.aliases ] && [ -f ~/.aliases ] && source ~/.aliases;
+# Load Shell aliases & functions
+for file in ~/dotfiles/shell/{aliases.sh,functions.zsh}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 # Profiling ZSH Performance
 # zprof

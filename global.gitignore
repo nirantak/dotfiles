@@ -4,6 +4,7 @@
 *.cache
 Thumbs.db
 Desktop.ini
+.directory
 .DS_Store
 .Spotlight-V100
 .Trashes

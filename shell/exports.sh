@@ -3,26 +3,9 @@
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
 
-# Make vim the default editor.
+# Editor Settings
 export EDITOR="vim";
 export VISUAL="vim";
-
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY="$HOME/.node_history";
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE="32768";
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE="sloppy";
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING="UTF-8";
-
-if [ -n "$BASH" ]; then
-	# Increase Bash history size. Allow 32³ entries; the default is 500.
-	export HISTSIZE="32768";
-	export HISTFILESIZE="${HISTSIZE}";
-	export HISTCONTROL="ignoreboth:erasedups";
-fi
 
 export LESS="-iR"
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 3) # start blink - yellow
@@ -35,12 +18,23 @@ export LESS_TERMCAP_ue=$(tput rmul; tput sgr0) # stop underline
 export MANPAGER="less";
 export PAGER="less";
 
+# Python https://docs.python.org/3/using/cmdline.html#environment-variables
+export PYTHONIOENCODING="UTF-8";
+export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv";
-export GOPATH=$HOME/code/go
+
+# NodeJS https://nodejs.org/api/repl.html#repl_environment_variable_options
+export NODE_REPL_HISTORY_SIZE="100000";
 export NVM_DIR="$HOME/.nvm"
 
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-export ANDROID_HOME=$HOME/Android/Sdk
+# Go https://golang.org/doc/install/source#environment
+export GOPATH="$HOME/code/go"
+export GOOS="linux"
+export GOARCH="amd64"
+
+# Android
+export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+export ANDROID_HOME="$HOME/Android/Sdk"
 
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
 export PATH="/snap/bin:$HOME/.local/bin:$PATH"

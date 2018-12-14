@@ -19,7 +19,7 @@ sudo apt install -y apt-transport-https software-properties-common ca-certificat
 sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
 sudo apt install -y terminator vlc imagemagick potrace ffmpeg obs-studio filezilla clamav clamtk
-sudo apt install -y pandoc lynx texlive texlive-xetex perl-tk arename krename cloc silversearcher-ag
+sudo apt install -y pandoc lynx texlive texlive-xetex perl-tk krename cloc silversearcher-ag
 sudo apt install -y python-dev python-software-properties python3-pip python3-dev
 sudo snap install insomnia postman mailspring spotify gimp
 sudo snap install heroku --classic

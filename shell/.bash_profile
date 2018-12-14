@@ -2,15 +2,18 @@
 export TERM="screen-256color"
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{bash_prompt,exports,aliases}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+for file in ~/dotfiles/shell/{bash_prompt.sh,exports.sh,aliases.sh}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
-# Append to the Bash history file, rather than overwriting it
+# History Settings
+export HISTSIZE=;
+export HISTFILESIZE=;
+export HISTCONTROL="ignoreboth:erasedups";
 shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
@@ -20,7 +23,7 @@ shopt -s cdspell;
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar; do
-	shopt -s "$option" 2> /dev/null;
+    shopt -s "$option" 2> /dev/null;
 done;
 
 # make less more friendly for non-text input files, see lesspipe(1)

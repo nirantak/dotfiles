@@ -3,7 +3,7 @@ private
 .env
 .extra
 README.html
-dotfiles_old/
+dotfiles_old
 backup.sh
 
 # Git credential file

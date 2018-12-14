@@ -1,5 +1,5 @@
 # Load environment variables
-[ -r ~/.exports ] && [ -f ~/.exports ] && source ~/.exports;
+[ -r ~/dotfiles/shell/exports.sh ] && [ -f ~/dotfiles/shell/exports.sh ] && source ~/dotfiles/shell/exports.sh;
 
 # Start Gnome Keyring
 if [ -n "$DESKTOP_SESSION" ];then
