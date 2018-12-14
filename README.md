@@ -41,7 +41,7 @@ Install additional software
 Run the setup script
 
 ```bash
-$ ~/dotfiles/make.sh
+$ bash ~/dotfiles/make.sh
 ```
 
 Old dotfiles are backed up in `~/dotfiles/dotfiles_old`

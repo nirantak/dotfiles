@@ -3,7 +3,7 @@
 
 # Latest language versions for installation
 PYTHON_VERSION=3.7.1
-GO_VERSION=1.11.2
+GO_VERSION=1.11.3
 NODE_VERSION=11
 RUBY_VERSION=2.5.3
 
@@ -92,7 +92,7 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install --upgrade pip pipenv black flake8 rope ipython httpie
+pip install --upgrade pip pipenv black flake8 rope ipython httpie requests cookiecutter
 
 ruby --version
 node --version
