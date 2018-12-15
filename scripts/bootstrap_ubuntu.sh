@@ -1,11 +1,14 @@
 #!/bin/bash
 # Set up new Ubuntu machine
+USER=$(whoami)
 
-# Latest language versions for installation
+# Program versions for installation
 PYTHON_VERSION=3.7.1
 GO_VERSION=1.11.4
 NODE_VERSION=11
 RUBY_VERSION=2.5.3
+BAT_VERSION=0.9.0
+RIPGREP_VERSION=0.10.0
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -19,24 +22,22 @@ sudo apt install -y apt-transport-https software-properties-common ca-certificat
 sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
 sudo apt install -y terminator vlc imagemagick potrace ffmpeg obs-studio filezilla clamav clamtk
-sudo apt install -y pandoc lynx texlive texlive-xetex perl-tk krename cloc silversearcher-ag
+sudo apt install -y pandoc lynx texlive texlive-xetex perl-tk krename cloc
 sudo apt install -y python-dev python-software-properties python3-pip python3-dev
 sudo snap install insomnia postman mailspring spotify gimp
 sudo snap install heroku --classic
 sudo snap install slack --classic
 sudo apt install -y fonts-powerline fonts-firacode ttf-mscorefonts-installer pop-theme command-not-found command-not-found-data
 
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - && \
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-sudo apt update
-sudo apt install sublime-text docker-ce
+sudo apt update && sudo apt install sublime-text docker-ce
 
-USER=$(whoami)
-sudo usermod -aG docker $USER
+sudo usermod -aG docker ${USER}
 # Install Chrome, VSCode
 
 echo -e "\n \e[32m Swappiness && inotify settings \e[0m"
@@ -51,9 +52,19 @@ chsh -s /bin/zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 cd ~/.fzf && ./install --no-key-bindings --no-completion --no-update-rc && cd ~
+
+wget https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat_${BAT_VERSION}_amd64.deb && \
+sudo dpkg -i bat_${BAT_VERSION}_amd64.deb && \
+rm bat_${BAT_VERSION}_amd64.deb
+
+wget https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/ripgrep_${RIPGREP_VERSION}_amd64.deb && \
+sudo dpkg -i ripgrep_${RIPGREP_VERSION}_amd64.deb && \
+rm ripgrep_${RIPGREP_VERSION}_amd64.deb
 
 echo -e "\n \e[32m Installing pyenv \e[0m"
 sudo apt install -y pkg-config autoconf bison libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libyaml-dev libreadline6-dev libgdbm3 libgdbm-dev

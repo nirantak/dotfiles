@@ -17,6 +17,7 @@ export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7) # start underline -
 export LESS_TERMCAP_ue=$(tput rmul; tput sgr0) # stop underline
 export MANPAGER="less";
 export PAGER="less";
+export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 
 # Python https://docs.python.org/3/using/cmdline.html#environment-variables
 export PYTHONIOENCODING="UTF-8";
