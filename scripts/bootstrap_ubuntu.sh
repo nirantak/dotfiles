@@ -3,7 +3,7 @@
 
 # Latest language versions for installation
 PYTHON_VERSION=3.7.1
-GO_VERSION=1.11.3
+GO_VERSION=1.11.4
 NODE_VERSION=11
 RUBY_VERSION=2.5.3
 

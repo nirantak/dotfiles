@@ -16,6 +16,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 4,
   "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
@@ -86,5 +87,11 @@
     "no-hard-tabs": false
   },
   "emmet.excludeLanguages": [],
+  "indentRainbow.colors": [
+    "rgba(32,64,32,0.3)",
+    "rgba(64,32,64,0.3)",
+    "rgba(16,48,48,0.3)",
+    "rgba(64,64,16,0.3)"
+  ],
   "cSpell.userWords": ["nirantak", "raghav"]
 }

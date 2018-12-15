@@ -33,17 +33,7 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-
-# http://zsh.sourceforge.net/Guide/zshguide02.html#l17
 HIST_STAMPS="dd.mm.yyyy"
-HISTSIZE=100000
-SAVEHIST=100000
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_SPACE
-setopt HIST_IGNORE_DUPS
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_FIND_NO_DUPS
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
@@ -52,6 +42,17 @@ plugins=(git command-not-found colorize python pip z zsh-autosuggestions zsh-syn
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# History # http://zsh.sourceforge.net/Guide/zshguide02.html#l17
+HISTSIZE=100000
+SAVEHIST="$HISTSIZE"
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
 ZSH_AUTOSUGGEST_USE_ASYNC=1

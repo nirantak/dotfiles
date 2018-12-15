@@ -21,6 +21,7 @@ ms-python.python
 ms-vscode.cpptools
 ms-vscode.Go
 ms-vscode.sublime-keybindings
+oderwat.indent-rainbow
 PeterJausovec.vscode-docker
 robertohuertasm.vscode-icons
 shinnn.stylelint

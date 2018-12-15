@@ -8,17 +8,19 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd.mm.yyyy"
+
+plugins=(git command-not-found colorize python pip z zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
 HISTSIZE=100000
-SAVEHIST=100000
+SAVEHIST="$HISTSIZE"
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
-
-plugins=(git command-not-found colorize python pip zsh-autosuggestions zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
+setopt HIST_REDUCE_BLANKS
 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
 ZSH_AUTOSUGGEST_USE_ASYNC=1
