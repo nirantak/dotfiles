@@ -1,4 +1,7 @@
 #!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
 echo -e "\e[32mStarting Pendrive Backup...\e[0m"
 
 rsync -CauhP --stats --delete-after --exclude "N" --dry-run /media/nirantak/NirantakPD/ ~/Downloads/PD | grep "^del"

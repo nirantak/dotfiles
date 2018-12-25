@@ -1,4 +1,7 @@
 #!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
 # make.sh
 # This script creates symlinks from dotfiles dir to their respective locations
 

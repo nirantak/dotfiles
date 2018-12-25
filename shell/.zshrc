@@ -32,11 +32,6 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
 # Plugin Settings
 ZSH_TMUX_AUTOSTART="true"
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 
 # ZSH Settings
 export UPDATE_ZSH_DAYS=5
@@ -62,6 +57,12 @@ plugins=(   colorize
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
+
 # History # http://zsh.sourceforge.net/Guide/zshguide02.html#l17
 HISTSIZE=100000
 SAVEHIST="$HISTSIZE"

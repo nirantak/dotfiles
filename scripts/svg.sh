@@ -1,4 +1,7 @@
 #!/bin/bash
+# Convert PNG images to SVG
+set -euo pipefail
+IFS=$'\n\t'
 
 File_png="${1?:Usage: $0 file.png}"
 

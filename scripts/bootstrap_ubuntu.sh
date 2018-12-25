@@ -1,5 +1,8 @@
 #!/bin/bash
 # Set up new Ubuntu machine
+set -euo pipefail
+IFS=$'\n\t'
+
 USER=$(whoami)
 
 # Program versions for installation
