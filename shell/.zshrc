@@ -4,7 +4,7 @@
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-#Theme
+# Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv nvm pyenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history time)
@@ -30,6 +30,15 @@ POWERLEVEL9K_PYENV_BACKGROUND='002'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='005'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
+# Plugin Settings
+ZSH_TMUX_AUTOSTART="true"
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
+
+# ZSH Settings
 export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -37,7 +46,18 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(git command-not-found colorize python pip z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(   colorize
+            command-not-found
+            docker
+            git
+            python
+            pip
+            pyenv
+            tmux
+            z
+            zsh-autosuggestions
+            zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,19 +73,14 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
-
-# heroku autocomplete setup
+# Heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/home/nirantak/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
-# FZF Fuzzy Search
-[ -f "$HOME/.fzf/shell/completion.zsh" ] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
+# FZF - Fuzzy Search
+# [ -f "$HOME/.fzf/shell/completion.zsh" ] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
 # source "$HOME/.fzf/shell/key-bindings.zsh"
 
+# NVM - Node Version Manager
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 # # Autoload node version from .nvmrc

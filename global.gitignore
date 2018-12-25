@@ -9,9 +9,13 @@ Desktop.ini
 .Spotlight-V100
 .Trashes
 .idea
+.vs
 .env
 .envrc
 .nvmrc
+*.pk
+*.pub
+*.pem
 *.py[co]
 *.class
 node_modules

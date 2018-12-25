@@ -6,10 +6,14 @@ ZSH_THEME="robbyrussell"
 export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(git command-not-found colorize python pip z zsh-autosuggestions zsh-syntax-highlighting)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
+
+plugins=(colorize command-not-found git python pip z zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 HISTSIZE=100000
@@ -22,16 +26,11 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
-
 function t() {
-	tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -ahC $2
+    tree -I '.git|.venv|venv|node_modules|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -ahC $2
 }
 function cht() {
-	curl https://cheat.sh/$1
+    curl https://cheat.sh/$1
 }
 
 export LANG="en_US.UTF-8";
@@ -50,6 +49,7 @@ export PAGER="less";
 export PYTHONIOENCODING="UTF-8";
 export PYTHONUNBUFFERED=1
 export NODE_REPL_HISTORY_SIZE="100000";
+export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 
 alias h="cd /mnt/sdcard/Download"
 alias u="sudo apt update && sudo apt upgrade"
