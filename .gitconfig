@@ -15,17 +15,15 @@
 
 [color "diff"]
     meta = yellow bold
-    frag = magenta bold     # line info
-    old = red               # deletions
-    new = green             # additions
+    frag = magenta bold  # line info
+    old = red            # deletions
+    new = green          # additions
 
 [commit]
     gpgsign = true
 
-[alias]
-    pm= "!git push -u origin master"
-    c = commit -S -m
-    a = add .
+[push]
+    default = current
 
 [log]
     date = relative
@@ -33,5 +31,22 @@
 [fetch]
     prune = true
 
-[push]
-    default = current
+[diff]
+    renames = copies
+
+[merge]
+    stat = true
+
+[advice]
+    statusHints = false
+
+[help]
+    autocorrect = 1
+
+[alias]
+    pm= "!git push -u origin master"
+    c = commit -S -m
+    a = add .
+
+[github]
+    user = nirantak
