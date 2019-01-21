@@ -22,7 +22,6 @@ ms-vscode.sublime-keybindings
 oderwat.indent-rainbow
 PeterJausovec.vscode-docker
 robertohuertasm.vscode-icons
-shinnn.stylelint
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
 wix.vscode-import-cost

@@ -33,11 +33,6 @@ export GOPATH="$HOME/code/go"
 export GOOS="linux"
 export GOARCH="amd64"
 
-# Android
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-export ANDROID_HOME="$HOME/Android/Sdk"
-
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
 export PATH="/snap/bin:$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.fzf/bin:$HOME/.pyenv/bin:/usr/local/go/bin:$HOME/.rbenv/bin"
 

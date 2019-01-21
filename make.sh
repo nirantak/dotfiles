@@ -21,7 +21,7 @@ sublimeFiles=(
     "Markdown.sublime-settings"
     "Python-3.sublime-build"
     )
-vsFiles=( "settings.json" )
+vsFiles=( "settings.json" "keybindings.json" )
 
 echo "Creating $oldDir for backup of any existing dotfiles"
 mkdir -p "$oldDir/shell"

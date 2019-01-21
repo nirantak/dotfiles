@@ -12,6 +12,7 @@ NODE_VERSION=11
 RUBY_VERSION=2.6.0
 BAT_VERSION=0.9.0
 RIPGREP_VERSION=0.10.0
+DOCKER_COMPOSE_VERSION=1.23.2
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -41,6 +42,10 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update && sudo apt install sublime-text docker-ce
 
 sudo usermod -aG docker ${USER}
+
+sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 # Install Chrome, VSCode
 
 echo -e "\n \e[32m Swappiness && inotify settings \e[0m"

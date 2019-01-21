@@ -22,6 +22,9 @@ alias note-pd="vim +startinsert ~/Downloads/PD/Notes/notes.txt"
 alias tmux="TERM=screen-256color-bce tmux -u"
 
 alias b="browser-sync start --server --files='**/*'"
+alias soundcloud="youtube-dl -i -c --audio-quality 0 --prefer-ffmpeg --embed-thumbnail --add-metadata --geo-bypass-country US"
+alias ytmusic="youtube-dl -i -c --no-playlist -x --audio-format mp3 --audio-quality 0 --prefer-ffmpeg --embed-thumbnail --add-metadata"
+alias ytd="youtube-dl"
 
 alias ngrok="~/tools/ngrok"
 alias jq="~/tools/jq-linux64"

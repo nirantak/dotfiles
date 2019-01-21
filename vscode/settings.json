@@ -21,6 +21,7 @@
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.parameterHints.enabled": false,
   "breadcrumbs.enabled": true,
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
@@ -87,6 +88,9 @@
     "no-hard-tabs": false
   },
   "emmet.excludeLanguages": [],
+  "emmet.syntaxProfiles": {
+    "javascript": "javascriptreact"
+  },
   "indentRainbow.colors": [
     "rgba(32,64,32,0.3)",
     "rgba(64,32,64,0.3)",

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 IFS=$'\n\t'
 
 echo -e "\e[32mStarting Pendrive Backup...\e[0m"
