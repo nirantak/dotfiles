@@ -79,14 +79,6 @@
   // Plugin Settings
   "prolog.format.insertSpaces": false,
   "prolog.linter.run": "onSave",
-  "markdownlint.config": {
-    "default": true,
-    "MD001": false,
-    "MD007": {
-      "indent": 4
-    },
-    "no-hard-tabs": false
-  },
   "emmet.excludeLanguages": [],
   "emmet.syntaxProfiles": {
     "javascript": "javascriptreact"
