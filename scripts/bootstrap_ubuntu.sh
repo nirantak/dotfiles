@@ -9,7 +9,7 @@ USER=$(whoami)
 PYTHON_VERSION=3.7.2
 GO_VERSION=1.11.4
 NODE_VERSION=11
-RUBY_VERSION=2.6.0
+RUBY_VERSION=2.6.1
 BAT_VERSION=0.9.0
 RIPGREP_VERSION=0.10.0
 DOCKER_COMPOSE_VERSION=1.23.2
@@ -25,8 +25,9 @@ sudo apt install -y man wget curl git nano vim vim-gui-common zsh tmux htop less
 sudo apt install -y apt-transport-https software-properties-common ca-certificates
 sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
-sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio filezilla clamav clamtk
+sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio filezilla
 sudo apt install -y pandoc lynx texlive texlive-xetex perl-tk krename cloc
+sudo apt install -y clamav clamtk pass
 sudo apt install -y python-dev python-software-properties python3-pip python3-dev
 sudo snap install insomnia postman mailspring spotify gimp
 sudo snap install heroku --classic
@@ -46,7 +47,7 @@ sudo usermod -aG docker ${USER}
 sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Install Chrome, VSCode
+# Install Chrome, VSCode, docker-credential-helpers
 
 echo -e "\n \e[32m Swappiness && inotify settings \e[0m"
 cat /proc/sys/vm/swappiness && sudo bash -c "echo 'vm.swappiness = 20' >> /etc/sysctl.conf"

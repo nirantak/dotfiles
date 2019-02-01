@@ -31,6 +31,9 @@
 [fetch]
     prune = true
 
+[remote "origin"]
+    prune = true
+
 [diff]
     renames = copies
 
