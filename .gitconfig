@@ -47,9 +47,11 @@
     autocorrect = 1
 
 [alias]
-    pm= "!git push -u origin master"
+    pm = "!git push -u origin master"
     c = commit -S -m
     a = add .
+    unstage = reset HEAD --
+    amend = commit --amend --no-edit
 
 [github]
     user = nirantak

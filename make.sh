@@ -10,7 +10,7 @@ IFS=$(echo -en "\n\b") #internal field seperator
 
 dir=~/dotfiles
 oldDir=~/dotfiles/dotfiles_old
-files=( ".bash_profile" ".bashrc" ".tmux.conf" ".vimrc" ".zshenv" ".zshrc" )
+files=( ".bash_profile" ".bashrc" ".prettierrc" ".tmux.conf" ".vimrc" ".zshenv" ".zshrc" )
 sublimeFiles=(
     "Preferences.sublime-settings"
     "Package Control.sublime-settings"

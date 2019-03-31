@@ -27,7 +27,7 @@ alias dotfiles="cd ~/dotfiles && git status && code ."
 alias freq_cmd="history | awk '{print $4}' | sort | uniq -c | sort -nr | head -10"
 
 # Language Packages
-alias b="browser-sync start --server --files='**/*'"
+alias b="browser-sync start --server --directory --files='**/*'"
 alias soundcloud="youtube-dl -i -c --audio-quality 0 --prefer-ffmpeg --embed-thumbnail --add-metadata --geo-bypass-country US"
 alias ytmusic="youtube-dl -i -c --no-playlist -x --audio-format mp3 --audio-quality 0 --prefer-ffmpeg --embed-thumbnail --add-metadata"
 alias ytd="youtube-dl"
@@ -38,7 +38,7 @@ alias jq="~/tools/jq-linux64"
 alias jid="~/tools/jid_linux_amd64"
 alias dman="~/dotfiles/scripts/dman.sh"
 alias wrk="~/tools/wrk/wrk"
-alias gotop="~/tools/gotop/gotop -p -c monokai"
+alias gotop="~/tools/gotop/gotop -pbs -c monokai"
 
 # Docker
 alias dcu="docker-compose up"

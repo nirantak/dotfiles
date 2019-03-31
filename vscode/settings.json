@@ -1,7 +1,7 @@
 {
+  "workbench.settings.editor": "json",
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.settings.editor": "json",
   "workbench.editor.highlightModifiedTabs": true,
   "window.titleBarStyle": "custom",
   "telemetry.enableTelemetry": false,
@@ -34,7 +34,8 @@
     "*.env": "shellscript",
     "*.dat": "CSV (pipe)",
     ".slugignore": "ignore",
-    ".flake8": "ini"
+    ".flake8": "ini",
+    "Dockerfile*": "dockerfile"
   },
   "search.showLineNumbers": true,
   "search.smartCase": true,
@@ -89,5 +90,8 @@
     "rgba(16,48,48,0.3)",
     "rgba(64,64,16,0.3)"
   ],
-  "cSpell.userWords": ["nirantak", "raghav"]
+  "cSpell.userWords": ["nirantak", "raghav"],
+  "window.zoomLevel": 0,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

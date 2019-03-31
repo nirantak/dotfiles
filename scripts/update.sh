@@ -3,7 +3,7 @@
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 sudo snap refresh
 
 echo -e "\n \e[32m Updating NPM Packages \e[0m"
