@@ -1,5 +1,6 @@
 aaron-bond.better-comments
 alefragnani.Bookmarks
+bungcip.better-toml
 christian-kohler.npm-intellisense
 CoenraadS.bracket-pair-colorizer
 cssho.vscode-svgviewer

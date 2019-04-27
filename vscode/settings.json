@@ -4,6 +4,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.highlightModifiedTabs": true,
   "window.titleBarStyle": "custom",
+  "window.zoomLevel": 0,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "terminal.integrated.cursorStyle": "line",
@@ -21,7 +22,9 @@
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.rulers": [80],
   "editor.parameterHints.enabled": false,
+  "editor.suggestSelection": "first",
   "breadcrumbs.enabled": true,
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
@@ -39,6 +42,7 @@
   },
   "search.showLineNumbers": true,
   "search.smartCase": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   // Language Settings
   "python.pythonPath": "python",
@@ -60,12 +64,13 @@
     },
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
-    "editor.rulers": [79, 120],
+    "editor.rulers": [80, 100],
     "editor.tabSize": 4
   },
   "[html]": {
     "editor.formatOnSave": false,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.tabSize": 2
@@ -90,8 +95,5 @@
     "rgba(16,48,48,0.3)",
     "rgba(64,64,16,0.3)"
   ],
-  "cSpell.userWords": ["nirantak", "raghav"],
-  "window.zoomLevel": 0,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "cSpell.userWords": ["nirantak", "raghav"]
 }
