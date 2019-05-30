@@ -59,9 +59,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-cd ~/.fzf && ./install --no-key-bindings --no-completion --no-update-rc && cd ~
-
 wget https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat_${BAT_VERSION}_amd64.deb && \
 sudo dpkg -i bat_${BAT_VERSION}_amd64.deb && \
 rm bat_${BAT_VERSION}_amd64.deb
@@ -81,9 +78,6 @@ echo -e "\n \e[32m Installing rbenv \e[0m"
 # mkdir -p ~/.rbenv/plugins
 # git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-
-echo -e "\n \e[32m Installing R \e[0m"
-sudo apt install libopenblas-base r-base
 
 echo -e "\n \e[32m Installing Golang \e[0m"
 wget https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
