@@ -12,6 +12,12 @@
 
 ### Installation
 
+Clone the git repository:
+
+```bash
+$ git clone https://github.com/nirantak/dotfiles.git ~/dotfiles
+```
+
 Install necessary dependencies
 
 ```bash
@@ -20,17 +26,10 @@ $ # or for full system setup:
 $ ./scripts/bootstrap_ubuntu.sh
 ```
 
-Clone the git repository:
-
-```bash
-$ git clone https://github.com/nirantak/dotfiles.git ~/dotfiles
-```
-
 Install additional software
 
--   [Sublime Text 3](https://www.sublimetext.com/3)
--   [Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+-   [Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Vundle](https://github.com/VundleVim/Vundle.vim)
 -   [Powerline](https://github.com/powerline/powerline)
 -   [Powerline Fonts](https://github.com/powerline/fonts)

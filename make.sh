@@ -11,21 +11,10 @@ IFS=$(echo -en "\n\b") #internal field seperator
 dir=~/dotfiles
 oldDir=~/dotfiles/dotfiles_old
 files=( ".bash_profile" ".bashrc" ".prettierrc" ".tmux.conf" ".vimrc" ".zshenv" ".zshrc" )
-sublimeFiles=(
-    "Preferences.sublime-settings"
-    "Package Control.sublime-settings"
-    "Default (Linux).sublime-keymap"
-    "Default (Linux).sublime-mousemap"
-    "Anaconda.sublime-settings"
-    "Distraction Free.sublime-settings"
-    "Markdown.sublime-settings"
-    "Python-3.sublime-build"
-    )
 vsFiles=( "settings.json" "keybindings.json" )
 
 echo "Creating $oldDir for backup of any existing dotfiles"
 mkdir -p "$oldDir/shell"
-mkdir -p "$oldDir/sublime"
 mkdir -p "$oldDir/vscode"
 echo "...complete."
 
@@ -41,16 +30,8 @@ for file in "${files[@]}"; do
     ln -s $dir/shell/$file ~/$file
 done
 
-echo "Moving existing dotfiles from ~/.config/sublime-text-3/Packages/User to $oldDir/sublime"
-for file in "${sublimeFiles[@]}"; do
-    if [ -f ~/.config/sublime-text-3/Packages/User/$file ]; then
-        mv ~/.config/sublime-text-3/Packages/User/$file $oldDir/sublime/
-    fi
-    echo "Creating symlink to $file"
-    ln -s $dir/sublime/$file ~/.config/sublime-text-3/Packages/User/$file
-done
-
 echo "Moving existing dotfiles from ~/.config/Code/User to $oldDir/vscode"
+mkdir -p "~/.config/Code/User/"
 for file in "${vsFiles[@]}"; do
     if [ -f ~/.config/Code/User/$file ]; then
         mv ~/.config/Code/User/$file $oldDir/vscode/

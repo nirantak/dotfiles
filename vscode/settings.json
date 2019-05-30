@@ -83,8 +83,6 @@
   },
 
   // Plugin Settings
-  "prolog.format.insertSpaces": false,
-  "prolog.linter.run": "onSave",
   "emmet.excludeLanguages": [],
   "emmet.syntaxProfiles": {
     "javascript": "javascriptreact"

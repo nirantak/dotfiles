@@ -7,10 +7,10 @@ USER=$(whoami)
 
 # Program versions for installation
 PYTHON_VERSION=3.7.3
-GO_VERSION=1.12.4
+GO_VERSION=1.12.5
 NODE_VERSION=12
 RUBY_VERSION=2.6.3
-BAT_VERSION=0.10.0
+BAT_VERSION=0.11.0
 RIPGREP_VERSION=11.0.0
 DOCKER_COMPOSE_VERSION=1.24.0
 
@@ -26,22 +26,17 @@ sudo apt install -y apt-transport-https software-properties-common ca-certificat
 sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
 sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio filezilla
-sudo apt install -y pandoc lynx texlive texlive-xetex perl-tk krename cloc
+sudo apt install -y pandoc lynx krename cloc
 sudo apt install -y clamav clamtk pass
-sudo apt install -y python-dev python-software-properties python3-pip python3-dev
+sudo apt install -y python-dev python3-pip python3-dev
 sudo snap install insomnia postman mailspring spotify gimp
 sudo snap install heroku --classic
 sudo snap install slack --classic
-sudo apt install -y fonts-powerline fonts-firacode ttf-mscorefonts-installer pop-theme command-not-found command-not-found-data
-
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - && \
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt install -y fonts-powerline fonts-firacode ttf-mscorefonts-installer command-not-found command-not-found-data
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-
-sudo apt update && sudo apt install sublime-text docker-ce
-
+sudo apt install docker-ce
 sudo usermod -aG docker ${USER}
 
 sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -76,7 +71,7 @@ sudo dpkg -i ripgrep_${RIPGREP_VERSION}_amd64.deb && \
 rm ripgrep_${RIPGREP_VERSION}_amd64.deb
 
 echo -e "\n \e[32m Installing pyenv \e[0m"
-sudo apt install -y pkg-config autoconf bison libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libyaml-dev libreadline6-dev libgdbm3 libgdbm-dev
+sudo apt install -y pkg-config autoconf bison libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libyaml-dev libreadline6-dev
 # git clone https://github.com/pyenv/pyenv.git ~/.pyenv # or
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
@@ -98,12 +93,7 @@ echo -e "\n \e[32m Installing NodeJS \e[0m"
 curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | sudo -E bash -
 sudo apt install -y nodejs nodejs-dev
 sudo npm update -g
-sudo npm install -g browser-sync speed-test gulp-cli
-
-echo -e "\n \e[32m Setting up dotfiles \e[0m"
-git clone git@github.com:nirantak/dotfiles.git ~/dotfiles
-cd ~/dotfiles && ./make.sh && cd ~
-source ~/.zshrc
+sudo npm install -g browser-sync speed-test
 
 rbenv install ${RUBY_VERSION}
 rbenv global ${RUBY_VERSION}
