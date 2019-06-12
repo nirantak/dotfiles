@@ -12,6 +12,7 @@ ecmel.vscode-html-css
 EditorConfig.EditorConfig
 eg2.vscode-npm-script
 esbenp.prettier-vscode
+mbessey.vscode-rufo
 mechatroner.rainbow-csv
 ms-python.python
 ms-vscode.Go
@@ -19,6 +20,7 @@ ms-vscode.sublime-keybindings
 ms-vsliveshare.vsliveshare
 oderwat.indent-rainbow
 PeterJausovec.vscode-docker
+rebornix.ruby
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons

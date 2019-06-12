@@ -11,7 +11,13 @@ IFS=$(echo -en "\n\b") #internal field seperator
 dir=~/dotfiles
 oldDir=~/dotfiles/dotfiles_old
 files=( ".bash_profile" ".bashrc" ".prettierrc" ".tmux.conf" ".vimrc" ".zshenv" ".zshrc" )
+
 vsFiles=( "settings.json" "keybindings.json" )
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    vsPath=~/Library/Application\ Support/Code/User
+else
+    vsPath=~/.config/Code/User
+fi
 
 echo "Creating $oldDir for backup of any existing dotfiles"
 mkdir -p "$oldDir/shell"
@@ -30,14 +36,14 @@ for file in "${files[@]}"; do
     ln -s $dir/shell/$file ~/$file
 done
 
-echo "Moving existing dotfiles from ~/.config/Code/User to $oldDir/vscode"
-mkdir -p "~/.config/Code/User/"
+echo "Moving existing dotfiles from $vsPath to $oldDir/vscode"
+mkdir -p $vsPath
 for file in "${vsFiles[@]}"; do
-    if [ -f ~/.config/Code/User/$file ]; then
-        mv ~/.config/Code/User/$file $oldDir/vscode/
+    if [ -f $vsPath/$file ]; then
+        mv $vsPath/$file $oldDir/vscode/
     fi
     echo "Creating symlink to $file"
-    ln -s $dir/vscode/$file ~/.config/Code/User/$file
+    ln -s $dir/vscode/$file $vsPath/$file
 done
 
 # restore $IFS

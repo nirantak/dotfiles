@@ -31,7 +31,9 @@ export NVM_DIR="$HOME/.nvm"
 # Go https://golang.org/doc/install/source#environment
 export GOPATH="$HOME/code/go"
 
-export PATH="/snap/bin:$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/.pyenv/bin:/usr/local/go/bin:$HOME/.rbenv/bin"
+export PATH="$PATH:$HOME/.pyenv/bin:$HOME/.rbenv/bin"
+if [[ "$OSTYPE" == "linux"* ]]; then
+    export PATH="$PATH:/snap/bin:$HOME/.local/bin:/usr/local/go/bin"
+fi
 
 export GPG_TTY=$(tty)

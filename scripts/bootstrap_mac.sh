@@ -22,8 +22,8 @@ brew install gpgme pyenv rbenv nvm
 brew install docker docker-compose
 
 echo -e "\n \e[32m Installing Apps \e[0m"
-brew cask install google-chrome spotify visual-studio-code iterm2
-brew cask install vlc postman karabiner-elements ngrok gimp
+brew cask install google-chrome visual-studio-code iterm2 diff-so-fancy ngrok
+brew cask install spotify vlc gimp postman karabiner-elements
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -38,7 +38,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 brew untap caskroom/fonts
 brew tap homebrew/cask-fonts
-brew cask install font-fira font-source-code-pro font-hack-nerd-font
+brew cask install font-fira-code font-source-code-pro font-hack-nerd-font
 
 rbenv install ${RUBY_VERSION}
 rbenv global ${RUBY_VERSION}

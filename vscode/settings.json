@@ -1,8 +1,10 @@
 {
-  "workbench.settings.editor": "json",
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "vscode-icons",
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.settings.editor": "json",
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": true,
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "telemetry.enableTelemetry": false,
@@ -15,7 +17,7 @@
   "editor.fontSize": 14,
   "editor.wordWrap": "on",
   "editor.renderWhitespace": "boundary",
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -43,7 +45,6 @@
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
   // Language Settings
   "python.pythonPath": "python",
   "python.linting.maxNumberOfProblems": 50,
@@ -58,14 +59,28 @@
     "**/node_modules/**"
   ],
   "python.jediEnabled": false,
+  "ruby.format": "rufo",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "ruby": true,
+    "rubocop": true
+  },
   "[python]": {
+    "editor.tabSize": 4,
+    "editor.rulers": [80, 100],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    },
-    "editor.formatOnPaste": false,
+    }
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
     "editor.formatOnSave": true,
-    "editor.rulers": [80, 100],
-    "editor.tabSize": 4
+    "editor.formatOnPaste": false,
+    "editor.formatOnSaveTimeout": 1500
   },
   "[html]": {
     "editor.formatOnSave": false,
@@ -81,7 +96,6 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-
   // Plugin Settings
   "emmet.excludeLanguages": [],
   "emmet.syntaxProfiles": {

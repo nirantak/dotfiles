@@ -7,6 +7,7 @@
     editor = vim
     excludesfile = ~/dotfiles/global.gitignore
     autocrlf = input
+    pager = diff-so-fancy | less --tabs=4 -iRFX
 
 [color]
     diff = auto
@@ -14,10 +15,18 @@
     ui = true
 
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold  # line info
-    old = red            # deletions
-    new = green          # additions
+    meta = yellow
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    commit = yellow bold
+    whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 
 [commit]
     gpgsign = true
@@ -54,4 +63,4 @@
     amend = commit --amend --no-edit
 
 [github]
-    user = nirantak
+    user = username
