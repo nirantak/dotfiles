@@ -50,22 +50,28 @@ export PYTHONIOENCODING="UTF-8";
 export PYTHONUNBUFFERED=1
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
+export GEM_HOME=~/.gem
+export PATH="$GEM_HOME/bin:$PATH"
 
-alias h="cd /mnt/sdcard/Download"
-alias u="sudo apt update && sudo apt upgrade"
-alias b="browser-sync start --server --files='**/*'"
+alias b="browser-sync start --server"
 alias l="ls -lh"
 alias ll="ls -AlF"
 alias la="ls -a"
 alias cp="cp -i"
-alias rm="rm -I"
+alias rm="rm -i"
 alias df="df -h"
 alias free="free -m"
 alias mkdir="mkdir -p"
-alias cls="clear"
-alias clip="xsel --clipboard"
+alias clip="pbcopy"
+
 alias path="echo $PATH | tr -s ':' '\n'"
 alias up="ping 8.8.8.8 -c 3"
+alias ip-int="ipconfig getifaddr en0"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
 alias freq_cmd="history | awk '{print $4}' | sort | uniq -c | sort -nr | head -10"
+
+if [[ "$OSTYPE" == "linux"* ]]; then
+    alias u="sudo apt update && sudo apt upgrade"
+    alias clip="xsel --clipboard"
+    alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
+fi

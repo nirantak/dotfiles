@@ -5,8 +5,8 @@
 export ZSH=~/.oh-my-zsh
 
 # Theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv nvm pyenv virtualenv vcs)
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv pyenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
@@ -26,9 +26,6 @@ POWERLEVEL9K_PYENV_BACKGROUND='002'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='005'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
-# Plugin Settings
-ZSH_TMUX_AUTOSTART="false"
-
 # ZSH Settings
 export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
@@ -44,7 +41,6 @@ plugins=(   colorize
             python
             pip
             pyenv
-            tmux
             z
             zsh-autosuggestions
             zsh-syntax-highlighting
@@ -77,35 +73,6 @@ else
     HEROKU_AC_ZSH_SETUP_PATH=~/.cache/heroku/autocomplete/zsh_setup
 fi
 test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-# FZF - Fuzzy Search
-# [ -f "$HOME/.fzf/shell/completion.zsh" ] && source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
-# source "$HOME/.fzf/shell/key-bindings.zsh"
-
-# NVM - Node Version Manager
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-# # Autoload node version from .nvmrc
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#   local node_version="$(nvm version)"
-#   local nvmrc_path="$(nvm_find_nvmrc)"
-
-#   if [ -n "$nvmrc_path" ]; then
-#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-#     if [ "$nvmrc_node_version" = "N/A" ]; then
-#       nvm install
-#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#       nvm use
-#     fi
-#   elif [ "$node_version" != "$(nvm version default)" ]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"

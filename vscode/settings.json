@@ -9,10 +9,8 @@
   "window.zoomLevel": 0,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontFamily": "'Liberation Mono for Powerline', 'Ubuntu Mono', monospace",
-  "terminal.integrated.fontSize": 14,
   "editor.fontFamily": "Fira Code",
+  "editor.fontWeight": "normal",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.wordWrap": "on",
@@ -28,6 +26,9 @@
   "editor.parameterHints.enabled": false,
   "editor.suggestSelection": "first",
   "breadcrumbs.enabled": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "'Liberation Mono for Powerline', 'Ubuntu Mono', monospace",
+  "terminal.integrated.fontSize": 14,
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -40,7 +41,8 @@
     "*.dat": "CSV (pipe)",
     ".slugignore": "ignore",
     ".flake8": "ini",
-    "Dockerfile*": "dockerfile"
+    "Dockerfile*": "dockerfile",
+    "*.scpt": "shellscript"
   },
   "search.showLineNumbers": true,
   "search.smartCase": true,
@@ -80,7 +82,8 @@
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
-    "editor.formatOnSaveTimeout": 1500
+    "editor.formatOnSaveTimeout": 1500,
+    "editor.defaultFormatter": "mbessey.vscode-rufo"
   },
   "[html]": {
     "editor.formatOnSave": false,
@@ -107,5 +110,39 @@
     "rgba(16,48,48,0.3)",
     "rgba(64,64,16,0.3)"
   ],
-  "cSpell.userWords": ["nirantak", "raghav"]
+  "cSpell.userWords": ["nirantak", "raghav"],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "ruby",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ]
 }
