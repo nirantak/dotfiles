@@ -18,11 +18,10 @@ mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.Go
-ms-vscode.sublime-keybindings
-ms-vsliveshare.vsliveshare
 oderwat.indent-rainbow
 rebornix.ruby
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
+waderyan.gitblame
 yzhang.markdown-all-in-one
