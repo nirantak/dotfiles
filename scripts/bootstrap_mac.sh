@@ -17,12 +17,12 @@ sudo chown -R $USER:$(id -gn $USER) ~/.config
 echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time grep
 brew install python3 node go gcc
-brew install chromedriver imagemagick pandoc lynx cloc
+brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy
 brew install gpgme pyenv rbenv nvm
 brew install docker docker-compose
 
 echo -e "\n \e[32m Installing Apps \e[0m"
-brew cask install google-chrome visual-studio-code iterm2 diff-so-fancy ngrok
+brew cask install google-chrome visual-studio-code iterm2 ngrok
 brew cask install spotify vlc gimp postman karabiner-elements
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
