@@ -2,7 +2,7 @@ aaron-bond.better-comments
 alefragnani.Bookmarks
 bungcip.better-toml
 christian-kohler.npm-intellisense
-CoenraadS.bracket-pair-colorizer
+CoenraadS.bracket-pair-colorizer-2
 cssho.vscode-svgviewer
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
@@ -24,4 +24,5 @@ streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
 vscode-icons-team.vscode-icons
 waderyan.gitblame
+wingrunr21.vscode-ruby
 yzhang.markdown-all-in-one

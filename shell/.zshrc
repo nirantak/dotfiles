@@ -78,7 +78,7 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 # Load Shell aliases & functions
-for file in ~/dotfiles/shell/{aliases.sh,functions.zsh}; do
+for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

@@ -18,6 +18,7 @@
   "editor.tabSize": 2,
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSurroundingLines": 5,
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -25,10 +26,12 @@
   "editor.parameterHints.enabled": false,
   "editor.suggestSelection": "first",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontFamily": "'Liberation Mono for Powerline', 'Ubuntu Mono', monospace",
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.rendererType": "dom",
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -85,12 +88,15 @@
     "editor.defaultFormatter": "mbessey.vscode-rufo"
   },
   "[html]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
   // Plugin Settings
+  "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  "bracket-pair-colorizer-2.showBracketsInRuler": true,
   "emmet.excludeLanguages": [],
   "emmet.syntaxProfiles": {
     "javascript": "javascriptreact"

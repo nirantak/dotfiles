@@ -16,6 +16,7 @@ alias path="echo $PATH | tr -s ':' '\n'"
 alias up="ping 8.8.8.8 -c 3"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip-int="ipconfig getifaddr en0"
+alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs vnstat -i"
 
 # Utilities
 alias note="vim +startinsert ~/Documents/notes.md"
