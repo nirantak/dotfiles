@@ -11,6 +11,7 @@ alias free="free -m"
 alias mkdir="mkdir -p"
 alias clip="pbcopy"
 alias path="echo $PATH | tr -s ':' '\n'"
+alias sed="gsed"
 
 # Networking
 alias up="ping 8.8.8.8 -c 3"
@@ -22,19 +23,20 @@ alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f
 alias note="vim +startinsert ~/Documents/notes.md"
 alias tmux="TERM=screen-256color-bce tmux -u"
 alias dotfiles="cd ~/dotfiles && git status && code ."
-alias freq_cmd="history | awk '{print $4}' | sort | uniq -c | sort -nr | head -10"
+alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"  # Delete the last command and this command itself from history
 
-# Language Packages
+# Tools
 alias b="browser-sync start --server"
 alias bd="browser-sync start --server --directory --files='**/*'"
-alias soundcloud="youtube-dl -i -c --audio-quality 0 --prefer-ffmpeg --embed-thumbnail --add-metadata --geo-bypass-country US"
-alias ytmusic="youtube-dl -i -c --no-playlist -x --audio-format mp3 --audio-quality 0 --prefer-ffmpeg --embed-thumbnail --add-metadata"
+alias ytaud="youtube-dl -f bestaudio[ext!=webm] --extract-audio --audio-quality 0 --no-playlist --add-metadata --embed-thumbnail --prefer-ffmpeg"
+alias ytvid="youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] --no-playlist --add-metadata --embed-thumbnail"
 alias ytd="youtube-dl"
+alias ytf="youtube-dl -F"
 
 # Docker
 alias dcu="docker-compose up"
 alias dcr="docker-compose run --rm"
-alias dlf='docker logs -f'
+alias dlf="docker logs -f"
 alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}'"
 alias dtop="docker stats --format 'table {{.Container}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}'"
 alias dalias="__dalias"
@@ -47,6 +49,7 @@ alias drmi="__drmi"
 
 # Linux Overrides
 if [[ "$OSTYPE" == "linux"* ]]; then
+    unalias sed
     alias u="sudo apt update && sudo apt upgrade"
     alias rm="rm -I"
     alias clip="xsel --clipboard"

@@ -117,3 +117,13 @@ function load_nvm() {
     add-zsh-hook chpwd load_nvmrc
     load_nvmrc
 }
+
+# Show frequently used commands
+function freq_cmd() {
+    if [ -n "$1" ]
+    then
+        history | awk '{print $4}' | sort | uniq -c | sort -nr | head -n $1
+    else
+        history | awk '{print $4}' | sort | uniq -c | sort -nr | head
+    fi
+}
