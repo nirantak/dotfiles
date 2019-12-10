@@ -6,13 +6,12 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.7.3
-GO_VERSION=1.12.5
-NODE_VERSION=12
-RUBY_VERSION=2.6.3
-BAT_VERSION=0.11.0
-RIPGREP_VERSION=11.0.0
-DOCKER_COMPOSE_VERSION=1.24.0
+PYTHON_VERSION=3.8.0
+GO_VERSION=1.13.4
+NODE_VERSION=13
+RUBY_VERSION=2.6.5
+BAT_VERSION=0.12.1
+DOCKER_COMPOSE_VERSION=1.25.0
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -62,10 +61,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 wget https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat_${BAT_VERSION}_amd64.deb && \
 sudo dpkg -i bat_${BAT_VERSION}_amd64.deb && \
 rm bat_${BAT_VERSION}_amd64.deb
-
-wget https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/ripgrep_${RIPGREP_VERSION}_amd64.deb && \
-sudo dpkg -i ripgrep_${RIPGREP_VERSION}_amd64.deb && \
-rm ripgrep_${RIPGREP_VERSION}_amd64.deb
 
 echo -e "\n \e[32m Installing pyenv \e[0m"
 sudo apt install -y pkg-config autoconf bison libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libyaml-dev libreadline6-dev

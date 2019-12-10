@@ -6,8 +6,8 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.7.3
-RUBY_VERSION=2.6.3
+PYTHON_VERSION=3.8.0
+RUBY_VERSION=2.6.5
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
 xcode-select --install
@@ -15,7 +15,7 @@ xcode-select --install
 sudo chown -R $USER:$(id -gn $USER) ~/.config
 
 echo -e "\n \e[32m Installing Packages \e[0m"
-brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time grep
+brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed grep
 brew install python3 node go gcc
 brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy
 brew install gpgme pyenv rbenv nvm
