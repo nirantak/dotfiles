@@ -21,12 +21,12 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+right",
+    "key": "ctrl+alt+right",
     "command": "bracket-pair-colorizer-2.expandBracketSelection",
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+left",
+    "key": "ctrl+alt+left",
     "command": "bracket-pair-colorizer-2.undoBracketSelection",
     "when": "editorTextFocus"
   }
