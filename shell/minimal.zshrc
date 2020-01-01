@@ -32,6 +32,14 @@ function t() {
 function cht() {
     curl https://cheat.sh/$1
 }
+function freq_cmd() {
+    if [ -n "$1" ]
+    then
+        history | awk '{print $4}' | sort | uniq -c | sort -nr | head -n $1
+    else
+        history | awk '{print $4}' | sort | uniq -c | sort -nr | head
+    fi
+}
 
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
@@ -53,9 +61,8 @@ export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 export GEM_HOME=~/.gem
 export PATH="$GEM_HOME/bin:$PATH"
 
-alias b="browser-sync start --server"
-alias l="ls -lh"
-alias ll="ls -AlF"
+alias l="pwd && ls"
+alias ll="ls -AlFh"
 alias la="ls -a"
 alias cp="cp -i"
 alias rm="rm -i"
@@ -68,10 +75,22 @@ alias path="echo $PATH | tr -s ':' '\n'"
 alias up="ping 8.8.8.8 -c 3"
 alias ip-int="ipconfig getifaddr en0"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
-alias freq_cmd="history | awk '{print $4}' | sort | uniq -c | sort -nr | head -10"
+alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"
+
+alias b="browser-sync start --server"
+alias bd="browser-sync start --server --directory --files='**/*'"
+alias ytaud="youtube-dl -f bestaudio[ext!=webm] --extract-audio --audio-quality 0 --no-playlist --add-metadata --embed-thumbnail --prefer-ffmpeg"
+alias ytvid="youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] --no-playlist --add-metadata --embed-thumbnail"
+alias ytd="youtube-dl"
+alias ytf="youtube-dl -F"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
     alias u="sudo apt update && sudo apt upgrade"
     alias clip="xsel --clipboard"
     alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
+fi
+
+if [[ "$OSTYPE" == *"android"* ]]; then
+    alias u="apt update && apt upgrade"
+    alias d="cd ~/storage/shared/Download"
 fi
