@@ -16,7 +16,7 @@ sudo chown -R $USER:$(id -gn $USER) ~/.config
 
 echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed grep
-brew install python3 node go gcc
+brew install python3 node go gcc coreutils
 brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy
 brew install gpgme pyenv rbenv nvm
 brew install docker docker-compose

@@ -127,3 +127,9 @@ function freq_cmd() {
         history | awk '{print $4}' | sort | uniq -c | sort -nr | head
     fi
 }
+
+# Run latest ipython
+function ipy() {
+    global_python=`pyenv global`
+    ~/.pyenv/versions/$global_python/bin/ipython
+}

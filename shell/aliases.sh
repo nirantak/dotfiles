@@ -18,12 +18,14 @@ alias up="ping 8.8.8.8 -c 3"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip-int="ipconfig getifaddr en0"
 alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs vnstat -i"
+alias flush_dns="sudo killall -HUP mDNSResponder"
 
 # Utilities
 alias note="vim +startinsert ~/Documents/notes.md"
 alias tmux="TERM=screen-256color-bce tmux -u"
 alias dotfiles="cd ~/dotfiles && git status && code ."
 alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"  # Delete the last command and this command itself from history
+alias reload="~/dotfiles/scripts/reload.scp"
 
 # Tools
 alias b="browser-sync start --server"
@@ -54,4 +56,5 @@ if [[ "$OSTYPE" == "linux"* ]]; then
     alias rm="rm -I"
     alias clip="xsel --clipboard"
     alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
+    alias flush_dns="sudo systemd-resolve --flush-caches"
 fi
