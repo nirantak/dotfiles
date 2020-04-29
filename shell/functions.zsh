@@ -133,3 +133,11 @@ function ipy() {
     global_python=`pyenv global`
     ~/.pyenv/versions/$global_python/bin/ipython
 }
+
+# Cleanup git repo
+function git_clean() {
+    git checkout master
+    git pull --all
+    git branch -D `git branch | grep -v "\*\|master" | xargs`
+    git gc
+}

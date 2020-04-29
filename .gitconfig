@@ -63,7 +63,6 @@
     amend = commit --amend --no-edit
     changes = diff --name-status
     stat = diff --stat
-    bd = branch -D `git branch | grep -v "\*\|master" | xargs`
     whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
 
 [github]
