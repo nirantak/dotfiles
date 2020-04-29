@@ -56,11 +56,15 @@
     autocorrect = 1
 
 [alias]
-    pm = "!git push -u origin master"
-    c = commit -S -m
-    a = add .
+    p = push -u origin
+    c = checkout
+    l1 = log -i -1
     unstage = reset HEAD --
     amend = commit --amend --no-edit
+    changes = diff --name-status
+    stat = diff --stat
+    bd = branch -D `git branch | grep -v "\*\|master" | xargs`
+    whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
 
 [github]
     user = username
