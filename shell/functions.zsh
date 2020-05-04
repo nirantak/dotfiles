@@ -14,17 +14,20 @@ function __dbash() {
     docker exec -it $(docker ps -aqf "name=$1") bash;
 }
 function __dip() {
+    # Inspect running container
     for container in "$@"; do
         docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" "${container}";
     done
 }
 function __dst() {
+    # Show stats for running container
     if [ -z $1 ]
     then docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}';
     else docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}' | grep $1;
     fi
 }
 function __dstop() {
+    # Stop running containers
     if [ $# -eq 0 ]
     then docker stop $(docker ps -aq --no-trunc);
     else
@@ -34,6 +37,7 @@ function __dstop() {
     fi
 }
 function __drm() {
+    # Delete containers
     if [ $# -eq 0 ]
     then docker rm $(docker ps -aq --no-trunc);
     else
@@ -43,6 +47,7 @@ function __drm() {
     fi
 }
 function __drmi() {
+    # Delete images
     if [ $# -eq 0 ]
     then docker rmi $(docker images --filter 'dangling=true' -aq --no-trunc);
     else

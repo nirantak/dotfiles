@@ -57,7 +57,6 @@
 
 [alias]
     p = push -u origin
-    c = checkout
     l1 = log -i -1
     unstage = reset HEAD --
     amend = commit --amend --no-edit

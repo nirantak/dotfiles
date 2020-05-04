@@ -12,6 +12,13 @@ alias mkdir="mkdir -p"
 alias clip="pbcopy"
 alias path="echo $PATH | tr -s ':' '\n'"
 alias sed="gsed"
+alias rb="ruby -W0"
+alias gs="git status"
+alias gp="git push"
+alias gb="git branch"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gc="git checkout"
 
 # Networking
 alias up="ping 8.8.8.8 -c 3"
