@@ -18,7 +18,7 @@ echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep telnet
 brew install python3 node go gcc coreutils
 brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy
-brew install pyenv rbenv nvm pre-commit vnstat
+brew install pyenv rbenv nvm pre-commit vnstat openvpn
 
 echo -e "\n \e[32m Installing Apps \e[0m"
 brew cask install google-chrome firefox spotify vlc

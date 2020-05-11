@@ -1,11 +1,12 @@
 # Environment variables
 
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export COLUMNS
 
 # Editor Settings
-export EDITOR="vim";
-export VISUAL="vim";
+export EDITOR="vim"
+export VISUAL="vim"
 
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 3) # start blink - yellow
 export LESS_TERMCAP_md=$(tput bold; tput setaf 2) # start bold - green
@@ -16,17 +17,17 @@ export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7) # start underline -
 export LESS_TERMCAP_ue=$(tput rmul; tput sgr0) # stop underline
 
 export LESS="-iR"
-export MANPAGER="less";
-export PAGER="less";
+export MANPAGER="less"
+export PAGER="less"
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 
 # Python https://docs.python.org/3/using/cmdline.html#environment-variables
-export PYTHONIOENCODING="UTF-8";
+export PYTHONIOENCODING="UTF-8"
 export PYTHONUNBUFFERED=1
-export PYENV_ROOT="$HOME/.pyenv";
+export PYENV_ROOT="$HOME/.pyenv"
 
 # NodeJS https://nodejs.org/api/repl.html#repl_environment_variable_options
-export NODE_REPL_HISTORY_SIZE="100000";
+export NODE_REPL_HISTORY_SIZE="100000"
 export NVM_DIR="$HOME/.nvm"
 
 # Go https://golang.org/doc/install/source#environment
