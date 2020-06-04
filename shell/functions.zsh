@@ -148,7 +148,11 @@ function ipy() {
 # Cleanup git repo
 function git_clean() {
     git checkout master
-    git pull --all
+    git pull --all --ff-only
     git branch -D `git branch | grep -v "\*\|master" | xargs`
     git gc
+}
+
+function git_search() {
+    git log -S "$1" --source --all $2
 }

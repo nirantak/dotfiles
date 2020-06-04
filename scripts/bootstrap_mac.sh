@@ -6,7 +6,7 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.8.2
+PYTHON_VERSION=3.8.3
 RUBY_VERSION=2.7.1
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
@@ -15,15 +15,15 @@ xcode-select --install
 sudo chown -R $USER:$(id -gn $USER) ~/.config
 
 echo -e "\n \e[32m Installing Packages \e[0m"
-brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep telnet
-brew install python3 node go gcc coreutils
-brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy
-brew install pyenv rbenv nvm pre-commit vnstat openvpn
+brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep
+brew install python3 node go gcc coreutils hping wrk mtr telnet
+brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy jq
+brew install pyenv rbenv nvm pre-commit vnstat openvpn github/gh/gh autossh
 
 echo -e "\n \e[32m Installing Apps \e[0m"
-brew cask install google-chrome firefox spotify vlc
-brew cask install visual-studio-code iterm2 istat-menus ngrok docker
-brew cask install gimp insomnia karabiner-elements db-browser-for-sqlite
+brew cask install --no-quarantine google-chrome firefox spotify vlc
+brew cask install --no-quarantine visual-studio-code iterm2 istat-menus ngrok docker
+brew cask install --no-quarantine gimp insomnia karabiner-elements db-browser-for-sqlite
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
