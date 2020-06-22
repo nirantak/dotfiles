@@ -7,7 +7,7 @@ USER=$(whoami)
 
 # Program versions for installation
 PYTHON_VERSION=3.8.3
-GO_VERSION=1.14.3
+GO_VERSION=1.14.4
 NODE_VERSION=14
 RUBY_VERSION=2.7.1
 BAT_VERSION=0.15.4

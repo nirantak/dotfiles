@@ -18,10 +18,10 @@ echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep
 brew install python3 node go gcc coreutils hping wrk mtr telnet
 brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy jq
-brew install pyenv rbenv nvm pre-commit vnstat openvpn github/gh/gh autossh
+brew install pyenv rbenv nvm vnstat openvpn github/gh/gh autossh
 
 echo -e "\n \e[32m Installing Apps \e[0m"
-brew cask install --no-quarantine google-chrome firefox spotify vlc
+brew cask install --no-quarantine google-chrome firefox spotify vlc notion
 brew cask install --no-quarantine visual-studio-code iterm2 istat-menus ngrok docker
 brew cask install --no-quarantine gimp insomnia karabiner-elements db-browser-for-sqlite
 

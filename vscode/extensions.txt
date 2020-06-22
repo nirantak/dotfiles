@@ -13,12 +13,15 @@ EditorConfig.EditorConfig
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 formulahendry.code-runner
+GitHub.github-vscode-theme
+GitHub.vscode-pull-request-github
+golang.Go
 mbessey.vscode-rufo
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-python.python
-ms-vscode.Go
 oderwat.indent-rainbow
+PKief.material-icon-theme
 rebornix.ruby
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode

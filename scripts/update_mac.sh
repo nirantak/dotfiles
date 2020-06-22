@@ -11,7 +11,7 @@ echo -e "\n \x1B[32m Updating NPM Packages \x1B[0m"
 sudo npm update -g
 
 echo -e "\n \x1B[32m Updating Python Packages \x1B[0m"
-pip install --upgrade pip pipenv black flake8 rope ipython httpie requests youtube-dl
+pip install --upgrade pip pipenv black flake8 rope ipython httpie requests youtube-dl pre-commit
 
 echo -e "\n \x1B[32m Updating Shell \x1B[0m"
 env ZSH=$ZSH sh $ZSH/tools/upgrade.sh
