@@ -1,65 +1,73 @@
 # Dotfiles
 
-> _Configuration files for zsh, bash, vim, tmux, git, Sublime Text 3, and VSCode_
+> _Configuration files for zsh, bash, vim, tmux, git, and VSCode_
 
-### Table of Contents
+## Table of Contents
 
 - [Dotfiles](#dotfiles)
-    - [Table of Contents](#table-of-contents)
-    - [Installation](#installation)
-    - [Screenshots](#screenshots)
-    - [References](#references)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Screenshots](#screenshots)
+  - [References](#references)
 
-### Installation
+## Installation
 
 Clone the git repository:
 
 ```bash
-$ git clone https://github.com/nirantak/dotfiles.git ~/dotfiles
+git clone https://github.com/nirantak/dotfiles.git ~/dotfiles
 ```
 
 Install necessary dependencies
 
 ```bash
-$ sudo apt update && sudo apt install -y git curl wget vim zsh tmux
-$ # or for full system setup:
-$ ./scripts/bootstrap_ubuntu.sh
+brew install git curl wget vim zsh tmux
+# OR
+sudo apt update && sudo apt install -y git curl wget vim zsh tmux
 ```
 
-Install additional software
+Or for full system setup:
 
--   [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
--   [Visual Studio Code](https://code.visualstudio.com/Download)
--   [Vundle](https://github.com/VundleVim/Vundle.vim)
--   [Powerline](https://github.com/powerline/powerline)
--   [Powerline Fonts](https://github.com/powerline/fonts)
--   [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
--   [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
--   [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+```bash
+./scripts/bootstrap_mac.sh
+# OR
+./scripts/bootstrap_ubuntu.sh
+```
+
+Install additional software (Included in bootstrap scripts)
+
+- [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- [Visual Studio Code](https://code.visualstudio.com/Download)
+- [Vundle](https://github.com/VundleVim/Vundle.vim)
+- [Powerline](https://github.com/powerline/powerline)
+- [Powerline Fonts](https://github.com/powerline/fonts)
+- [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 Run the setup script
 
 ```bash
-$ bash ~/dotfiles/make.sh
+~/dotfiles/make.sh
 ```
 
 Old dotfiles are backed up in `~/dotfiles/dotfiles_old`
 
-### Screenshots
+## Screenshots
 
--   Zsh
+- Zsh
 
 ![zsh](images/zsh.png)
 
--   Bash
+- Bash
 
 ![bash](images/bash.png)
 
--   Vim
+- Vim
 
 ![vim](images/vim.png)
 
-### References
+## References
 
--   [GitHub dotfiles](http://dotfiles.github.io/)
--   [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) dotfiles
+- [GitHub dotfiles](http://dotfiles.github.io/)
+- [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) dotfiles
