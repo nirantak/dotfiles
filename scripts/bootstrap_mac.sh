@@ -38,6 +38,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 brew untap caskroom/fonts
 brew tap homebrew/cask-fonts
+brew tap homebrew/services
+
 brew cask install font-fira-code font-source-code-pro font-hack-nerd-font font-victor-mono
 
 rbenv install ${RUBY_VERSION}

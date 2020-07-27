@@ -15,11 +15,12 @@ esbenp.prettier-vscode
 formulahendry.code-runner
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
-golang.Go
+golang.go
 mbessey.vscode-rufo
 mechatroner.rainbow-csv
 ms-azuretools.vscode-docker
 ms-python.python
+ms-python.vscode-pylance
 oderwat.indent-rainbow
 PKief.material-icon-theme
 rebornix.ruby
