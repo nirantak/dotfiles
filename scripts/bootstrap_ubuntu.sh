@@ -6,12 +6,12 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.8.3
-GO_VERSION=1.14.4
+PYTHON_VERSION=3.8.5
+GO_VERSION=1.15
 NODE_VERSION=14
 RUBY_VERSION=2.7.1
 BAT_VERSION=0.15.4
-DOCKER_COMPOSE_VERSION=1.25.5
+DOCKER_COMPOSE_VERSION=1.26.2
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -33,7 +33,7 @@ sudo snap install heroku --classic
 sudo snap install slack --classic
 sudo apt install -y fonts-powerline fonts-firacode ttf-mscorefonts-installer command-not-found command-not-found-data
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
+curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | sudo apt-key add - && \
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt install docker-ce
 sudo usermod -aG docker ${USER}
@@ -52,34 +52,29 @@ cat /proc/sys/fs/inotify/max_user_watches
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /bin/zsh
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-wget https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat_${BAT_VERSION}_amd64.deb && \
+wget "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat_${BAT_VERSION}_amd64.deb" && \
 sudo dpkg -i bat_${BAT_VERSION}_amd64.deb && \
 rm bat_${BAT_VERSION}_amd64.deb
 
 echo -e "\n \e[32m Installing pyenv \e[0m"
 sudo apt install -y pkg-config autoconf bison libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev libyaml-dev libreadline6-dev
-# git clone https://github.com/pyenv/pyenv.git ~/.pyenv # or
-curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+curl -L "https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer" | bash
 
 echo -e "\n \e[32m Installing rbenv \e[0m"
-# git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-# cd ~/.rbenv && src/configure && make -C src && cd ~
-# mkdir -p ~/.rbenv/plugins
-# git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+curl -fsSL "https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer" | bash
 
 echo -e "\n \e[32m Installing Golang \e[0m"
-wget https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
+wget "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz"
 sudo tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz && rm go${GO_VERSION}.linux-amd64.tar.gz
 
 echo -e "\n \e[32m Installing NodeJS \e[0m"
-curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | sudo -E bash -
+curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
 sudo apt install -y nodejs nodejs-dev
 sudo npm update -g
 sudo npm install -g browser-sync speed-test diff-so-fancy
@@ -91,7 +86,7 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install --upgrade pip pipenv black flake8 rope ipython httpie requests cookiecutter youtube-dl
+pip install --upgrade pip pipenv black flake8 rope ipython httpie requests youtube-dl
 
 ruby --version
 node --version

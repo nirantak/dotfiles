@@ -22,6 +22,7 @@ alias gb="git branch"
 alias gd="git diff"
 alias gds="git diff --staged"
 alias gc="git checkout"
+unalias gsd
 
 # Networking
 alias up="ping 8.8.8.8 -c 3"
