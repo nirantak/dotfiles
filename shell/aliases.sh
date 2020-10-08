@@ -2,7 +2,7 @@
 
 # System
 alias l="pwd && ls"
-alias ll="ls -AlFh"
+alias ll="ls -FltrAh"
 alias la="ls -a"
 alias cp="cp -i"
 alias rm="rm -i"
@@ -29,7 +29,7 @@ alias up="ping 8.8.8.8 -c 3"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip-int="ipconfig getifaddr en0"
 alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs vnstat -i"
-alias flush_dns="sudo killall -HUP mDNSResponder"
+alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # Utilities
 alias note="vim +startinsert ~/Documents/notes.md"

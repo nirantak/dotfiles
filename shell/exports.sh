@@ -25,6 +25,7 @@ export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 export PYTHONIOENCODING="UTF-8"
 export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # allow fork() in python for OSX
 
 # NodeJS https://nodejs.org/api/repl.html#repl_environment_variable_options
 export NODE_REPL_HISTORY_SIZE="100000"
