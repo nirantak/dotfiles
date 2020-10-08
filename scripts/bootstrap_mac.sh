@@ -6,8 +6,8 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.8.3
-RUBY_VERSION=2.7.1
+PYTHON_VERSION=3.9.0
+RUBY_VERSION=2.7.2
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
 xcode-select --install
@@ -23,7 +23,7 @@ brew install pyenv rbenv nvm vnstat openvpn github/gh/gh autossh
 echo -e "\n \e[32m Installing Apps \e[0m"
 brew cask install --no-quarantine google-chrome firefox spotify vlc notion
 brew cask install --no-quarantine visual-studio-code iterm2 istat-menus ngrok docker
-brew cask install --no-quarantine gimp insomnia karabiner-elements db-browser-for-sqlite
+brew cask install --no-quarantine gimp insomnia beekeeper-studio mongodb-compass
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -49,7 +49,7 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install --upgrade pip pipenv black flake8 rope ipython httpie requests cookiecutter youtube-dl
+pip install -U wheel pip pipenv black flake8 rope ipython httpie requests cookiecutter youtube-dl
 
 ruby --version
 node --version

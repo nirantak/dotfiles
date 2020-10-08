@@ -12,7 +12,7 @@ echo -e "\n \e[32m Installing Packages \e[0m"
 apt install -y build-essential man wget curl git nano vim zsh tmux htop less tree
 apt install -y coreutils dnsutils net-tools ncurses-utils
 apt install -y unzip gzip ffmpeg imagemagick
-apt install -y python nodejs
+apt install -y python
 
 pip install --upgrade pip black ipython httpie youtube-dl
 
@@ -26,5 +26,4 @@ cp ~/dotfiles/shell/minimal.zshrc ~/.zshrc
 touch ~/.hushlogin
 termux-setup-storage
 
-node --version
 python --version

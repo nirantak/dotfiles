@@ -5,9 +5,6 @@ echo -e "\n \e[32m Updating System Packages \e[0m"
 apt update
 apt upgrade -y
 
-echo -e "\n \e[32m Updating NPM Packages \e[0m"
-npm update -g
-
 echo -e "\n \e[32m Updating Python Packages \e[0m"
 pip install --upgrade pip black ipython httpie youtube-dl
 

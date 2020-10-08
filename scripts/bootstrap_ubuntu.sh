@@ -6,12 +6,12 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.8.5
-GO_VERSION=1.15
+PYTHON_VERSION=3.9.0
+GO_VERSION=1.15.2
 NODE_VERSION=14
-RUBY_VERSION=2.7.1
-BAT_VERSION=0.15.4
-DOCKER_COMPOSE_VERSION=1.26.2
+RUBY_VERSION=2.7.2
+BAT_VERSION=0.16.0
+DOCKER_COMPOSE_VERSION=1.27.4
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -86,7 +86,7 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install --upgrade pip pipenv black flake8 rope ipython httpie requests youtube-dl
+pip install -U wheel pip pipenv black flake8 rope ipython httpie youtube-dl
 
 ruby --version
 node --version
