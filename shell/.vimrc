@@ -125,8 +125,8 @@ nnoremap <C-l> <C-w>l
 noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 if has("gui_running")
-    if has("gui_gtk2")
-        set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
-        colorscheme iceberg
-    endif
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
+    colorscheme iceberg
+  endif
 endif

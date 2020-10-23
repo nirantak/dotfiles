@@ -62,10 +62,10 @@ alias drmi="__drmi"
 
 # Linux Overrides
 if [[ "$OSTYPE" == "linux"* ]]; then
-    unalias sed
-    alias u="sudo apt update && sudo apt upgrade"
-    alias rm="rm -I"
-    alias clip="xsel --clipboard"
-    alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
-    alias flush_dns="sudo systemd-resolve --flush-caches"
+  unalias sed
+  alias u="sudo apt update && sudo apt upgrade"
+  alias rm="rm -I"
+  alias clip="xsel --clipboard"
+  alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
+  alias flush_dns="sudo systemd-resolve --flush-caches"
 fi

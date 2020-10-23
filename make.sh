@@ -14,9 +14,9 @@ files=( ".bash_profile" ".bashrc" ".prettierrc" ".tmux.conf" ".vimrc" ".zshenv" 
 
 vsFiles=( "settings.json" "keybindings.json" )
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    vsPath=~/Library/Application\ Support/Code/User
+  vsPath=~/Library/Application\ Support/Code/User
 else
-    vsPath=~/.config/Code/User
+  vsPath=~/.config/Code/User
 fi
 
 echo "Creating $oldDir for backup of any existing dotfiles"
@@ -29,21 +29,21 @@ cd $dir
 
 echo "Moving existing dotfiles from ~ to $oldDir"
 for file in "${files[@]}"; do
-    if [ -f ~/$file ]; then
-        mv ~/$file $oldDir/shell/
-    fi
-    echo "Creating symlink to $file"
-    ln -s $dir/shell/$file ~/$file
+  if [ -f ~/$file ]; then
+    mv ~/$file $oldDir/shell/
+  fi
+  echo "Creating symlink to $file"
+  ln -s $dir/shell/$file ~/$file
 done
 
 echo "Moving existing dotfiles from $vsPath to $oldDir/vscode"
 mkdir -p $vsPath
 for file in "${vsFiles[@]}"; do
-    if [ -f $vsPath/$file ]; then
-        mv $vsPath/$file $oldDir/vscode/
-    fi
-    echo "Creating symlink to $file"
-    ln -s $dir/vscode/$file $vsPath/$file
+  if [ -f $vsPath/$file ]; then
+    mv $vsPath/$file $oldDir/vscode/
+  fi
+  echo "Creating symlink to $file"
+  ln -s $dir/vscode/$file $vsPath/$file
 done
 
 # restore $IFS

@@ -1,68 +1,68 @@
 [user]
-    name = Full Name
-    email = user@email.com
-    signingkey = xxxxxxxxxxxxxxxx
+  name = Full Name
+  email = user@email.com
+  signingkey = xxxxxxxxxxxxxxxx
 
 [core]
-    editor = vim
-    excludesfile = ~/dotfiles/global.gitignore
-    autocrlf = input
-    pager = diff-so-fancy | less --tabs=4 -iRFX
+  editor = vim
+  excludesfile = ~/dotfiles/global.gitignore
+  autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -iRFX
 
 [color]
-    diff = auto
-    status = auto
-    ui = true
+  diff = auto
+  status = auto
+  ui = true
 
 [color "diff"]
-    meta = yellow
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    commit = yellow bold
-    whitespace = red reverse
+  meta = yellow
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  commit = yellow bold
+  whitespace = red reverse
 
 [color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = red bold 52
-    newNormal = green bold
-    newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 
 [commit]
-    gpgsign = true
+  gpgsign = true
 
 [push]
-    default = current
+  default = current
 
 [log]
-    date = relative
+  date = relative
 
 [fetch]
-    prune = true
+  prune = true
 
 [remote "origin"]
-    prune = true
+  prune = true
 
 [diff]
-    renames = copies
+  renames = copies
 
 [merge]
-    stat = true
+  stat = true
 
 [advice]
-    statusHints = false
+  statusHints = false
 
 [help]
-    autocorrect = 1
+  autocorrect = 1
 
 [alias]
-    p = push -u origin
-    l1 = log -i -1
-    unstage = reset HEAD --
-    amend = commit --amend --no-edit
-    changes = diff --name-status
-    stat = diff --stat
-    whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
+  p = push -u origin
+  l1 = log -i -1
+  unstage = reset HEAD --
+  amend = commit --amend --no-edit
+  changes = diff --name-status
+  stat = diff --stat
+  whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
 
 [github]
-    user = username
+  user = username

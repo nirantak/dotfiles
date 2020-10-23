@@ -3,7 +3,7 @@ export TERM="screen-256color"
 
 # Load the shell dotfiles, and then some:
 for file in ~/dotfiles/shell/{bash_prompt.sh,exports.sh,aliases.sh}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
@@ -23,7 +23,7 @@ shopt -s cdspell;
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar; do
-    shopt -s "$option" 2> /dev/null;
+  shopt -s "$option" 2> /dev/null;
 done;
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -31,13 +31,13 @@ done;
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias dir='dir --color=auto'
+  alias vdir='vdir --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -60,6 +60,6 @@ fi
 complete -o "nospace" -W "firefox chrome sleep rhythmbox spotify slack mailspring" killall;
 
 if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
+  eval $(gnome-keyring-daemon --start)
+  export SSH_AUTH_SOCK
 fi

@@ -3,32 +3,32 @@
 # Usage: ./reload.scp <page> <counter> <sleep>
 
 on reload_page(page)
-    tell application "Google Chrome"
-        repeat with w in windows
-            set i to 0
-            repeat with t in tabs of w
-                set i to i + 1
-                if URL of t is page then
-                    set active tab index of w to i
-                    set index of w to 1
-                    tell t to reload
-                    activate
-                    return
-                end if
-            end repeat
-        end repeat
-        open location page
-        activate
-    end tell
+  tell application "Google Chrome"
+    repeat with w in windows
+      set i to 0
+      repeat with t in tabs of w
+        set i to i + 1
+        if URL of t is page then
+          set active tab index of w to i
+          set index of w to 1
+          tell t to reload
+          activate
+          return
+        end if
+      end repeat
+    end repeat
+    open location page
+    activate
+  end tell
 end reload_page
 
 on run argv
-    set page to item 1 of argv
-    set counter to item 2 of argv
-    set sleep to item 3 of argv
+  set page to item 1 of argv
+  set counter to item 2 of argv
+  set sleep to item 3 of argv
 
-    repeat with i from 1 to counter
-        reload_page(page)
-        delay sleep
-    end repeat
+  repeat with i from 1 to counter
+    reload_page(page)
+    delay sleep
+  end repeat
 end run

@@ -36,7 +36,7 @@ export GOPATH="$HOME/code/go"
 
 export PATH="$PATH:/usr/local/sbin:$HOME/.pyenv/bin:$HOME/.rbenv/bin"
 if [[ "$OSTYPE" == "linux"* ]]; then
-    export PATH="$PATH:/snap/bin:$HOME/.local/bin:/usr/local/go/bin"
+  export PATH="$PATH:/snap/bin:$HOME/.local/bin:/usr/local/go/bin"
 fi
 
 export GPG_TTY=$(tty)

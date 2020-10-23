@@ -70,12 +70,12 @@ alias ytd="youtube-dl"
 alias ytf="youtube-dl -F"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
-    alias u="sudo apt update && sudo apt upgrade"
-    alias clip="xsel --clipboard"
-    alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
+  alias u="sudo apt update && sudo apt upgrade"
+  alias clip="xsel --clipboard"
+  alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
 fi
 
 if [[ "$OSTYPE" == *"android"* ]]; then
-    alias u="apt update && apt upgrade"
-    alias d="cd ~/storage/shared/Download"
+  alias u="apt update && apt upgrade"
+  alias d="cd ~/storage/shared/Download"
 fi
