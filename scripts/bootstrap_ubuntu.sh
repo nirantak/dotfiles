@@ -77,7 +77,7 @@ echo -e "\n \e[32m Installing NodeJS \e[0m"
 curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
 sudo apt install -y nodejs nodejs-dev
 sudo npm update -g
-sudo npm install -g browser-sync speed-test diff-so-fancy
+sudo npm install -g browser-sync speed-test diff-so-fancy tldr eslint prettier
 
 rbenv install ${RUBY_VERSION}
 rbenv global ${RUBY_VERSION}

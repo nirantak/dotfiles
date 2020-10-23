@@ -21,9 +21,9 @@ brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy jq
 brew install pyenv rbenv nvm vnstat openvpn github/gh/gh autossh
 
 echo -e "\n \e[32m Installing Apps \e[0m"
-brew cask install --no-quarantine google-chrome firefox spotify vlc notion
-brew cask install --no-quarantine visual-studio-code iterm2 istat-menus ngrok docker
-brew cask install --no-quarantine gimp insomnia beekeeper-studio mongodb-compass
+brew cask install google-chrome firefox spotify vlc notion rectangle
+brew cask install visual-studio-code iterm2 istat-menus ngrok docker
+brew cask install gimp insomnia beekeeper-studio mongodb-compass
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -49,6 +49,8 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
+
+sudo npm install -g browser-sync speed-test tldr eslint prettier
 pip install -U wheel pip pipenv black flake8 rope ipython httpie requests cookiecutter youtube-dl
 
 ruby --version
