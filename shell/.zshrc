@@ -4,6 +4,11 @@
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv pyenv virtualenv vcs)
@@ -34,16 +39,17 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
-plugins=(   colorize
-            command-not-found
-            docker
-            git
-            python
-            pip
-            pyenv
-            z
-            zsh-autosuggestions
-            zsh-syntax-highlighting
+plugins=(
+  colorize
+  command-not-found
+  docker
+  git
+  python
+  pip
+  pyenv
+  z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -68,9 +74,9 @@ setopt HIST_REDUCE_BLANKS
 
 # Heroku autocomplete setup
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    HEROKU_AC_ZSH_SETUP_PATH=~/Library/Caches/heroku/autocomplete/zsh_setup
+  HEROKU_AC_ZSH_SETUP_PATH=~/Library/Caches/heroku/autocomplete/zsh_setup
 else
-    HEROKU_AC_ZSH_SETUP_PATH=~/.cache/heroku/autocomplete/zsh_setup
+  HEROKU_AC_ZSH_SETUP_PATH=~/.cache/heroku/autocomplete/zsh_setup
 fi
 test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
@@ -79,13 +85,16 @@ eval "$(pyenv init -)"
 
 # Load Shell aliases & functions
 for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Profiling ZSH Performance
 # zprof
