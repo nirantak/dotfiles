@@ -12,7 +12,6 @@
 *.PDF  diff=astextplain
 *.rtf  diff=astextplain
 *.RTF  diff=astextplain
-*.md       text
 *.adoc     text
 *.textile  text
 *.mustache text
@@ -22,38 +21,42 @@
 *.sql      text
 
 # SOURCE CODE
+*.c        text diff=cpp
+*.h        text diff=cpp
+*.c++      text diff=cpp
+*.h++      text diff=cpp
+*.cpp      text diff=cpp
+*.hpp      text diff=cpp
+*.cc       text diff=cpp
+*.hh       text diff=cpp
+*.m        text diff=objc
+*.mm       text diff=objc
 *.bat      text eol=crlf
-*.coffee   text
-*.css      text
-*.htm      text
-*.html     text
+*.css      text diff=css
+*.htm      text diff=html
+*.html     text diff=html
+*.go       text diff=golang
 *.inc      text
 *.ini      text
-*.js       text
+*.js       text diff=javascript
 *.json     text
-*.jsx      text
-*.less     text
-*.od       text
-*.onlydata text
-*.php      text
-*.pl       text
-*.py       text
-*.pxd      text
-*.py3      text
-*.pyw      text
-*.pyx      text
-*.rb       text
-*.sass     text
-*.scm      text
-*.scss     text
+*.jsx      text diff=html
+*.md       text diff=markdown
+*.php      text diff=php
+*.pl       text diff=perl
+*.py       text diff=python
+*.rb       text diff=ruby
+*.rake     text diff=ruby
+*_spec.rb  text diff=rspec
+*.erb      text diff=html
+*.sass     text diff=css
+*.scss     text diff=css
 *.sh       text eol=lf
 *.sql      text
-*.styl     text
-*.tag      text
-*.ts       text
-*.tsx      text
-*.xml      text
-*.xhtml    text
+*.ts       text diff=javascript
+*.tsx      text diff=html
+*.xml      text diff=html
+*.xhtml    text diff=html
 
 # DOCKER
 *.dockerignore text
