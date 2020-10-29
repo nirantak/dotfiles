@@ -7,8 +7,8 @@ USER=$(whoami)
 
 # Program versions for installation
 PYTHON_VERSION=3.9.0
-GO_VERSION=1.15.2
-NODE_VERSION=14
+GO_VERSION=1.15.3
+NODE_VERSION=15
 RUBY_VERSION=2.7.2
 BAT_VERSION=0.16.0
 DOCKER_COMPOSE_VERSION=1.27.4
@@ -86,7 +86,7 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install -U wheel pip pipenv black flake8 rope ipython httpie youtube-dl
+pip install -U wheel pip pipenv black flake8 rope ipython httpie youtube-dl pre-commit
 
 ruby --version
 node --version

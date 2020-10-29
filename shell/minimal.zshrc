@@ -47,7 +47,7 @@ export GEM_HOME=~/.gem
 export PATH="$GEM_HOME/bin:$PATH"
 
 alias l="pwd && ls"
-alias ll="ls -AlFh"
+alias ll="ls -FltrAh"
 alias la="ls -a"
 alias cp="cp -i"
 alias rm="rm -i"

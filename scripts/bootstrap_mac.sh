@@ -21,26 +21,26 @@ brew install chromedriver imagemagick pandoc lynx cloc diff-so-fancy jq
 brew install pyenv rbenv nvm vnstat openvpn github/gh/gh autossh
 
 echo -e "\n \e[32m Installing Apps \e[0m"
-brew cask install google-chrome firefox spotify vlc notion rectangle
-brew cask install visual-studio-code iterm2 istat-menus ngrok docker
-brew cask install gimp insomnia beekeeper-studio mongodb-compass
+brew install --cask google-chrome firefox spotify vlc notion rectangle
+brew install --cask visual-studio-code iterm2 istat-menus ngrok docker
+brew install --cask gimp insomnia beekeeper-studio mongodb-compass
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
 
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 brew untap caskroom/fonts
 brew tap homebrew/cask-fonts
 brew tap homebrew/services
 
-brew cask install font-fira-code font-source-code-pro font-hack-nerd-font font-victor-mono
+brew install --cask font-fira-code font-source-code-pro font-hack-nerd-font font-victor-mono
 
 rbenv install ${RUBY_VERSION}
 rbenv global ${RUBY_VERSION}
@@ -51,7 +51,7 @@ pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 
 sudo npm install -g browser-sync speed-test tldr eslint prettier
-pip install -U wheel pip pipenv black flake8 rope ipython httpie requests cookiecutter youtube-dl
+pip install -U wheel pip pipenv black flake8 rope ipython httpie cookiecutter youtube-dl
 
 ruby --version
 node --version
