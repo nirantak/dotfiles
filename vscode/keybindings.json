@@ -1,6 +1,11 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
     "key": "alt+h",
     "command": "editor.action.triggerParameterHints",
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
