@@ -6,8 +6,8 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.0
-RUBY_VERSION=2.7.2
+PYTHON_VERSION=3.9.1
+RUBY_VERSION=3.0.0
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
 xcode-select --install

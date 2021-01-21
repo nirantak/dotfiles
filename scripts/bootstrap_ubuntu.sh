@@ -6,12 +6,12 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.0
-GO_VERSION=1.15.3
+PYTHON_VERSION=3.9.1
+GO_VERSION=1.15.6
 NODE_VERSION=15
-RUBY_VERSION=2.7.2
-BAT_VERSION=0.16.0
-DOCKER_COMPOSE_VERSION=1.27.4
+RUBY_VERSION=3.0.0
+BAT_VERSION=0.17.1
+DOCKER_COMPOSE_VERSION=1.28.0
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
