@@ -36,6 +36,8 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 
 git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+$(brew --prefix)/opt/fzf/install --all
+
 brew untap caskroom/fonts
 brew tap homebrew/cask-fonts
 brew tap homebrew/services

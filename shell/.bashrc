@@ -7,3 +7,5 @@
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

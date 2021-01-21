@@ -25,7 +25,7 @@ sudo apt install -y apt-transport-https software-properties-common ca-certificat
 sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
 sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio filezilla
-sudo apt install -y pandoc lynx krename cloc
+sudo apt install -y pandoc lynx krename cloc fzf
 sudo apt install -y clamav clamtk pass
 sudo apt install -y python-dev python3-pip python3-dev
 sudo snap install insomnia postman mailspring spotify gimp
