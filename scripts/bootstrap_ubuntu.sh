@@ -1,6 +1,6 @@
 #!/bin/bash
 # Set up new Ubuntu machine
-set -euo pipefail
+set -xeuo pipefail
 IFS=$'\n\t'
 
 USER=$(whoami)
