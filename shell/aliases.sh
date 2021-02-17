@@ -41,6 +41,7 @@ alias reload="~/dotfiles/scripts/reload.scp"
 # Tools
 alias b="browser-sync start --server"
 alias bd="browser-sync start --server --directory --files='**/*'"
+alias rgf="rg --files | rg"
 alias ytaud="youtube-dl -f bestaudio[ext!=webm] --extract-audio --audio-quality 0 --no-playlist --add-metadata --embed-thumbnail --prefer-ffmpeg"
 alias ytvid="youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] --no-playlist --add-metadata --embed-thumbnail"
 alias ytd="youtube-dl"

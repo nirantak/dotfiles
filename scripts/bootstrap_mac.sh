@@ -16,9 +16,9 @@ sudo chown -R $USER:$(id -gn $USER) ~/.config
 
 echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep
-brew install python3 node go gcc pyenv rbenv nvm pandoc lynx imagemagick
+brew install python3 node go gcc pyenv rbenv nvm pandoc lynx imagemagick bazelisk
 brew install autossh vnstat openvpn coreutils hping wrk mtr telnet
-brew install github/gh/gh chromedriver cloc diff-so-fancy jq fzf ripgrep
+brew install gh geckodriver cloc diff-so-fancy jq fzf ripgrep exa
 
 echo -e "\n \e[32m Installing Apps \e[0m"
 brew install --cask google-chrome firefox spotify vlc notion rectangle
@@ -53,7 +53,7 @@ pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 
 sudo npm install -g browser-sync speed-test tldr eslint prettier
-pip install -U wheel pip pipenv black flake8 rope ipython httpie cookiecutter youtube-dl
+pip install -U wheel pip pipenv black flake8 rope ipython httpie tox requests youtube-dl
 
 ruby --version
 node --version
