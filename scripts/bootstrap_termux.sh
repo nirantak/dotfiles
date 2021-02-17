@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 # Set up new Ubuntu machine
 set -xeuo pipefail
 IFS=$'\n\t'

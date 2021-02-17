@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 # Update all packages
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
