@@ -87,7 +87,7 @@ map <C-n> :NERDTreeToggle<CR>
 set encoding=utf-8
 set hidden
 set history=100
-set mouse=a
+"set mouse=a
 
 set guioptions-=m
 set guioptions-=T
@@ -129,4 +129,8 @@ if has("gui_running")
     set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
     colorscheme iceberg
   endif
+endif
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif

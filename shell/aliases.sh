@@ -2,7 +2,7 @@
 
 # System
 alias l="pwd && ls"
-alias ll="ls -FltrAh"
+alias ll="ls -ltrahF"
 alias la="ls -a"
 alias cp="cp -i"
 alias rm="rm -i"
