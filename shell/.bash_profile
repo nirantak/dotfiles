@@ -57,7 +57,7 @@ fi
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "firefox chrome sleep rhythmbox spotify slack mailspring" killall;
+complete -o "nospace" -W "firefox chrome sleep rhythmbox spotify slack" killall;
 
 if [ -n "$DESKTOP_SESSION" ];then
   eval $(gnome-keyring-daemon --start)

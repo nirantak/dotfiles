@@ -61,12 +61,16 @@ alias clip="pbcopy"
 
 alias path="echo $PATH | tr -s ':' '\n'"
 alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"
-alias vim="vim -c 'set hls nu cursorline | syntax on'"
+alias vim="vim -c 'set hls nu rnu cursorline | syntax on'"
+alias gs="git status"
+alias gp="git pull --all --ff-only"
+alias gb="git branch"
+alias gd="git diff"
 
 alias up="ping 8.8.8.8 -c 3"
 alias ip-int="ipconfig getifaddr en0"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
-alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs vnstat -i"
+alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs -t vnstat -i"
 alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 alias b="browser-sync start --server"
@@ -79,9 +83,10 @@ alias ytf="youtube-dl -F"
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   alias u="sudo apt update && sudo apt upgrade"
+  alias rm="rm -I"
   alias clip="xsel --clipboard"
   alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
-  alias data="ip a | grep -w inet | grep -v -w lo | awk '{print $NF}' | xargs vnstat -i"
+  alias data="ip a | grep -w inet | grep -v -w lo | awk '{print \$NF}' | xargs -t vnstat -i"
   alias flush_dns="sudo systemd-resolve --flush-caches"
 fi
 
