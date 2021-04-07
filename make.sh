@@ -43,7 +43,7 @@ for file in "${vsFiles[@]}"; do
     mv $vsPath/$file $oldDir/vscode/
   fi
   echo "Creating symlink to $file"
-  ln -s $dir/vscode/$file $vsPath/$file
+  ln -svf $dir/vscode/$file $vsPath/$file
 done
 
 # restore $IFS

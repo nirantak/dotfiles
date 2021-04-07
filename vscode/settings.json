@@ -1,10 +1,15 @@
 {
   "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultSettings": true,
   "workbench.settings.useSplitJSON": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.startupEditor": "welcomePage",
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "telemetry.enableTelemetry": false,
@@ -25,33 +30,81 @@
   "editor.rulers": [80],
   "editor.parameterHints.enabled": false,
   "editor.suggestSelection": "first",
+  "editor.suggest.showStatusBar": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.padding.bottom": 10,
+  "editor.padding.top": 10,
+  "editor.largeFileOptimizations": false,
+  "editor.renderLineHighlight": "all",
+  "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+  "search.searchEditor.defaultNumberOfContextLines": 5,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontFamily": "'Liberation Mono for Powerline', 'Ubuntu Mono', monospace",
+  "terminal.integrated.fontFamily": "'MesloLGS NF', 'Ubuntu Mono', monospace",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.rendererType": "dom",
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "files.restoreUndoStack": false,
   "files.defaultLanguage": "markdown",
   "files.associations": {
     "*.lock": "json",
+    "*.conf.*": "properties",
+    "*.json.*": "json",
+    "*.yml.*": "yaml",
+    "*.yaml.*": "yaml",
     "Pipfile": "toml",
     "*.env": "shellscript",
     "*.dat": "CSV (pipe)",
     ".slugignore": "ignore",
     ".flake8": "ini",
     "Dockerfile*": "dockerfile",
-    "*.scpt": "shellscript"
+    "*.scpt": "shellscript",
+    "*.scp": "shellscript",
+    "run": "shellscript",
+    "*.au3": "cpp",
+    "hosts": "ini",
+    "*.plist": "xml"
   },
-  "search.showLineNumbers": true,
-  "search.smartCase": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "git.autofetch": true,
+  "git.autoStash": true,
+  "git.branchWhitespaceChar": "_",
+  "git.enableCommitSigning": true,
+  "git.confirmSync": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.venv": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.venv/**": true,
+    "**/.hg/store/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.venv": true,
+    "**/.git": true,
+    "**/*.code-search": true
+  },
   // Language Settings
   "python.pythonPath": "python",
+  "python.languageServer": "Pylance",
   "python.linting.maxNumberOfProblems": 50,
   "python.formatting.provider": "black",
   "python.linting.pylintEnabled": false,
@@ -63,28 +116,27 @@
     "**/__pycache__/**",
     "**/node_modules/**"
   ],
-  "python.jediEnabled": false,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.rulers": [80, 120],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
   "ruby.format": "rufo",
   "ruby.intellisense": "rubyLocate",
   "ruby.codeCompletion": "rcodetools",
   "ruby.useLanguageServer": true,
   "ruby.lint": {
     "ruby": true,
-    "rubocop": true
-  },
-  "[python]": {
-    "editor.tabSize": 4,
-    "editor.rulers": [80, 120],
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
+    "rubocop": false
   },
   "[ruby]": {
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.formatOnSaveTimeout": 1500,
+    "editor.formatOnPaste": true,
     "editor.defaultFormatter": "mbessey.vscode-rufo"
   },
   "[html]": {
@@ -94,6 +146,7 @@
     "files.trimTrailingWhitespace": false
   },
   // Plugin Settings
+  "material-icon-theme.activeIconPack": "none",
   "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
   "bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -107,39 +160,7 @@
     "rgba(16,48,48,0.3)",
     "rgba(64,64,16,0.3)"
   ],
-  "cSpell.userWords": ["nirantak", "raghav"],
-  "cSpell.enabledLanguageIds": [
-    "asciidoc",
-    "c",
-    "cpp",
-    "csharp",
-    "css",
-    "git-commit",
-    "go",
-    "handlebars",
-    "html",
-    "jade",
-    "java",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "latex",
-    "less",
-    "markdown",
-    "php",
-    "plaintext",
-    "pug",
-    "python",
-    "restructuredtext",
-    "ruby",
-    "rust",
-    "scala",
-    "scss",
-    "text",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-    "yml"
-  ]
+  "cSpell.userWords": ["Nirantak", "Raghav", "httpx", "dotenv", "asyncio"],
+  "githubPullRequests.telemetry.enabled": false,
+  "go.toolsManagement.autoUpdate": true
 }

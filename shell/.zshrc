@@ -36,6 +36,7 @@ export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
+ZSH_DOTENV_PROMPT=false
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
@@ -43,6 +44,7 @@ plugins=(
   colorize
   command-not-found
   docker
+  dotenv
   git
   python
   pip
