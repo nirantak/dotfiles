@@ -6,12 +6,12 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.1
-GO_VERSION=1.15.6
+PYTHON_VERSION=3.9.4
+GO_VERSION=1.16.3
 NODE_VERSION=15
-RUBY_VERSION=3.0.0
-BAT_VERSION=0.17.1
-DOCKER_COMPOSE_VERSION=1.28.0
+RUBY_VERSION=3.0.1
+BAT_VERSION=0.18.0
+DOCKER_COMPOSE_VERSION=1.29.0
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -24,14 +24,13 @@ sudo apt install -y man wget curl git nano vim vim-gui-common zsh tmux htop less
 sudo apt install -y apt-transport-https software-properties-common ca-certificates
 sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
-sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio filezilla
+sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio
 sudo apt install -y pandoc lynx krename cloc fzf ripgrep
 sudo apt install -y clamav clamtk pass
 sudo apt install -y python-dev python3-pip python3-dev
-sudo snap install insomnia postman mailspring spotify gimp
-sudo snap install heroku --classic
+sudo snap install insomnia spotify gimp
 sudo snap install slack --classic
-sudo apt install -y fonts-powerline fonts-firacode ttf-mscorefonts-installer command-not-found command-not-found-data
+sudo apt install -y fonts-powerline fonts-firacode ttf-mscorefonts-installer command-not-found
 
 curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | sudo apt-key add - && \
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -86,7 +85,7 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install -U wheel pip pipenv black flake8 rope ipython httpie tox youtube-dl pre-commit
+pip install -U wheel pip black flake8 rope ipython httpie youtube-dl pre-commit
 
 ruby --version
 node --version
