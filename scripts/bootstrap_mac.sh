@@ -1,5 +1,5 @@
 #!/bin/bash
-# Set up new MacOS machine
+# Set up a new MacOS machine
 set -xeuo pipefail
 IFS=$'\n\t'
 

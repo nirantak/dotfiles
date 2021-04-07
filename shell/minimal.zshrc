@@ -7,8 +7,9 @@ export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
+ZSH_DOTENV_PROMPT=false
 
-plugins=(colorize command-not-found git python pip z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 HISTSIZE=100000
@@ -28,6 +29,7 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
+export COLUMNS
 export EDITOR="vim";
 export VISUAL="vim";
 export LESS="-iR"
@@ -41,13 +43,13 @@ export MANPAGER="less";
 export PAGER="less";
 export PYTHONIOENCODING="UTF-8";
 export PYTHONUNBUFFERED=1
+export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
-export GEM_HOME=~/.gem
-export PATH="$GEM_HOME/bin:$PATH"
 
+alias r="reset"
 alias l="pwd && ls"
-alias ll="ls -FltrAh"
+alias ll="ls -ltrahF"
 alias la="ls -a"
 alias cp="cp -i"
 alias rm="rm -i"
@@ -57,13 +59,16 @@ alias mkdir="mkdir -p"
 alias clip="pbcopy"
 
 alias path="echo $PATH | tr -s ':' '\n'"
+alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"
 alias up="ping 8.8.8.8 -c 3"
 alias ip-int="ipconfig getifaddr en0"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
-alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"
+alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs vnstat -i"
+alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 alias b="browser-sync start --server"
 alias bd="browser-sync start --server --directory --files='**/*'"
+alias rgf="rg --files | rg"
 alias ytaud="youtube-dl -f bestaudio[ext!=webm] --extract-audio --audio-quality 0 --no-playlist --add-metadata --embed-thumbnail --prefer-ffmpeg"
 alias ytvid="youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] --no-playlist --add-metadata --embed-thumbnail"
 alias ytd="youtube-dl"
@@ -73,9 +78,13 @@ if [[ "$OSTYPE" == "linux"* ]]; then
   alias u="sudo apt update && sudo apt upgrade"
   alias clip="xsel --clipboard"
   alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
+  alias data="ip a | grep -w inet | grep -v -w lo | awk '{print $NF}' | xargs vnstat -i"
+  alias flush_dns="sudo systemd-resolve --flush-caches"
 fi
 
 if [[ "$OSTYPE" == *"android"* ]]; then
   alias u="apt update && apt upgrade"
   alias d="cd ~/storage/shared/Download"
+else
+  eval "$(pyenv init -)"
 fi

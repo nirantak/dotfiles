@@ -1,5 +1,5 @@
 #!/bin/env bash
-# Set up new Ubuntu machine
+# Set up a new Termux environment on Android
 set -xeuo pipefail
 IFS=$'\n\t'
 
