@@ -25,7 +25,6 @@ export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 export PYTHONIOENCODING="UTF-8"
 export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv"
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # allow fork() in python for OSX
 
 # NodeJS https://nodejs.org/api/repl.html#repl_environment_variable_options
 export NODE_REPL_HISTORY_SIZE="100000"
@@ -33,6 +32,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go https://golang.org/doc/install/source#environment
 export GOPATH="$HOME/code/go"
+
+# For MacOS
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # allow fork() in python for OSX
+export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="$PATH:/usr/local/sbin:$HOME/.pyenv/bin:$HOME/.rbenv/bin"
 if [[ "$OSTYPE" == "linux"* ]]; then

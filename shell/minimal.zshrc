@@ -46,6 +46,7 @@ export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
+export PATH="$PATH:/sbin:/usr/sbin"
 
 alias r="reset"
 alias l="pwd && ls"
@@ -60,6 +61,8 @@ alias clip="pbcopy"
 
 alias path="echo $PATH | tr -s ':' '\n'"
 alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"
+alias vim="vim -c 'set hls nu cursorline | syntax on'"
+
 alias up="ping 8.8.8.8 -c 3"
 alias ip-int="ipconfig getifaddr en0"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
