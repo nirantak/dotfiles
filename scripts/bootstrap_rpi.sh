@@ -14,10 +14,10 @@ echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
 
 echo -e "\n \e[32m Installing Packages \e[0m"
-sudo apt install -y make cmake build-essential man wget curl gzip
+sudo apt install -y make cmake build-essential man wget curl gzip coreutils
 sudo apt install -y git nano vim vim-gui-common zsh tmux htop less tree xclip xsel
 sudo apt install -y apt-transport-https software-properties-common ca-certificates
-sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-server
+sudo apt install -y ufw dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y imagemagick atomicparsley ffmpeg cloc fzf ripgrep neofetch
 sudo apt install -y fonts-powerline fonts-firacode command-not-found
 
@@ -49,7 +49,18 @@ sudo npm install -g browser-sync speed-test
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 pip install -U pip wheel setuptools
-pip install -U ipython httpie youtube-dl
+pip install -U ipython httpie
 
 node --version
 python --version
+
+echo -e "\n \e[32m Security Settings \e[0m"
+sudo ufw allow ssh
+sudo ufw allow 80/tcp
+sudo ufw allow 53/tcp
+sudo ufw allow 53/udp
+sudo ufw allow 67/tcp
+sudo ufw allow 67/udp
+sudo ufw allow 546:547/udp
+sudo ufw enable
+sudo ufw status

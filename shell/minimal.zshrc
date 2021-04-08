@@ -61,7 +61,6 @@ alias clip="pbcopy"
 
 alias path="echo $PATH | tr -s ':' '\n'"
 alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"
-alias vim="vim -c 'set hls nu rnu cursorline | syntax on'"
 alias gs="git status"
 alias gp="git pull --all --ff-only"
 alias gb="git branch"

@@ -1,0 +1,15 @@
+syntax on
+set autoindent
+set bg=dark
+set backspace=indent,eol,start
+set cursorline
+set expandtab
+set ignorecase
+set incsearch
+set hlsearch
+set noswapfile
+set number
+set relativenumber
+set showcmd
+set showmode
+set encoding=utf-8

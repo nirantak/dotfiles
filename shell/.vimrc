@@ -1,5 +1,3 @@
-set nocompatible
-
 syntax on
 
 " Vundle begins here; turn off filetype temporarily
@@ -43,10 +41,10 @@ set autoindent
 set bg=dark
 set backspace=indent,eol,start
 set cursorline
-" hi CursorLine term=bold cterm=bold guibg=Grey40
 set expandtab
 set ignorecase
 set incsearch
+set hlsearch
 set laststatus=2
 set linebreak
 set nobackup
@@ -73,9 +71,6 @@ set undolevels=1000
 highlight ColorColumn ctermbg=black
 set colorcolumn=80
 
-"CtrlP
-let g:ctrlp_map='<c-p>'
-
 "Airline
 let g:airline_theme='tomorrow'
 let g:airline_powerline_fonts=1
@@ -87,13 +82,11 @@ map <C-n> :NERDTreeToggle<CR>
 set encoding=utf-8
 set hidden
 set history=100
-"set mouse=a
 
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=Lo
-
 
 " Ctrl + c to copy
 :vmap <C-C> "+y
