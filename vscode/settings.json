@@ -10,6 +10,12 @@
   "workbench.editor.decorations.badges": true,
   "workbench.editor.decorations.colors": true,
   "workbench.startupEditor": "welcomePage",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "telemetry.enableTelemetry": false,
