@@ -19,7 +19,7 @@ sudo apt install -y git nano vim vim-gui-common zsh tmux htop less tree xclip xs
 sudo apt install -y apt-transport-https software-properties-common ca-certificates
 sudo apt install -y ufw dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y imagemagick atomicparsley ffmpeg cloc fzf ripgrep neofetch
-sudo apt install -y fonts-powerline fonts-firacode command-not-found
+sudo apt install -y fonts-powerline fonts-firacode command-not-found screen
 
 echo -e "\n \e[32m Swappiness && inotify settings \e[0m"
 cat /proc/sys/vm/swappiness && sudo bash -c "echo 'vm.swappiness = 20' >> /etc/sysctl.conf"
