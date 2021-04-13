@@ -20,6 +20,8 @@ sudo apt install -y apt-transport-https software-properties-common ca-certificat
 sudo apt install -y ufw dnsutils net-tools mosh openssh-client openssh-server
 sudo apt install -y imagemagick atomicparsley ffmpeg cloc fzf ripgrep neofetch
 sudo apt install -y fonts-powerline fonts-firacode command-not-found screen
+sudo apt install -y nginx php7.3-fpm php7.3-cgi php7.3-xml php7.3-sqlite3 php7.3-intl apache2-utils
+sudo apt install -y wireguard wireguard-tools wireguard-dkms certbot python-certbot-nginx
 
 echo -e "\n \e[32m Swappiness && inotify settings \e[0m"
 cat /proc/sys/vm/swappiness && sudo bash -c "echo 'vm.swappiness = 20' >> /etc/sysctl.conf"

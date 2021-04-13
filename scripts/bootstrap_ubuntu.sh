@@ -26,7 +26,7 @@ sudo apt install -y coreutils dnsutils net-tools mosh openssh-client openssh-ser
 sudo apt install -y neofetch rar unrar zip unzip gzip bzip2 p7zip-full cabextract
 sudo apt install -y terminator vlc imagemagick potrace ffmpeg pulseaudio paprefs cmus cmus-plugin-ffmpeg obs-studio
 sudo apt install -y pandoc lynx krename cloc fzf ripgrep
-sudo apt install -y clamav clamtk pass
+sudo apt install -y clamav clamtk pass wireguard wireguard-tools wireguard-dkms
 sudo apt install -y python-dev python3-pip python3-dev
 sudo snap install insomnia spotify gimp
 sudo snap install slack --classic
