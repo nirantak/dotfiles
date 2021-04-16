@@ -85,7 +85,8 @@ gem update --system
 
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
-pip install -U wheel pip black flake8 rope ipython httpie youtube-dl pre-commit
+pip install -U pip wheel setuptools
+pip install -U black flake8 rope ipython httpie youtube-dl pre-commit pipx
 
 ruby --version
 node --version

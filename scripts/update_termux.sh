@@ -9,8 +9,8 @@ apt update
 apt upgrade -y
 
 echo -e "\n \e[32m Updating Python Packages \e[0m"
-pip install --upgrade pip wheel setuptools
-pip install --upgrade ipython httpie youtube-dl
+pip install -U pip wheel setuptools
+pip install -U ipython httpie youtube-dl
 
 echo -e "\n \e[32m Updating Shell \e[0m"
 env ZSH=$ZSH sh $ZSH/tools/upgrade.sh

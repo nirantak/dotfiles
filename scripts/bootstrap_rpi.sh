@@ -59,6 +59,7 @@ python --version
 echo -e "\n \e[32m Security Settings \e[0m"
 sudo ufw allow ssh
 sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
 sudo ufw allow 53/tcp
 sudo ufw allow 53/udp
 sudo ufw allow 67/tcp

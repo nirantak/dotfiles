@@ -56,6 +56,7 @@
   "terminal.integrated.fontFamily": "'MesloLGS NF', 'Ubuntu Mono', monospace",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.scrollback": 10000,
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -79,7 +80,8 @@
     "run": "shellscript",
     "*.au3": "cpp",
     "hosts": "ini",
-    "*.plist": "xml"
+    "*.plist": "xml",
+    "requirements*.txt": "pip-requirements"
   },
   "git.autofetch": true,
   "git.autoStash": true,
@@ -126,7 +128,7 @@
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "editor.defaultFormatter": "ms-python.python",
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
@@ -166,7 +168,14 @@
     "rgba(16,48,48,0.3)",
     "rgba(64,64,16,0.3)"
   ],
-  "cSpell.userWords": ["Nirantak", "Raghav", "httpx", "dotenv", "asyncio"],
+  "cSpell.userWords": [
+    "Nirantak",
+    "Raghav",
+    "httpx",
+    "dotenv",
+    "asyncio",
+    "typer"
+  ],
   "githubPullRequests.telemetry.enabled": false,
   "go.toolsManagement.autoUpdate": true
 }

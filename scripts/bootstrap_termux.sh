@@ -14,7 +14,7 @@ apt install -y coreutils dnsutils net-tools ncurses-utils
 apt install -y unzip gzip ffmpeg imagemagick atomicparsley
 apt install -y python
 
-pip install --upgrade pip black ipython httpie youtube-dl
+pip install -U pip ipython httpie youtube-dl
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

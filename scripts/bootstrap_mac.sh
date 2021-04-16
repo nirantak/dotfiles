@@ -53,7 +53,8 @@ pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 
 sudo npm install -g browser-sync speed-test tldr eslint prettier
-pip install -U wheel pip pipenv black flake8 rope ipython httpie tox requests youtube-dl
+pip install -U pip wheel setuptools
+pip install -U black flake8 rope ipython httpie youtube-dl pre-commit pipx
 
 ruby --version
 node --version

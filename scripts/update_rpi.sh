@@ -9,8 +9,8 @@ sudo apt update
 sudo apt upgrade -y
 
 echo -e "\n \e[32m Updating Python Packages \e[0m"
-pip install --upgrade pip wheel setuptools
-pip install --upgrade ipython httpie youtube-dl
+pip install -U pip wheel setuptools
+pip install -U ipython httpie youtube-dl
 
 echo -e "\n \x1B[32m Updating NPM Packages \x1B[0m"
 sudo npm update -g
