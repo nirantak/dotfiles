@@ -12,6 +12,7 @@ sudo npm update -g
 echo -e "\n \e[32m Updating Python Packages \e[0m"
 pip install -U pip wheel setuptools
 pip install -U black flake8 rope ipython httpie youtube-dl pre-commit pipx
+pipx upgrade-all
 
 echo -e "\n \e[32m Updating rbenv \e[0m"
 cd "$(rbenv root)" && git pull
