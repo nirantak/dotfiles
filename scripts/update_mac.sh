@@ -12,7 +12,7 @@ sudo npm update -g
 
 echo -e "\n \x1B[32m Updating Python Packages \x1B[0m"
 pip install -U pip wheel setuptools
-pip install -U black flake8 rope ipython httpie youtube-dl pre-commit pipx
+pip install -U black flake8 ipython
 pipx upgrade-all
 
 echo -e "\n \x1B[32m Updating Shell \x1B[0m"

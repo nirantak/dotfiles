@@ -6,8 +6,8 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.1
-RUBY_VERSION=3.0.0
+PYTHON_VERSION=3.9.4
+RUBY_VERSION=3.0.1
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
 xcode-select --install
@@ -18,7 +18,7 @@ echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep
 brew install python3 node go gcc pyenv rbenv nvm pandoc lynx imagemagick bazelisk
 brew install autossh vnstat openvpn coreutils hping wrk mtr telnet
-brew install gh geckodriver cloc diff-so-fancy jq fzf ripgrep exa hyperfine
+brew install gh geckodriver cloc diff-so-fancy jq fzf ripgrep pipx hyperfine
 
 echo -e "\n \e[32m Installing Apps \e[0m"
 brew install --cask google-chrome firefox spotify vlc notion rectangle
@@ -54,7 +54,11 @@ pyenv global ${PYTHON_VERSION}
 
 sudo npm install -g browser-sync speed-test tldr eslint prettier
 pip install -U pip wheel setuptools
-pip install -U black flake8 rope ipython httpie youtube-dl pre-commit pipx
+pip install -U black flake8 ipython
+for package in httpie youtube-dl pre-commit aws;
+  do pipx install $package;
+done
+pipx install ansible --include-deps
 
 ruby --version
 node --version

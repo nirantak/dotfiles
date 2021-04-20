@@ -11,7 +11,7 @@ GO_VERSION=1.16.3
 NODE_VERSION=15
 RUBY_VERSION=3.0.1
 BAT_VERSION=0.18.0
-DOCKER_COMPOSE_VERSION=1.29.0
+DOCKER_COMPOSE_VERSION=1.29.1
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
@@ -86,7 +86,11 @@ gem update --system
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 pip install -U pip wheel setuptools
-pip install -U black flake8 rope ipython httpie youtube-dl pre-commit pipx
+pip install -U black flake8 ipython pipx
+for package in httpie youtube-dl pre-commit aws;
+  do pipx install $package;
+done
+pipx install ansible --include-deps
 
 ruby --version
 node --version
