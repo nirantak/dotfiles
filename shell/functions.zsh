@@ -130,6 +130,12 @@ function git_clean() {
   git gc
 }
 
+# Go to project root
+function git_root() {
+  cd "$(git rev-parse --show-toplevel)"
+}
+
+# Find when arg $1 was introduced in file $2
 function git_search() {
   git log -S "$1" --source --all $2
 }

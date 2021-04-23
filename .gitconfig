@@ -30,11 +30,14 @@
   newHighlight = green bold 22
 
 [commit]
-  gpgsign = true
+  gpgSign = true
 
 [push]
   default = current
   followTags = true
+
+[tag]
+  gpgSign = true
 
 [log]
   date = human
