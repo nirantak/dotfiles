@@ -6,7 +6,7 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.4
+PYTHON_VERSION=3.9.5
 RUBY_VERSION=3.0.1
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
@@ -16,7 +16,7 @@ sudo chown -R $USER:$(id -gn $USER) ~/.config
 
 echo -e "\n \e[32m Installing Packages \e[0m"
 brew install curl wget git tree htop vim tmux zsh zsh-completions bat gnu-time gnu-sed gpgme grep
-brew install python3 node go gcc pyenv rbenv nvm pandoc lynx imagemagick bazelisk
+brew install python3 node go gcc pyenv rbenv nvm pandoc lynx imagemagick k9s
 brew install autossh vnstat openvpn coreutils hping wrk mtr telnet
 brew install gh geckodriver cloc diff-so-fancy jq fzf ripgrep pipx hyperfine
 

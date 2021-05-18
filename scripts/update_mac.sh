@@ -1,11 +1,14 @@
 #!/bin/bash
 # Update all packages
 
+echo -e "\n \e[32m Updating Repos \e[0m"
+cd ~/dotfiles && git pull --all --ff-only
+
 echo -e "\n \x1B[32m Updating System Packages \x1B[0m"
 brew update
 brew upgrade
 brew upgrade --cask
-brew list --cask | grep -Ev "ngrok|font-victor-mono" | xargs brew upgrade --cask
+brew list --cask | grep -Ev "ngrok|font-victor-mono|font-source-code-pro" | xargs brew upgrade --cask
 
 echo -e "\n \x1B[32m Updating NPM Packages \x1B[0m"
 sudo npm update -g

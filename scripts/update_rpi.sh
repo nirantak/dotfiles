@@ -2,7 +2,7 @@
 # Update all packages
 
 echo -e "\n \e[32m Updating Repos \e[0m"
-cd ~/dotfiles && git pull --ff-only
+cd ~/dotfiles && git pull --all --ff-only
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update
