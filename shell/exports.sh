@@ -37,9 +37,9 @@ export GOPATH="$HOME/code/go"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # allow fork() in python for OSX
 export HOMEBREW_NO_ANALYTICS=1
 
-export PATH="$PATH:$HOME/.local/bin:/usr/local/sbin:$HOME/.pyenv/bin:$HOME/.rbenv/bin"
+export PATH="$PATH:$HOME/.local/bin:/usr/local/sbin:$PYENV_ROOT/bin:$HOME/.rbenv/bin"
 if [[ "$OSTYPE" == "linux"* ]]; then
-  export PATH="$PATH:/snap/bin:/usr/local/go/bin"
+  export PATH="$PYENV_ROOT/shims:$PATH:/snap/bin:/usr/local/go/bin"
 fi
 
 export GPG_TTY=$(tty)
