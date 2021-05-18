@@ -46,7 +46,7 @@ export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
-export PATH="$PATH:$PYENV_ROOT/bin:/sbin:/usr/sbin"
+export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$HOME/.local/bin:$PATH:/sbin:/usr/sbin"
 
 alias r="reset"
 alias l="pwd && ls"
@@ -87,7 +87,6 @@ if [[ "$OSTYPE" == "linux"* ]]; then
   alias ip-int="ip a | grep -oP '(?<=inet )[^ ]*'"
   alias data="ip a | grep -w inet | grep -v -w lo | awk '{print \$NF}' | xargs -t vnstat -i"
   alias flush_dns="sudo systemd-resolve --flush-caches"
-  export PATH="$PYENV_ROOT/shims:$PATH"
 fi
 
 if [[ "$OSTYPE" == *"android"* ]]; then
