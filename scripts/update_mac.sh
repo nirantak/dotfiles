@@ -1,7 +1,7 @@
 #!/bin/bash
 # Update all packages
 
-echo -e "\n \e[32m Updating Repos \e[0m"
+echo -e "\n \x1B[32m Updating Repos \x1B[0m"
 cd ~/dotfiles && git pull --all --ff-only
 
 echo -e "\n \x1B[32m Updating System Packages \x1B[0m"

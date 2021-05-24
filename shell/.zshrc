@@ -82,14 +82,14 @@ else
 fi
 test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
-eval "$(rbenv init -)"
-eval "$(pyenv init -)"
-
 # Load Shell aliases & functions
 for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+eval "$(rbenv init -)"
+eval "$(pyenv init -)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
