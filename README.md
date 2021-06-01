@@ -41,7 +41,7 @@ Install additional software (Included in bootstrap scripts)
 - [Vundle](https://github.com/VundleVim/Vundle.vim)
 - [Powerline](https://github.com/powerline/powerline)
 - [Powerline Fonts](https://github.com/powerline/fonts)
-- [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
