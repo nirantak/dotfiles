@@ -9,24 +9,6 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 ZSH_DOTENV_PROMPT=false
 
-plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosuggestions zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
-
-HISTSIZE=100000
-SAVEHIST="$HISTSIZE"
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_SPACE
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_REDUCE_BLANKS
-
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
-
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
 export COLUMNS
@@ -46,7 +28,25 @@ export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
-export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$HOME/.local/bin:$PATH:/sbin:/usr/sbin"
+export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
+
+plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosuggestions zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+HISTSIZE=100000
+SAVEHIST="$HISTSIZE"
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 
 alias r="reset"
 alias l="pwd && ls"
@@ -93,5 +93,6 @@ if [[ "$OSTYPE" == *"android"* ]]; then
   alias u="apt update && apt upgrade"
   alias d="cd ~/storage/shared/Download"
 else
+  export PATH="$PYENV_ROOT/shims:$PATH"
   eval "$(pyenv init -)"
 fi
