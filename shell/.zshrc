@@ -88,7 +88,7 @@ for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
 done;
 unset file;
 
-export PATH="$PYENV_ROOT/shims:$PATH"
+eval "$(pyenv init --path)"
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 

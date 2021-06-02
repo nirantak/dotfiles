@@ -8,3 +8,5 @@ if [[ "$OSTYPE" == "linux"* ]]; then
     export SSH_AUTH_SOCK
   fi
 fi
+
+eval "$(pyenv init --path)"
