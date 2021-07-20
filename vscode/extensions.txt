@@ -12,6 +12,7 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 formulahendry.code-runner
 GitHub.github-vscode-theme
+GitHub.remotehub
 golang.go
 mbessey.vscode-rufo
 mechatroner.rainbow-csv

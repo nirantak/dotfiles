@@ -9,13 +9,10 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.decorations.badges": true,
   "workbench.editor.decorations.colors": true,
-  "workbench.startupEditor": "welcomePage",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   "window.titleBarStyle": "custom",
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
@@ -80,7 +77,8 @@
     "*.au3": "cpp",
     "hosts": "ini",
     "*.plist": "xml",
-    "requirements*.txt": "pip-requirements"
+    "requirements*.txt": "pip-requirements",
+    ".coveragerc": "ini"
   },
   "git.autofetch": true,
   "git.autoStash": true,
@@ -93,19 +91,19 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/.venv": true
+    "**/*.venv": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true,
-    "**/.venv/**": true,
+    "**/*.venv/**": true,
     "**/.hg/store/**": true
   },
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
-    "**/.venv": true,
+    "**/*.venv": true,
     "**/.git": true,
     "**/*.code-search": true
   },
@@ -176,5 +174,9 @@
     "typer"
   ],
   "githubPullRequests.telemetry.enabled": false,
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  }
 }
