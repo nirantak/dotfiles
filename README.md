@@ -48,7 +48,7 @@ Install additional software (Included in bootstrap scripts)
 Run the setup script
 
 ```bash
-~/dotfiles/make.sh
+~/dotfiles/setup.sh
 ```
 
 Old dotfiles are backed up in `~/dotfiles/dotfiles_old`

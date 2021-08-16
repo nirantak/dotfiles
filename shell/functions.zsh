@@ -139,3 +139,8 @@ function git_root() {
 function git_search() {
   git log -S "$1" --source --all $2
 }
+
+# Shorten URLs using ray.run
+function shorten() {
+  (cd ~/code/nirantak/ray.run/ && npm run shorten $1 $2)
+}

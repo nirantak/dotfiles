@@ -2,11 +2,11 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-# make.sh
+# setup.sh
 # This script creates symlinks from dotfiles dir to their respective locations
 
 SAVEIFS=$IFS
-IFS=$(echo -en "\n\b") #internal field seperator
+IFS=$(echo -en "\n\b")
 
 dir=~/dotfiles
 oldDir=~/dotfiles/dotfiles_old
