@@ -11,6 +11,7 @@ ecmel.vscode-html-css
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 formulahendry.code-runner
+GitHub.copilot
 GitHub.github-vscode-theme
 GitHub.remotehub
 golang.go

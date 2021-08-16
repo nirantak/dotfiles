@@ -1,4 +1,4 @@
-# Auto detect text files and perform LF normalization
+# Auto Detect Text Files And Perform LF Normalization
 * text=auto
 
 # Documents
@@ -20,7 +20,7 @@
 *.tsv      text
 *.sql      text
 
-# SOURCE CODE
+# Source Code
 *.c        text diff=cpp
 *.h        text diff=cpp
 *.c++      text diff=cpp
@@ -58,11 +58,11 @@
 *.xml      text diff=html
 *.xhtml    text diff=html
 
-# DOCKER
+# Docker
 *.dockerignore text
 Dockerfile     text
 
-# DOCUMENTATION
+# Documentation
 *.markdown   text
 *.md         text
 *.mdwn       text
@@ -87,7 +87,7 @@ readme       text
 *README*     text
 TODO         text
 
-# TEMPLATES
+# Templates
 *.dot        text
 *.ejs        text
 *.haml       text
@@ -103,7 +103,7 @@ TODO         text
 *.tpl        text
 *.twig       text
 
-# CONFIGS
+# Configs
 *.bowerrc       text
 *.cnf           text
 *.conf          text
@@ -120,7 +120,7 @@ browserslist    text
 Makefile        text
 makefile        text
 
-# Binary files
+# Binary Files
 *.db  binary
 *.p   binary
 *.pkl binary
@@ -129,11 +129,11 @@ makefile        text
 *.pyo binary
 *.exe binary
 
-# HEROKU
+# Heroku
 Procfile    text
 .slugignore text
 
-# GRAPHICS
+# Graphics
 *.png  binary
 *.jpg  binary
 *.jpeg binary
@@ -156,7 +156,7 @@ Procfile    text
 *.wbmp binary
 *.webp binary
 
-# AUDIO
+# Audio
 *.kar  binary
 *.m4a  binary
 *.mid  binary
@@ -165,7 +165,7 @@ Procfile    text
 *.ogg  binary
 *.ra   binary
 
-# VIDEO
+# Video
 *.3gpp binary
 *.3gp  binary
 *.as   binary
@@ -184,7 +184,7 @@ Procfile    text
 *.swf  binary
 *.webm binary
 
-# ARCHIVES
+# Archives
 *.7z  binary
 *.gz  binary
 *.jar binary
@@ -192,7 +192,7 @@ Procfile    text
 *.tar binary
 *.zip binary
 
-## FONTS
+# Fonts
 *.ttf   binary
 *.eot   binary
 *.otf   binary

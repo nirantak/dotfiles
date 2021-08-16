@@ -39,6 +39,7 @@
   "editor.padding.top": 10,
   "editor.largeFileOptimizations": false,
   "editor.renderLineHighlight": "all",
+  "editor.inlineSuggest.enabled": true,
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
@@ -178,5 +179,11 @@
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
   }
 }
