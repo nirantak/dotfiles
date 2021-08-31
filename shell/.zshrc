@@ -10,14 +10,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME='powerlevel10k/powerlevel10k'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv pyenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=''
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_unique"
+POWERLEVEL9K_SHORTEN_STRATEGY='truncate_to_unique'
 POWERLEVEL9K_DIR_SHOW_WRITABLE=true
 POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
 POWERLEVEL9K_PYTHON_ICON='\u2695' # get_icon_names
@@ -33,10 +33,11 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
 # ZSH Settings
 export UPDATE_ZSH_DAYS=5
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="dd.mm.yyyy"
+ENABLE_CORRECTION=true
+COMPLETION_WAITING_DOTS=true
+HIST_STAMPS='dd.mm.yyyy'
 ZSH_DOTENV_PROMPT=false
+DISABLE_MAGIC_FUNCTIONS=true
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Note that zsh-syntax-highlighting must be the last plugin sourced.
