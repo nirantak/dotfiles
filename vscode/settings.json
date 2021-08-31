@@ -40,6 +40,7 @@
   "editor.largeFileOptimizations": false,
   "editor.renderLineHighlight": "all",
   "editor.inlineSuggest.enabled": true,
+  "editor.tabCompletion": "on",
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
@@ -157,9 +158,11 @@
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
   "bracket-pair-colorizer-2.showBracketsInRuler": true,
   "emmet.excludeLanguages": [],
+  "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
     "javascript": "javascriptreact"
   },
+  "emmet.triggerExpansionOnTab": true,
   "indentRainbow.colors": [
     "rgba(32,64,32,0.3)",
     "rgba(64,32,64,0.3)",
@@ -181,9 +184,9 @@
     "jupyter-notebook": "left"
   },
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "yaml": false,
-    "plaintext": false,
-    "markdown": false
+    "plaintext": true,
+    "markdown": true
   }
 }

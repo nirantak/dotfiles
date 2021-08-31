@@ -6,7 +6,7 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.6
+PYTHON_VERSION=3.9.7
 RUBY_VERSION=3.0.2
 
 echo -e "\n \e[32m Setting up Dev Env \e[0m"
@@ -22,7 +22,7 @@ brew install gh geckodriver cloc diff-so-fancy jq fzf ripgrep pipx hyperfine
 
 echo -e "\n \e[32m Installing Apps \e[0m"
 brew install --cask google-chrome firefox spotify vlc notion rectangle
-brew install --cask visual-studio-code iterm2 istat-menus ngrok docker
+brew install --cask visual-studio-code iterm2 istat-menus ngrok clipy docker
 brew install --cask gimp insomnia beekeeper-studio mongodb-compass
 
 echo -e "\n \e[32m Setting up Terminal \e[0m"

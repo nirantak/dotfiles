@@ -6,9 +6,9 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.6
+PYTHON_VERSION=3.9.7
 NODE_VERSION=16
-BAT_VERSION=0.18.2
+BAT_VERSION=0.18.3
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y
