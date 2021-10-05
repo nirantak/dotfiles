@@ -1,7 +1,7 @@
 [user]
   name = Nirantak Raghav
   email = me@nirantak.com
-  signingkey = 824A319553F49E10
+  signingkey = 764B054CBFE95423
 
 [core]
   editor = vim
