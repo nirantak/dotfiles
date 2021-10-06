@@ -6,7 +6,7 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.7
+PYTHON_VERSION=3.10.0
 NODE_VERSION=16
 BAT_VERSION=0.18.3
 

@@ -6,7 +6,7 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.7
+PYTHON_VERSION=3.10.0
 GO_VERSION=1.17
 NODE_VERSION=16
 RUBY_VERSION=3.0.2
@@ -76,7 +76,7 @@ echo -e "\n \e[32m Installing NodeJS \e[0m"
 curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
 sudo apt install -y nodejs nodejs-dev
 sudo npm update -g
-sudo npm install -g browser-sync speed-test diff-so-fancy tldr eslint prettier
+sudo npm install -g browser-sync speed-test diff-so-fancy eslint prettier
 
 rbenv install ${RUBY_VERSION}
 rbenv global ${RUBY_VERSION}
@@ -87,10 +87,9 @@ pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 pip install -U pip wheel setuptools
 pip install -U black flake8 ipython pipx
-for package in httpie youtube-dl pre-commit aws;
+for package in httpie youtube-dl pre-commit awscli;
   do pipx install $package;
 done
-pipx install ansible --include-deps
 
 ruby --version
 node --version

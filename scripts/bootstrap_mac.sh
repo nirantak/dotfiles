@@ -6,7 +6,7 @@ IFS=$'\n\t'
 USER=$(whoami)
 
 # Program versions for installation
-PYTHON_VERSION=3.9.7
+PYTHON_VERSION=3.10.0
 RUBY_VERSION=3.0.2
 
 echo -e "\n \x1B[32m Setting up Dev Env \x1B[0m"
@@ -52,7 +52,7 @@ gem update --system
 pyenv install ${PYTHON_VERSION}
 pyenv global ${PYTHON_VERSION}
 
-npm install -g browser-sync speed-test tldr eslint prettier
+npm install -g browser-sync speed-test eslint prettier
 pip install -U pip wheel setuptools
 pip install -U black flake8 ipython
 for package in httpie youtube-dl pre-commit awscli;
