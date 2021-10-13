@@ -14,8 +14,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "window.titleBarStyle": "custom",
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
+  "telemetry.telemetryLevel": "off",
   "editor.fontFamily": "Fira Code",
   "editor.fontWeight": "normal",
   "editor.fontLigatures": true,
@@ -41,6 +40,8 @@
   "editor.renderLineHighlight": "all",
   "editor.inlineSuggest.enabled": true,
   "editor.tabCompletion": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
@@ -49,6 +50,7 @@
   "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
   "search.searchEditor.defaultNumberOfContextLines": 5,
   "search.searchEditor.reusePriorSearchConfiguration": true,
+  "security.workspace.trust.untrustedFiles": "newWindow",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontFamily": "'MesloLGS NF', 'Ubuntu Mono', monospace",
@@ -154,9 +156,6 @@
   },
   // Plugin Settings
   "material-icon-theme.activeIconPack": "none",
-  "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
-  "bracket-pair-colorizer-2.showBracketsInGutter": true,
-  "bracket-pair-colorizer-2.showBracketsInRuler": true,
   "emmet.excludeLanguages": [],
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
@@ -177,7 +176,6 @@
     "asyncio",
     "typer"
   ],
-  "githubPullRequests.telemetry.enabled": false,
   "go.toolsManagement.autoUpdate": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
@@ -186,6 +184,7 @@
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
+    "json": false,
     "plaintext": true,
     "markdown": true
   }
