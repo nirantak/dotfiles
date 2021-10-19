@@ -71,6 +71,7 @@
     "*.yaml.*": "yaml",
     "Pipfile": "toml",
     "*.env": "shellscript",
+    ".env.*": "shellscript",
     "*.dat": "CSV (pipe)",
     ".slugignore": "ignore",
     ".flake8": "ini",
