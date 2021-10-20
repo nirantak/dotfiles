@@ -63,4 +63,4 @@ node --version
 go version
 python --version
 
-echo -e "\n \x1B[36m Install these from the App Store: 1password, NordVPN \x1B[0m"
+echo -e "\n \x1B[36m Install these from the App Store: Xcode, 1password, NordVPN \x1B[0m"
