@@ -7,7 +7,7 @@ USER=$(whoami)
 
 # Program versions for installation
 PYTHON_VERSION=3.10.0
-RUBY_VERSION=3.0.2
+RUBY_VERSION=3.0.3
 
 echo -e "\n \x1B[32m Setting up Dev Env \x1B[0m"
 xcode-select --install
@@ -21,10 +21,10 @@ brew install autossh vnstat openvpn coreutils hping wrk mtr telnet cloudflare/cl
 brew install gh geckodriver cloc diff-so-fancy jq fzf ripgrep pipx hyperfine
 
 echo -e "\n \x1B[32m Installing Apps \x1B[0m"
-brew install --cask rectangle iterm2 istat-menus visual-studio-code
+brew install --cask rectangle iterm2 istat-menus raycast visual-studio-code
 brew install --cask google-chrome firefox slack zoom tunnelblick
 brew install --cask spotify vlc notion microsoft-remote-desktop
-brew install --cask docker
+brew install --cask android-file-transfer docker
 
 echo -e "\n \x1B[32m Setting up Terminal \x1B[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

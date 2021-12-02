@@ -18,6 +18,7 @@ Run the following to add a config line to file `~/.gnupg/gpg-agent.conf`:
 
 ```shell
 echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
 ```
 
 ## Install from the App Store

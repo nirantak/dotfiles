@@ -4,6 +4,8 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>59AAD7DA-0703-4D12-89FA-BFEBD2DA60F0</string>
 	<key>DisableFullscreenTransparency</key>

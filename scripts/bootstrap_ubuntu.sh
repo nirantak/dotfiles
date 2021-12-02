@@ -7,11 +7,11 @@ USER=$(whoami)
 
 # Program versions for installation
 PYTHON_VERSION=3.10.0
-GO_VERSION=1.17.2
-NODE_VERSION=16
-RUBY_VERSION=3.0.2
+GO_VERSION=1.17.3
+NODE_VERSION=17
+RUBY_VERSION=3.0.3
 BAT_VERSION=0.18.3
-DOCKER_COMPOSE_VERSION=2.0.1
+DOCKER_COMPOSE_VERSION=2.1.1
 
 echo -e "\n \e[32m Updating System Packages \e[0m"
 sudo apt update && sudo apt upgrade -y

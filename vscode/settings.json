@@ -155,6 +155,7 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
+  "go.toolsManagement.autoUpdate": true,
   // Plugin Settings
   "material-icon-theme.activeIconPack": "none",
   "emmet.excludeLanguages": [],
@@ -177,7 +178,6 @@
     "asyncio",
     "typer"
   ],
-  "go.toolsManagement.autoUpdate": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
