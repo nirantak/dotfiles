@@ -45,6 +45,7 @@
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
   "search.showLineNumbers": true,
   "search.smartCase": true,
   "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
@@ -176,6 +177,7 @@
     "httpx",
     "dotenv",
     "asyncio",
+    "wsiwn",
     "typer"
   ],
   "notebook.cellToolbarLocation": {
