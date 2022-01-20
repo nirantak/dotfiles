@@ -3,7 +3,6 @@
 
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
@@ -31,6 +30,7 @@ export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
 export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
 
 plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosuggestions zsh-syntax-highlighting)
+zstyle ':omz:update' mode disabled
 source $ZSH/oh-my-zsh.sh
 
 HISTSIZE=100000

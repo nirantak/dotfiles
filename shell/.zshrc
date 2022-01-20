@@ -32,7 +32,6 @@ POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='005'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
 # ZSH Settings
-export UPDATE_ZSH_DAYS=5
 ENABLE_CORRECTION=true
 COMPLETION_WAITING_DOTS=true
 HIST_STAMPS='dd.mm.yyyy'
@@ -55,6 +54,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+zstyle ':omz:update' mode disabled
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
