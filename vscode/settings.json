@@ -70,6 +70,7 @@
     "*.json.*": "json",
     "*.yml.*": "yaml",
     "*.yaml.*": "yaml",
+    ".ansible-lint": "yaml",
     "Pipfile": "toml",
     "*.env": "shellscript",
     ".env.*": "shellscript",
