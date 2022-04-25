@@ -90,7 +90,7 @@ done;
 unset file;
 
 eval "$(pyenv init --path)"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

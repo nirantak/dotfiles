@@ -8,10 +8,10 @@ echo -e "\n \x1B[32m Updating System Packages \x1B[0m"
 brew update
 brew upgrade
 brew upgrade --cask
-brew list --cask | grep -Ev "ngrok|font-victor-mono|font-source-code-pro" | xargs brew upgrade --cask
+brew list --cask | grep -Ev "font-victor-mono|font-source-code-pro" | xargs brew upgrade --cask
 
-echo -e "\n \x1B[32m Updating NPM Packages \x1B[0m"
-npm update -g
+# echo -e "\n \x1B[32m Updating NPM Packages \x1B[0m"
+# npm update -g
 
 echo -e "\n \x1B[32m Updating Python Packages \x1B[0m"
 pip install -U pip wheel setuptools
