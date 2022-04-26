@@ -31,6 +31,5 @@ PKief.material-icon-theme
 rebornix.ruby
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
-vscode-icons-team.vscode-icons
 wingrunr21.vscode-ruby
 yzhang.markdown-all-in-one
