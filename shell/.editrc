@@ -1,0 +1,3 @@
+## arrow up and down
+bind "\e[A" ed-search-prev-history
+bind "\e[B" ed-search-next-history

@@ -10,7 +10,7 @@ IFS=$(echo -en "\n\b")
 
 dir=~/dotfiles
 oldDir=~/dotfiles/dotfiles_old
-files=( ".bash_profile" ".bashrc" ".prettierrc" ".tmux.conf" ".vimrc" ".zshenv" ".zshrc" ".gitconfig" )
+files=( ".bash_profile" ".bashrc" ".prettierrc" ".tmux.conf" ".vimrc" ".zshenv" ".zshrc" ".gitconfig" ".inputrc" ".editrc")
 
 vsFiles=( "settings.json" "keybindings.json" )
 if [[ "$OSTYPE" == "darwin"* ]]; then

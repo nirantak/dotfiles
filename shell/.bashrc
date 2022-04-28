@@ -5,7 +5,7 @@
 
 [ -n "$PS1" ] && source ~/.bash_profile;
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
