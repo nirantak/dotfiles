@@ -12,7 +12,7 @@ export LC_ALL="en_US.UTF-8";
 export COLUMNS
 export EDITOR="vim";
 export VISUAL="vim";
-export LESS="-iR"
+export LESS="-FiR"
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 3)
 export LESS_TERMCAP_md=$(tput bold; tput setaf 2)
 export LESS_TERMCAP_me=$(tput sgr0)

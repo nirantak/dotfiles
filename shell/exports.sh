@@ -16,7 +16,7 @@ export LESS_TERMCAP_se=$(tput rmso; tput sgr0) # stop standout
 export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7) # start underline - white
 export LESS_TERMCAP_ue=$(tput rmul; tput sgr0) # stop underline
 
-export LESS="-iR"
+export LESS="-FiR" # -e E --quit-at-eof, -F --quit-if-one-screen, -i --ignore-case, -r R --raw-control-chars, -X --no-init
 export MANPAGER="less"
 export PAGER="less"
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
