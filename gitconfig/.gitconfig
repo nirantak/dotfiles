@@ -1,12 +1,9 @@
 [user]
   name = Nirantak Raghav
-  email = me@nirantak.com
-  signingkey = 764B054CBFE95423
 
 [core]
   editor = vim
-  excludesfile = ~/dotfiles/global.gitignore
-  attributesfile = ~/dotfiles/.gitattributes
+  excludesfile = ~/dotfiles/gitconfig/global.gitignore
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -FiR
 
@@ -29,15 +26,9 @@
   newNormal = green bold
   newHighlight = green bold 22
 
-[commit]
-  gpgSign = true
-
 [push]
   default = current
   followTags = true
-
-[tag]
-  gpgSign = true
 
 [log]
   date = human
@@ -54,9 +45,6 @@
 [diff]
   renames = copies
 
-[diff "rspec"]
-  xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario|background)[ \t].*)$"
-
 [merge]
   stat = true
 
@@ -70,10 +58,17 @@
   p = push -u origin
   l1 = log -i -1
   unstage = reset HEAD --
+  uncommit = reset HEAD~
   amend = commit --amend --no-edit
   changes = diff --name-status
   stat = diff --stat
   whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
 
-[github]
-  user = nirantak
+[includeIf "gitdir/i:~/code/personal/"]
+  path = ~/dotfiles/gitconfig/personal.gitconfig
+
+[includeIf "gitdir/i:~/dotfiles/"]
+  path = ~/dotfiles/gitconfig/personal.gitconfig
+
+[includeIf "gitdir/i:~/code/work/"]
+  path = ~/dotfiles/gitconfig/work.gitconfig

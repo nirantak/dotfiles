@@ -6,6 +6,7 @@ README.html
 dotfiles_old
 backup.sh
 aliases.local.sh
+work.gitconfig
 
 # Git credential file
 .gitconfig

@@ -1,0 +1,16 @@
+[user]
+  name = Nirantak Raghav
+  email = me@nirantak.com
+  signingkey = 764B054CBFE95423
+
+[core]
+  attributesfile = ~/dotfiles/gitconfig/.gitattributes
+
+[commit]
+  gpgSign = true
+
+[tag]
+  gpgSign = true
+
+[github]
+  user = nirantak
