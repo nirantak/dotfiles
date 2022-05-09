@@ -35,17 +35,17 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
 fi
 
 echo -e "\n \x1B[32m Updating PIP and NPM Packages \x1B[0m"
-pip install -U pip wheel setuptools ipython
+pip3 install -U pip wheel setuptools
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  pip install -U black flake8
+  pip install -U ipython black flake8
   pipx upgrade-all
   # npm update -g
 elif [[ "$OSTYPE" == "linux-android" ]]; then
-  pip install -U httpie youtube-dl
+  pip install -U ipython httpie youtube-dl
 elif [[ "$OSTYPE" == "linux"* ]]; then
   if [[ "$LINUX_RELEASE" == *"ubuntu"* ]]; then
-    pip install -U black flake8 pipx
+    pip3 install -U ipython black flake8 pipx
     pipx upgrade-all
   fi
   if [[ "$LINUX_RELEASE" != *"rhel"* ]]; then

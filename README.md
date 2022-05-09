@@ -26,13 +26,7 @@ brew install git curl wget vim zsh tmux
 sudo apt update && sudo apt install -y git curl wget vim zsh tmux
 ```
 
-Or for full system setup:
-
-```bash
-./scripts/bootstrap_mac.sh
-# OR
-./scripts/bootstrap_ubuntu.sh
-```
+Or for full system setup, see repo [nirantak/ansible-setup](https://github.com/nirantak/ansible-setup). Run any of the [bootstrap scripts](https://github.com/nirantak/ansible-setup/tree/main/scripts).
 
 Install additional software (Included in bootstrap scripts)
 
