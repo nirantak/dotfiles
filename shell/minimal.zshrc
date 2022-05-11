@@ -97,3 +97,5 @@ else
   export PATH="$PYENV_ROOT/shims:$PATH"
   eval "$(pyenv init -)"
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
