@@ -23,7 +23,6 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
   if [[ "$LINUX_RELEASE" == *"rhel"* ]]; then
     sudo yum update -y --skip-broken
     sudo yum upgrade -y --skip-broken
-    sudo yum autoremove -y && sudo yum clean all
   else
     sudo apt update
     sudo apt upgrade -y
