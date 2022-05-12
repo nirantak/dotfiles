@@ -23,6 +23,7 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
   if [[ "$LINUX_RELEASE" == *"rhel"* ]]; then
     sudo yum update -y --skip-broken
     sudo yum upgrade -y --skip-broken
+    sudo yum autoremove -y && sudo yum clean all
   else
     sudo apt update
     sudo apt upgrade -y
@@ -44,9 +45,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-android" ]]; then
   pip install -U ipython httpie youtube-dl
 elif [[ "$OSTYPE" == "linux"* ]]; then
+  pipx upgrade-all
   if [[ "$LINUX_RELEASE" == *"ubuntu"* ]]; then
     pip3 install -U ipython black flake8 pipx
-    pipx upgrade-all
   fi
   if [[ "$LINUX_RELEASE" != *"rhel"* ]]; then
     sudo npm update -g
