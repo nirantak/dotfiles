@@ -32,7 +32,9 @@ plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosugges
 zstyle ':omz:update' mode disabled
 unsetopt correct_all
 setopt correct
+
 source $ZSH/oh-my-zsh.sh
+PROMPT="%{$fg[cyan]%}%m %(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜) %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)"
 
 HISTSIZE=100000
 SAVEHIST="$HISTSIZE"
