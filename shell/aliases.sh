@@ -32,7 +32,6 @@ alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # Utilities
 alias note="vim +startinsert ~/Documents/notes.md"
-alias tmux="TERM=screen-256color-bce tmux -u"
 alias dotfiles="cd ~/dotfiles && git status && code ."
 alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"  # Delete the last command and this command itself from history
 alias reload="~/dotfiles/scripts/reload.scp"

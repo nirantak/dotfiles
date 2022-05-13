@@ -1,5 +1,4 @@
 # ~/.bash_profile: executed by bash(1) for login shells.
-export TERM="screen-256color"
 
 # Load the shell dotfiles, and then some:
 for file in ~/dotfiles/shell/{bash_prompt.sh,exports.sh,aliases.sh}; do
