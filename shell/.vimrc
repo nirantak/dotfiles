@@ -1,3 +1,4 @@
+set term=screen-256color
 syntax on
 
 " Vundle begins here; turn off filetype temporarily
@@ -12,30 +13,21 @@ Plugin 'VundleVim/Vundle.vim'
 " plugins
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'  " https://github.com/flazz/vim-colorschemes/tree/master/colors
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-repeat'
-Plugin 'mattn/emmet-vim'
-Plugin 'raimondi/delimitmate'
-Plugin 'tpope/vim-markdown'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'nvie/vim-flake8'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'preservim/nerdtree'      " File tree explorer
+Plugin 'scrooloose/syntastic'    " Syntax checker
+Plugin 'tpope/vim-surround'      " Bracket matching
+Plugin 'junegunn/fzf'            " Fuzzy finder
+Plugin 'junegunn/fzf.vim'        " Fuzzy finder configs
+Plugin 'preservim/nerdcommenter' " Better Comments
+Plugin 'tpope/vim-repeat'        " Repeat plugin map commands
+Plugin 'raimondi/delimitmate'    " Autoclose symbols
+Plugin 'tpope/vim-markdown'      " Markdown support for old vim versions
+Plugin 'christoomey/vim-tmux-navigator'  " Vim+Tmux Navigator
+Plugin 'bronson/vim-trailing-whitespace' " Highlight trailing whitespace
 
 call vundle#end()
-filetype plugin indent on
-
-set term=screen-256color
-colorscheme PaperColor
-
-
-let python_highlight_all=1
 
 set autoindent
 set bg=dark
@@ -67,26 +59,24 @@ set sidescrolloff=7
 set smartcase
 set softtabstop=4
 set undolevels=1000
-
-highlight ColorColumn ctermbg=black
 set colorcolumn=80
 
-"Airline
-let g:airline_theme='tomorrow'
+filetype plugin indent on
+highlight ColorColumn ctermbg=black
+let python_highlight_all=1
+
+"ColorScheme - PaperColor mopkai moriarty
+colorscheme PaperColor
+
+"Airline - supernova onedark
+let g:airline_theme='supernova'
 let g:airline_powerline_fonts=1
 
 "NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-"Gvim mods
-set encoding=utf-8
-set hidden
-set history=100
-
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=Lo
+"FZF
+nnoremap <silent> <C-f> :Files<CR>
 
 " Ctrl + c to copy
 :vmap <C-C> "+y
@@ -94,18 +84,12 @@ set guioptions-=Lo
 "nerd-commenter settings
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims=1
-
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs=1
-
-" Align line-wise comment delimiters flush left instead of following code
-" indentation
+" Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign='left'
-
-" Allow commenting and inverting empty lines (useful when commenting a
-" region)
+" Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines=1
-
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace=1
 
@@ -117,13 +101,7 @@ nnoremap <C-l> <C-w>l
 " Remove all trailing whitespace by pressing F4
 noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
-    colorscheme iceberg
-  endif
-endif
-
+" Jump to last known cursor position
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif

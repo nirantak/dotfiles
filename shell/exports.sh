@@ -20,6 +20,7 @@ export LESS="-FiR" # -e E --quit-at-eof, -F --quit-if-one-screen, -i --ignore-ca
 export MANPAGER="less"
 export PAGER="less"
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/gitconfig/global.gitignore"
 
 # Python https://docs.python.org/3/using/cmdline.html#environment-variables
 export PYTHONIOENCODING="UTF-8"

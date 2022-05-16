@@ -26,6 +26,7 @@ export PYTHONUNBUFFERED=1
 export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/shell/bat.conf"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/gitconfig/global.gitignore"
 export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
 
 plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosuggestions zsh-syntax-highlighting)
