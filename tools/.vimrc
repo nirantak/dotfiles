@@ -24,7 +24,6 @@ Plugin 'preservim/nerdcommenter' " Better Comments
 Plugin 'tpope/vim-repeat'        " Repeat plugin map commands
 Plugin 'raimondi/delimitmate'    " Autoclose symbols
 Plugin 'tpope/vim-markdown'      " Markdown support for old vim versions
-Plugin 'christoomey/vim-tmux-navigator'  " Vim+Tmux Navigator
 Plugin 'bronson/vim-trailing-whitespace' " Highlight trailing whitespace
 
 call vundle#end()

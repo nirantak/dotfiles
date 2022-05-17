@@ -65,10 +65,10 @@
   whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
 
 [includeIf "gitdir/i:~/code/personal/"]
-  path = ~/dotfiles/gitconfig/personal.gitconfig
+  path = ~/dotfiles/git/personal.gitconfig
 
 [includeIf "gitdir/i:~/dotfiles/"]
-  path = ~/dotfiles/gitconfig/personal.gitconfig
+  path = ~/dotfiles/git/personal.gitconfig
 
 [includeIf "gitdir/i:~/code/work/"]
-  path = ~/dotfiles/gitconfig/work.gitconfig
+  path = ~/dotfiles/git/work.gitconfig

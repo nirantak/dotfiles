@@ -4,7 +4,7 @@
   signingkey = 764B054CBFE95423
 
 [core]
-  attributesfile = ~/dotfiles/gitconfig/.gitattributes
+  attributesfile = ~/dotfiles/git/.gitattributes
 
 [commit]
   gpgSign = true
