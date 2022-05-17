@@ -1,8 +1,13 @@
 # Profiling ZSH Performance
 # zmodload zsh/zprof
 
-# Path to oh-my-zsh installation.
+# Path to oh-my-zsh installation
 export ZSH=~/.oh-my-zsh
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # ZSH Settings
 ZSH_THEME='powerlevel10k/powerlevel10k'
@@ -14,8 +19,7 @@ unsetopt correct_all
 setopt correct
 zstyle ':omz:update' mode disabled
 
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Note that zsh-syntax-highlighting must be the last plugin sourced.
+# Note: zsh-syntax-highlighting must be the last plugin sourced
 plugins=(
   colorize
   command-not-found
@@ -39,7 +43,7 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 
-# History # http://zsh.sourceforge.net/Guide/zshguide02.html#l17
+# History: http://zsh.sourceforge.net/Guide/zshguide02.html#l17
 HISTSIZE=100000
 SAVEHIST="$HISTSIZE"
 setopt INC_APPEND_HISTORY
@@ -64,7 +68,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
