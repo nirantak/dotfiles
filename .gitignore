@@ -8,9 +8,6 @@ backup.sh
 aliases.local.sh
 work.gitconfig
 
-# Git credential file
-.gitconfig
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
