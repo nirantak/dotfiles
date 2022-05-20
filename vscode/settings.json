@@ -64,7 +64,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.restoreUndoStack": false,
-  "files.defaultLanguage": "markdown",
+  "files.defaultLanguage": "plaintext",
   "files.associations": {
     "*.lock": "json",
     "*.json.*": "json",
@@ -86,7 +86,9 @@
     "hosts": "ini",
     "*.plist": "xml",
     "requirements*.txt": "pip-requirements",
-    ".coveragerc": "ini"
+    ".coveragerc": "ini",
+    "_headers": "plaintext",
+    "_redirects": "plaintext"
   },
   "git.autofetch": true,
   "git.autoStash": true,
@@ -157,6 +159,9 @@
   },
   "[markdown]": {
     "files.trimTrailingWhitespace": false
+  },
+  "[plaintext]": {
+    "editor.defaultFormatter": null
   },
   "go.toolsManagement.autoUpdate": true,
   // Plugin Settings

@@ -63,7 +63,7 @@ function cht() {
 }
 
 # Markdown Viewer
-function mdv() {
+function md() {
   pandoc $1 | lynx -stdin -underline_links -use_mouse
 }
 
