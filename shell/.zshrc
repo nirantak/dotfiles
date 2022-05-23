@@ -13,27 +13,13 @@ fi
 ZSH_THEME='powerlevel10k/powerlevel10k'
 COMPLETION_WAITING_DOTS=true
 HIST_STAMPS='dd.mm.yyyy'
-ZSH_DOTENV_PROMPT=false
 DISABLE_MAGIC_FUNCTIONS=true
 unsetopt correct_all
 setopt correct
 zstyle ':omz:update' mode disabled
 
 # Note: zsh-syntax-highlighting must be the last plugin sourced
-plugins=(
-  colorize
-  command-not-found
-  docker
-  dotenv
-  git
-  python
-  pip
-  pyenv
-  z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
+plugins=(command-not-found git z zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

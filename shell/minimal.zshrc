@@ -1,11 +1,11 @@
 # Author: Nirantak Raghav
+# Single file config, to be put here: ~/.zshrc
 # Link: github.com/nirantak/dotfiles
 
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
-ZSH_DOTENV_PROMPT=false
 
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
@@ -29,7 +29,7 @@ export BAT_CONFIG_PATH="$HOME/dotfiles/tools/bat.conf"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/git/global.gitignore"
 export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
 
-plugins=(colorize command-not-found git python pip pyenv dotenv z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(command-not-found git z zsh-autosuggestions zsh-syntax-highlighting)
 zstyle ':omz:update' mode disabled
 unsetopt correct_all
 setopt correct
