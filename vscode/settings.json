@@ -13,6 +13,7 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
+  "workbench.editor.untitled.hint": "hidden",
   "window.titleBarStyle": "custom",
   "telemetry.telemetryLevel": "off",
   "editor.fontFamily": "Fira Code",
