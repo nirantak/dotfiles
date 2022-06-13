@@ -38,7 +38,7 @@ export GOPATH="$HOME/code/go"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # allow fork() in python for OSX
 export HOMEBREW_NO_ANALYTICS=1
 
-export PATH="$GOPATH/bin:$HOME/.poetry/bin:$PYENV_ROOT/bin:$HOME/.rbenv/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="$GOPATH/bin:$HOME/.poetry/bin:$PYENV_ROOT/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
 if [[ "$OSTYPE" == "linux"* ]]; then
   export PATH="$PATH:/snap/bin:/usr/local/go/bin"
 fi

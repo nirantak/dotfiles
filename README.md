@@ -32,13 +32,11 @@ Install additional software (Included in bootstrap scripts)
 
 - [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
-- [Vundle](https://github.com/VundleVim/Vundle.vim)
 - [Powerline](https://github.com/powerline/powerline)
-- [Powerline Fonts](https://github.com/powerline/fonts)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [Meslo Font](https://github.com/romkatv/powerlevel10k#fonts)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 Run the setup script
 

@@ -1,9 +1,12 @@
 [user]
   name = Nirantak Raghav
+  email = me@nirantak.com
+  signingkey = 764B054CBFE95423
 
 [core]
   editor = vim
   excludesfile = ~/dotfiles/git/global.gitignore
+  attributesfile = ~/dotfiles/git/.gitattributes
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -FiR
 
@@ -26,8 +29,14 @@
   newNormal = green bold
   newHighlight = green bold 22
 
+[commit]
+  gpgSign = true
+
+[tag]
+  gpgSign = true
+
 [push]
-  default = current
+  default = upstream
   followTags = true
 
 [log]
@@ -64,11 +73,5 @@
   stat = diff --stat
   whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
 
-[includeIf "gitdir/i:~/code/personal/"]
-  path = ~/dotfiles/git/personal.gitconfig
-
-[includeIf "gitdir/i:~/dotfiles/"]
-  path = ~/dotfiles/git/personal.gitconfig
-
-[includeIf "gitdir/i:~/code/work/"]
-  path = ~/dotfiles/git/work.gitconfig
+[github]
+  user = nirantak

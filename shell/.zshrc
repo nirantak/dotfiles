@@ -47,10 +47,13 @@ done;
 unset file;
 
 eval "$(pyenv init --path)"
-# eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  if [[ `arch` == "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
