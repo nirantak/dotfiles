@@ -51,13 +51,6 @@ alias dcl="docker-compose logs -ft --tail=20"
 alias dol="docker logs -f"
 alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}'"
 alias dtop="docker stats --format 'table {{.Container}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}'"
-alias dalias="__dalias"
-alias dbash="__dbash"
-alias dst="__dst"
-alias dip="__dip"
-alias dstop="__dstop"
-alias drm="__drm"
-alias drmi="__drmi"
 
 # Linux Overrides
 if [[ "$OSTYPE" == "linux"* ]]; then

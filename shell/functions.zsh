@@ -4,29 +4,29 @@ function t() {
 }
 
 # Docker
-function __dalias() {
+function dalias() {
   # Show all docker aliases
   alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort;
   alias | grep '__d' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort;
 }
-function __dbash() {
+function dbash() {
   # Bash into running container
   docker exec -it $(docker ps -aqf "name=$1") bash;
 }
-function __dip() {
+function dip() {
   # Inspect running container
   for container in "$@"; do
     docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" "${container}";
   done
 }
-function __dst() {
+function dst() {
   # Show stats for running container
   if [ -z $1 ]
   then docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}';
   else docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}' | grep $1;
   fi
 }
-function __dstop() {
+function dstop() {
   # Stop running containers
   if [ $# -eq 0 ]
   then docker stop $(docker ps -aq --no-trunc);
@@ -36,7 +36,7 @@ function __dstop() {
     done
   fi
 }
-function __drm() {
+function drm() {
   # Delete containers
   if [ $# -eq 0 ]
   then docker rm $(docker ps -aq --no-trunc);
@@ -46,7 +46,7 @@ function __drm() {
     done
   fi
 }
-function __drmi() {
+function drmi() {
   # Delete images
   if [ $# -eq 0 ]
   then docker rmi $(docker images --filter 'dangling=true' -aq --no-trunc);
@@ -116,20 +116,6 @@ function freq_cmd() {
   fi
 }
 
-# Run latest ipython
-function ipy() {
-  global_python=`pyenv global`
-  ~/.pyenv/versions/$global_python/bin/ipython
-}
-
-# Cleanup git repo
-function git_clean() {
-  git checkout master
-  git pull --all --ff-only
-  git branch -D `git branch | grep -v "\*\|master" | xargs`
-  git gc
-}
-
 # Go to project root
 function git_root() {
   cd "$(git rev-parse --show-toplevel)"
@@ -143,4 +129,19 @@ function git_search() {
 # Shorten URLs using ray.run
 function shorten() {
   (cd ~/code/nirantak/ray.run/ && npm run shorten $1 $2)
+}
+
+# Python virtualenv
+function venv() {
+  venv_path="$HOME/.virtualenvs"
+  venv_name=$(basename `pwd`)
+
+  if [[ ! -f "$venv_path/$venv_name/bin/activate" ]]; then
+    echo -e "\x1B[33mCreating venv: $venv_path/$venv_name \x1B[0m\n"
+    python3 -m venv --upgrade-deps "$venv_path/$venv_name"
+    echo -e ""
+  fi
+
+  echo -e "\x1B[32mActivating venv: $venv_path/$venv_name \x1B[0m"
+  source "$venv_path/$venv_name/bin/activate"
 }
