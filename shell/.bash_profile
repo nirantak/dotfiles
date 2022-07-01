@@ -1,8 +1,8 @@
 # ~/.bash_profile: executed by bash(1) for login shells.
 
-# Load the shell dotfiles, and then some:
+# Load shell aliases & functions
 for file in ~/dotfiles/shell/{bash_prompt.sh,exports.sh,aliases.sh}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [[ -f "$file" ]] && source "$file";
 done;
 unset file;
 
@@ -46,9 +46,9 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
 fi
 

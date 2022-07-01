@@ -26,7 +26,7 @@ for file in "${files[@]}"; do
   filename=$(basename $file)
   filedir=$(dirname $file)
 
-  if [ -f ~/$filename ]; then
+  if [[ -f ~/$filename ]]; then
     mv ~/$filename $oldDir/$filedir/
   fi
   echo "Creating symlink to $filename"
@@ -47,7 +47,7 @@ mkdir -p $vsPath
 mkdir -p "$oldDir/vscode"
 
 for file in "${vsFiles[@]}"; do
-  if [ -f $vsPath/$file ]; then
+  if [[ -f $vsPath/$file ]]; then
     mv $vsPath/$file $oldDir/vscode/
   fi
   echo "Creating symlink to $file"

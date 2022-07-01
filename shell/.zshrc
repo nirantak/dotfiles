@@ -40,27 +40,27 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 
-# Load Shell aliases & functions
-for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   if [[ `arch` == "arm64" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
-
-  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Load shell aliases & functions
+for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
+  [[ -f "$file" ]] && source "$file";
+done;
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# Load custom extensions
+for file in ~/.{p10k.zsh,fzf.zsh,iterm2_shell_integration.zsh}; do
+  [[ -f "$file" ]] && source "$file";
+done;
+
+unset file;
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 
 # Profiling ZSH Performance
 # zprof

@@ -21,15 +21,16 @@ function dip() {
 }
 function dst() {
   # Show stats for running container
-  if [ -z $1 ]
-  then docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}';
-  else docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}' | grep $1;
+  if [[ -z $1 ]]; then
+    docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}';
+  else
+    docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}' | grep $1;
   fi
 }
 function dstop() {
   # Stop running containers
-  if [ $# -eq 0 ]
-  then docker stop $(docker ps -aq --no-trunc);
+  if [[ $# -eq 0 ]]; then
+    docker stop $(docker ps -aq --no-trunc);
   else
     for container in "$@"; do
       docker stop $(docker ps -aq --no-trunc | grep ${container});
@@ -38,8 +39,8 @@ function dstop() {
 }
 function drm() {
   # Delete containers
-  if [ $# -eq 0 ]
-  then docker rm $(docker ps -aq --no-trunc);
+  if [[ $# -eq 0 ]]; then
+    docker rm $(docker ps -aq --no-trunc);
   else
     for container in "$@"; do
       docker rm $(docker ps -aq --no-trunc | grep ${container});
@@ -48,8 +49,8 @@ function drm() {
 }
 function drmi() {
   # Delete images
-  if [ $# -eq 0 ]
-  then docker rmi $(docker images --filter 'dangling=true' -aq --no-trunc);
+  if [[ $# -eq 0 ]]; then
+    docker rmi $(docker images --filter 'dangling=true' -aq --no-trunc);
   else
     for container in "$@"; do
       docker rmi $(docker images --filter 'dangling=true' -aq --no-trunc | grep ${container});
@@ -76,15 +77,15 @@ function load_nvmrc() {
   local node_version="$(nvm version)"
   local nvmrc_path="$(nvm_find_nvmrc)"
 
-  if [ -n "$nvmrc_path" ]; then
+  if [[ -n "$nvmrc_path" ]]; then
     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-    if [ "$nvmrc_node_version" = "N/A" ]; then
+    if [[ "$nvmrc_node_version" = "N/A" ]]; then
       nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+    elif [[ "$nvmrc_node_version" != "$node_version" ]]; then
       nvm use
     fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
+  elif [[ "$node_version" != "$(nvm version default)" ]]; then
     echo "Reverting to nvm default version"
     nvm use default
   fi
@@ -94,11 +95,13 @@ function load_nvm() {
   # NVM - Node Version Manager
   export NVM_DIR="$HOME/.nvm"
   if [[ "$OSTYPE" == "darwin"* ]]; then
-    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"
-    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+    for file in $(brew --prefix)/opt/nvm/{nvm.sh,etc/bash_completion.d/nvm}; do
+      [[ -f "$file" ]] && source "$file"
+    done
   else
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+    for file in $NVM_DIR/{nvm.sh,bash_completion}; do
+      [[ -f "$file" ]] && source "$file"
+    done
   fi
   # Autoload node version from .nvmrc
   autoload -U add-zsh-hook
@@ -108,8 +111,7 @@ function load_nvm() {
 
 # Show frequently used commands
 function freq_cmd() {
-  if [ -n "$1" ]
-  then
+  if [[ -n "$1" ]]; then
     history | awk '{print $4}' | sort | uniq -c | sort -nr | head -n $1
   else
     history | awk '{print $4}' | sort | uniq -c | sort -nr | head
@@ -144,4 +146,13 @@ function venv() {
 
   echo -e "\x1B[32mActivating venv: $venv_path/$venv_name \x1B[0m"
   source "$venv_path/$venv_name/bin/activate"
+}
+
+# Tmux
+function mux() {
+  if [[ $# -eq 0 ]]; then
+    echo "Usage: mux <hostname> [tmux_options | default -CC]"
+    return 1
+  fi
+  ssh -A $1 -t "tmux ${2:--CC} new -A -s nirantak"
 }

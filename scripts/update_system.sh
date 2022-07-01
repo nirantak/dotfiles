@@ -40,7 +40,7 @@ pip3 install -U pip wheel setuptools
 if [[ "$OSTYPE" == "darwin"* ]]; then
   pip install -U ipython black flake8
   pipx upgrade-all
-  # npm update -g
+  npm update -g
 elif [[ "$OSTYPE" == "linux-android" ]]; then
   pip install -U ipython httpie youtube-dl
 elif [[ "$OSTYPE" == "linux"* ]]; then
