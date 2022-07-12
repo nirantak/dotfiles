@@ -97,6 +97,7 @@
   "git.branchWhitespaceChar": "_",
   "git.enableCommitSigning": true,
   "git.confirmSync": false,
+  "git.mergeEditor": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,

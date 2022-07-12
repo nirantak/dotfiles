@@ -1,6 +1,6 @@
 # Author: Nirantak Raghav
 # Single file config, to be put here: ~/.zshrc
-# Link: github.com/nirantak/dotfiles
+# Link: https://github.com/nirantak/dotfiles
 
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
@@ -27,6 +27,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/tools/bat.conf"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/git/global.gitignore"
+export HOMEBREW_NO_ANALYTICS=1
 export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
 
 plugins=(command-not-found git z zsh-autosuggestions zsh-syntax-highlighting)

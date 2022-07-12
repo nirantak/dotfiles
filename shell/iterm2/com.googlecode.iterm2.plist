@@ -2627,8 +2627,6 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<real>1</real>
-								<key>path</key>
-								<string>username</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -2673,8 +2671,6 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<real>1</real>
-								<key>path</key>
-								<string>hostname</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -2717,8 +2713,6 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<integer>0</integer>
-								<key>path</key>
-								<string>path</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -2790,28 +2784,17 @@
 					</dict>
 					<dict>
 						<key>class</key>
-						<string>iTermStatusBarSearchFieldComponent</string>
+						<string>iTermStatusBarComposerComponent</string>
 						<key>configuration</key>
 						<dict>
 							<key>knobs</key>
 							<dict>
-								<key>base: compression resistance</key>
-								<integer>1</integer>
 								<key>base: priority</key>
-								<real>5</real>
-								<key>shared text color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.77580000000000027</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.63</real>
-									<key>Red Component</key>
-									<real>0.90000000000000002</real>
-								</dict>
+								<real>1</real>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<real>1</real>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
 							<dict>
