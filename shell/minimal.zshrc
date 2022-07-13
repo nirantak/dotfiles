@@ -102,4 +102,9 @@ else
   eval "$(pyenv init -)"
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Load custom extensions
+extensions=(~/.fzf.zsh ~/.iterm2_shell_integration.zsh)
+for file in ${extensions[@]}; do
+  [[ -f "$file" ]] && source "$file";
+done;
+unset extensions file

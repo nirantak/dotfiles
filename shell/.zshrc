@@ -55,12 +55,12 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # Load custom extensions
-for file in ~/.{p10k.zsh,fzf.zsh,iterm2_shell_integration.zsh}; do
+extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh $(brew --prefix)/etc/grc.zsh)
+for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
+unset extensions file
 
-unset file;
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-
 # Profiling ZSH Performance
 # zprof
