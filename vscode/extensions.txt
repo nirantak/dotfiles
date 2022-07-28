@@ -4,7 +4,6 @@ bungcip.better-toml
 cssho.vscode-svgviewer
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
-dsznajder.es7-react-js-snippets
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
@@ -28,8 +27,6 @@ ms-vscode.remote-repositories
 ms-vsliveshare.vsliveshare
 oderwat.indent-rainbow
 PKief.material-icon-theme
-rebornix.ruby
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
-wingrunr21.vscode-ruby
 yzhang.markdown-all-in-one
