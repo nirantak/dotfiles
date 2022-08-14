@@ -2048,7 +2048,7 @@
 			<key>Draw Powerline Glyphs</key>
 			<true/>
 			<key>Enable Triggers in Interactive Apps</key>
-			<false/>
+			<true/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -2900,6 +2900,26 @@
 					<true/>
 					<key>regex</key>
 					<string>\w+@[\w\-.]+.([\/~])?([\/~]?.*\w)?\W*[$#%]</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>BounceTrigger</string>
+					<key>parameter</key>
+					<integer>0</integer>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>^\s*Yubikey OTP .*MFA</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermUserNotificationTrigger</string>
+					<key>parameter</key>
+					<string>Enter Yubikey!</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>^\s*Yubikey OTP .*MFA</string>
 				</dict>
 			</array>
 			<key>Unlimited Scrollback</key>

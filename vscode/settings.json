@@ -18,7 +18,7 @@
   "telemetry.telemetryLevel": "off",
   "editor.fontFamily": "Fira Code",
   "editor.fontWeight": "normal",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.fontSize": 14,
   "editor.wordWrap": "on",
   "editor.renderWhitespace": "boundary",
@@ -43,6 +43,7 @@
   "editor.tabCompletion": "on",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
+  "editor.experimental.stickyScroll.enabled": true,
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
@@ -143,14 +144,6 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
-  },
-  "ruby.format": "rufo",
-  "ruby.intellisense": "rubyLocate",
-  "ruby.codeCompletion": "rcodetools",
-  "ruby.useLanguageServer": true,
-  "ruby.lint": {
-    "ruby": true,
-    "rubocop": false
   },
   "[ruby]": {
     "editor.formatOnSave": true,
