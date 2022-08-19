@@ -26,7 +26,7 @@ brew install git curl wget vim zsh tmux
 sudo apt update && sudo apt install -y git curl wget vim zsh tmux
 ```
 
-Or for full system setup, see repo [nirantak/ansible-setup](https://github.com/nirantak/ansible-setup). Run any of the [bootstrap scripts](https://github.com/nirantak/ansible-setup/tree/main/scripts).
+Or for full system setup, see repo [nirantak/infra-automation](https://github.com/nirantak/infra-automation). Run any of the [bootstrap scripts](https://github.com/nirantak/infra-automation/tree/main/scripts).
 
 Install additional software (Included in bootstrap scripts)
 
@@ -50,17 +50,17 @@ Old dotfiles are backed up in `~/dotfiles/dotfiles_old`
 
 - Zsh
 
-![zsh](images/zsh.png)
+![zsh](.github/images/zsh.png)
 
 - Bash
 
-![bash](images/bash.png)
+![bash](.github/images/bash.png)
 
 - Vim
 
-![vim](images/vim.png)
+![vim](.github/images/vim.png)
 
 ## References
 
 - [GitHub dotfiles](http://dotfiles.github.io/)
-- [Mathias Bynens'](https://github.com/mathiasbynens/dotfiles) dotfiles
+- [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)

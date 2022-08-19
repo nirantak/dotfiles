@@ -92,7 +92,8 @@
     "requirements*.txt": "pip-requirements",
     ".coveragerc": "properties",
     "_headers": "plaintext",
-    "_redirects": "plaintext"
+    "_redirects": "plaintext",
+    "*.mdx": "markdown"
   },
   "git.autofetch": true,
   "git.autoStash": true,
