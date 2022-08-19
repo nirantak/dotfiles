@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>0</integer>
 	<key>Actions</key>
 	<array/>
 	<key>AdjustWindowForFontSizeChange</key>
@@ -18,6 +22,8 @@
 	<true/>
 	<key>ClosingTmuxWindowKillsTmuxWindows_selection</key>
 	<integer>1</integer>
+	<key>CopySelection</key>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Andromeda</key>

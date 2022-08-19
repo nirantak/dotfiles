@@ -37,6 +37,7 @@
 [push]
   default = upstream
   followTags = true
+  autoSetupRemote = true
 
 [log]
   date = human
@@ -63,7 +64,6 @@
   autocorrect = 1
 
 [alias]
-  p = push -u origin
   l1 = log -i -1
   unstage = reset HEAD --
   uncommit = reset HEAD~
