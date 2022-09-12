@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-alefragnani.Bookmarks
 bungcip.better-toml
 cssho.vscode-svgviewer
 DavidAnson.vscode-markdownlint
@@ -7,7 +6,6 @@ dbaeumer.vscode-eslint
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
-GitHub.copilot
 GitHub.github-vscode-theme
 GitHub.remotehub
 golang.go

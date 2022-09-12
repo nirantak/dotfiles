@@ -43,7 +43,7 @@
   "editor.tabCompletion": "on",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
-  "editor.experimental.stickyScroll.enabled": true,
+  "editor.stickyScroll.enabled": true,
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
@@ -161,8 +161,8 @@
   "[plaintext]": {
     "editor.defaultFormatter": null
   },
-  "go.toolsManagement.autoUpdate": true,
   // Plugin Settings
+  "go.toolsManagement.autoUpdate": true,
   "material-icon-theme.activeIconPack": "none",
   "emmet.excludeLanguages": [],
   "emmet.showSuggestionsAsSnippets": true,
@@ -189,12 +189,5 @@
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "json": false,
-    "plaintext": true,
-    "markdown": true
   }
 }
