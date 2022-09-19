@@ -154,5 +154,5 @@ function mux() {
     echo "Usage: mux <hostname> [tmux_options | default -CC]"
     return 1
   fi
-  ssh -A $1 -t "tmux ${2:--CC} new -A -s nirantak"
+  ssh $1 -t "tmux ${2:--CC} new -A -s nirantak"
 }

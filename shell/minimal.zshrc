@@ -104,7 +104,7 @@ else
 fi
 
 # Load custom extensions
-extensions=(~/.fzf.zsh ~/.iterm2_shell_integration.zsh)
+extensions=(~/dotfiles/shell/aliases.local.sh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
