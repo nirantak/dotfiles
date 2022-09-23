@@ -50,7 +50,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # Load custom extensions
-extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh $(brew --prefix)/etc/grc.zsh)
+extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh ~/dotfiles/tools/grc.zsh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;

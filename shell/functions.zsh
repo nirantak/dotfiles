@@ -156,3 +156,40 @@ function mux() {
   fi
   ssh $1 -t "tmux ${2:--CC} new -A -s nirantak"
 }
+
+# Refresh extensions
+function refresh_ext() {
+  curl -sL https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+  curl -sL https://iterm2.com/shell_integration/bash -o ~/.iterm2_shell_integration.bash
+  curl -sL https://raw.github.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -o ~/.dir_colors
+
+  # Remove comments to reduce file size for SCP
+  sed -i'' '/^[[:space:]]*#/d; /#$/d' ~/.iterm2_shell_integration.bash
+
+  cp -fv "$(brew --prefix)/etc/grc.zsh" ~/dotfiles/tools/grc.zsh
+
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    gdircolors -b ~/.dir_colors
+  else
+    dircolors -b ~/.dir_colors
+  fi
+}
+
+# SCP shell config and the SSH
+function s() {
+  host="$1"
+  echo "Uploading custom config to $host"
+  cat ~/dotfiles/shell/{.bashrc,aliases.local.sh} ~/.iterm2_shell_integration.bash > ~/custom_shell_for_${USER}.bashrc
+  scp -q -o LogLevel=QUIET ~/custom_shell_for_${USER}.bashrc $host:~/.bashrc
+  echo "SSHing into $host"
+  ssh -At $host
+}
+
+# Display all available colors upto $1 or 255
+function colors () {
+  num=${1:-255}
+  for n in $(seq 0 $num); do
+    printf '\e[48;5;%dm %03d ' $n $n
+  done
+  printf '\e[0m \n'
+}

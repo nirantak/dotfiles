@@ -27,6 +27,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export NODE_REPL_HISTORY_SIZE="100000";
 export BAT_CONFIG_PATH="$HOME/dotfiles/tools/bat.conf"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/git/global.gitignore"
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export HOMEBREW_NO_ANALYTICS=1
 export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
 
@@ -56,8 +57,6 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf*' 'fg=white,bold,bg=red')
 alias r="reset"
 alias l="pwd && ls"
 alias ll="ls -ltrahF"
-alias la="ls -a"
-alias cp="cp -i"
 alias rm="rm -i"
 alias df="df -h"
 alias free="free -m"

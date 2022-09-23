@@ -2800,33 +2800,6 @@
 					</dict>
 					<dict>
 						<key>class</key>
-						<string>iTermStatusBarComposerComponent</string>
-						<key>configuration</key>
-						<dict>
-							<key>knobs</key>
-							<dict>
-								<key>base: priority</key>
-								<real>1</real>
-								<key>maxwidth</key>
-								<real>+infinity</real>
-								<key>minwidth</key>
-								<real>1</real>
-							</dict>
-							<key>layout advanced configuration dictionary value</key>
-							<dict>
-								<key>algorithm</key>
-								<integer>0</integer>
-								<key>auto-rainbow style</key>
-								<integer>0</integer>
-								<key>font</key>
-								<string>MesloLGS-NF-Regular 13</string>
-								<key>remove empty components</key>
-								<false/>
-							</dict>
-						</dict>
-					</dict>
-					<dict>
-						<key>class</key>
 						<string>iTermStatusBarClockComponent</string>
 						<key>configuration</key>
 						<dict>
@@ -2885,28 +2858,6 @@
 			<real>0.099370169132313835</real>
 			<key>Triggers</key>
 			<array>
-				<dict>
-					<key>action</key>
-					<string>SetHostnameTrigger</string>
-					<key>parameter</key>
-					<string>\1@\2</string>
-					<key>partial</key>
-					<true/>
-					<key>regex</key>
-					<string>(\w+)@([\w\-.]+).+[$#%]</string>
-				</dict>
-				<dict>
-					<key>action</key>
-					<string>SetDirectoryTrigger</string>
-					<key>disabled</key>
-					<false/>
-					<key>parameter</key>
-					<string>\1\2</string>
-					<key>partial</key>
-					<true/>
-					<key>regex</key>
-					<string>\w+@[\w\-.]+.([\/~])?([\/~]?.*\w)?\W*[$#%]</string>
-				</dict>
 				<dict>
 					<key>action</key>
 					<string>BounceTrigger</string>

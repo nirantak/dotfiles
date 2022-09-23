@@ -21,6 +21,7 @@ export MANPAGER="less"
 export PAGER="less"
 export BAT_CONFIG_PATH="$HOME/dotfiles/tools/bat.conf"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/git/global.gitignore"
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Python https://docs.python.org/3/using/cmdline.html#environment-variables
 export PYTHONIOENCODING="UTF-8"
