@@ -52,10 +52,6 @@ Old dotfiles are backed up in `~/dotfiles/dotfiles_old`
 
 ![zsh](.github/images/zsh.png)
 
-- Bash
-
-![bash](.github/images/bash.png)
-
 - Vim
 
 ![vim](.github/images/vim.png)
