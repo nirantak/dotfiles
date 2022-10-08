@@ -138,14 +138,33 @@ function venv() {
   venv_path="$HOME/.virtualenvs"
   venv_name=$(basename `pwd`)
 
-  if [[ ! -f "$venv_path/$venv_name/bin/activate" ]]; then
-    echo -e "\x1B[33mCreating venv: $venv_path/$venv_name \x1B[0m\n"
-    python3 -m venv --upgrade-deps "$venv_path/$venv_name"
-    echo -e ""
-  fi
+  case $1 in
+    list)
+      ls -ltrah $venv_path
+      ;;
 
-  echo -e "\x1B[32mActivating venv: $venv_path/$venv_name \x1B[0m"
-  source "$venv_path/$venv_name/bin/activate"
+    info)
+      if [[ -d "$VIRTUAL_ENV" ]]; then
+        echo "Active venv: $VIRTUAL_ENV"
+      elif [[ -f "$venv_path/$venv_name/bin/activate" ]]; then
+        echo "Available venv: $venv_path/$venv_name"
+      else
+        echo "No venv found!"
+      fi
+      ;;
+
+    *)
+      if [[ ! -f "$venv_path/$venv_name/bin/activate" ]]; then
+        rm -rf "$venv_path/$venv_name"
+        echo -e "\x1B[33mCreating venv: $venv_path/$venv_name \x1B[0m\n"
+        python3 -m venv --upgrade-deps "$venv_path/$venv_name"
+        echo -e ""
+      fi
+
+      echo -e "\x1B[32mActivating venv: $venv_path/$venv_name \x1B[0m"
+      source "$venv_path/$venv_name/bin/activate"
+      ;;
+  esac
 }
 
 # Tmux
