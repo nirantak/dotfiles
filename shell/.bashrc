@@ -104,5 +104,5 @@ alias df="df -h"
 alias vi="vim -c 'set nu cul'"
 alias vim="vim -c 'set nu cul'"
 
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+bind '"\e[A": history-search-backward' 2>/dev/null
+bind '"\e[B": history-search-forward' 2>/dev/null
