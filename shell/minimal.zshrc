@@ -37,7 +37,6 @@ unsetopt correct_all
 setopt correct
 
 source $ZSH/oh-my-zsh.sh
-PROMPT="%{$fg[cyan]%}%M %(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜) %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)"
 
 HISTSIZE=100000
 SAVEHIST="$HISTSIZE"
@@ -85,6 +84,8 @@ alias ytvid="youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=w
 alias ytd="youtube-dl"
 alias ytf="youtube-dl -F"
 
+export GPG_TTY=$(tty)
+
 if [[ "$OSTYPE" == "linux"* ]]; then
   alias u="sudo apt update && sudo apt upgrade"
   alias rm="rm -I"
@@ -108,3 +109,5 @@ for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
 unset extensions file
+
+PROMPT='%{$fg[cyan]%}%~ $(git_prompt_info)%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜) %{$reset_color%}'

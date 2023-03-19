@@ -27,14 +27,14 @@ if [[ "$MODE" == "work" ]]; then
     "$(__dock_item /Applications/Spotify.app)" \
     "$(__dock_item /Applications/Notion.app)" \
     "$(__dock_item /System/Applications/Utilities/Activity\ Monitor.app)" \
-    "$(__dock_item /System/Applications/System\ Preferences.app)"
+    "$(__dock_item /System/Applications/System\ Settings.app)"
 elif [[ "$MODE" == "personal" ]]; then
   defaults delete com.apple.dock persistent-apps
   defaults write com.apple.dock persistent-apps -array \
     "$(__dock_item /Applications/Google\ Chrome.app)" \
     "$(__dock_item /Applications/Spotify.app)" \
     "$(__dock_item /Applications/Notion.app)" \
-    "$(__dock_item /Applications/iTerm.app)" \
+    "$(__dock_item /Applications/Warp.app)" \
     "$(__dock_item /Applications/Visual\ Studio\ Code.app)" \
     "$(__dock_item /System/Applications/Utilities/Activity\ Monitor.app)" \
     "$(__dock_item /System/Applications/System\ Settings.app)"
