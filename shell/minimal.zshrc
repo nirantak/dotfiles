@@ -94,22 +94,6 @@ alias ip-int="ipconfig getifaddr en0"
 alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs -t vnstat -i"
 alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
-# Tools
-alias b="browser-sync start --server"
-alias bd="browser-sync start --server --directory --files='**/*'"
-alias rgf="rg --files | rg"
-alias ytaud="youtube-dl -f bestaudio[ext!=webm] --extract-audio --audio-quality 0 --no-playlist --add-metadata --embed-thumbnail --prefer-ffmpeg"
-alias ytvid="youtube-dl -f bestvideo[ext!=webm]+bestaudio[ext!=webm]/best[ext!=webm] --no-playlist --add-metadata --embed-thumbnail"
-alias ytd="youtube-dl"
-alias ytf="youtube-dl -F"
-
-# Docker
-alias dcr="docker-compose run --rm"
-alias dcl="docker-compose logs -ft --tail=20"
-alias dol="docker logs -f"
-alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}'"
-alias dtop="docker stats --format 'table {{.Container}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}'"
-
 export GPG_TTY=$(tty)
 export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
 
@@ -130,8 +114,13 @@ else
   eval "$(pyenv init -)"
 fi
 
-# Load custom extensions
-extensions=(~/dotfiles/shell/aliases.local.sh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh)
+# Load shell aliases & functions if they exist
+for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
+  [[ -f "$file" ]] && source "$file";
+done;
+
+# Load custom extensions if they exist
+extensions=(~/.fzf.zsh ~/.iterm2_shell_integration.zsh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
