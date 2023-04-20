@@ -39,6 +39,9 @@
   followTags = true
   autoSetupRemote = true
 
+[rebase]
+  autoStash = true
+
 [log]
   date = human
 

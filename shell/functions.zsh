@@ -199,9 +199,9 @@ function s() {
   host="$1"
   echo "Uploading custom config to $host"
   cat ~/dotfiles/shell/{.bashrc,aliases.local.sh} ~/.iterm2_shell_integration.bash > ~/custom_shell_for_${USER}.bashrc
-  scp -q -o LogLevel=QUIET ~/custom_shell_for_${USER}.bashrc $host:~/.bashrc
+  scp -q -o LogLevel=QUIET -o StrictHostKeyChecking=no ~/custom_shell_for_${USER}.bashrc $host:~/.bashrc
   echo "SSHing into $host"
-  ssh -At $host
+  ssh -At -o StrictHostKeyChecking=no $host
 }
 
 # Display all available colors upto $1 or 255
