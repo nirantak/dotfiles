@@ -58,7 +58,7 @@ env ZSH=$ZSH sh $ZSH/tools/upgrade.sh
 cd $ZSH/custom/plugins/zsh-autosuggestions && git pull --ff-only
 cd $ZSH/custom/plugins/zsh-syntax-highlighting && git pull --ff-only
 
-if [[ "$OSTYPE" != "linux-android" && "$LINUX_RELEASE" != *"rhel"* ]]; then
+if [[ -d "$PYENV_ROOT" ]]; then
   echo -e "\n \x1B[32m Updating Pyenv \x1B[0m"
   pyenv update
 fi

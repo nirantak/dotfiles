@@ -46,8 +46,10 @@ for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
   [[ -f "$file" ]] && source "$file";
 done;
 
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+if [[ -d "$PYENV_ROOT" ]]; then
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+fi
 
 # Load custom extensions
 extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh ~/dotfiles/tools/grc.zsh)

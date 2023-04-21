@@ -9,4 +9,6 @@ if [[ "$OSTYPE" == "linux"* ]]; then
   fi
 fi
 
-eval "$(pyenv init --path)"
+if [[ -d "$PYENV_ROOT" ]]; then
+  eval "$(pyenv init --path)"
+fi

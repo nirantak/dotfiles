@@ -95,7 +95,12 @@ alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f
 alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 export GPG_TTY=$(tty)
-export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
+export PATH="$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
+
+if [[ -d "$PYENV_ROOT" ]]; then
+  export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   alias u="sudo apt update && sudo apt upgrade"
@@ -109,9 +114,6 @@ fi
 if [[ "$OSTYPE" == *"android"* ]]; then
   alias u="apt update && apt upgrade"
   alias d="cd ~/storage/shared/Download"
-else
-  export PATH="$PYENV_ROOT/shims:$PATH"
-  eval "$(pyenv init -)"
 fi
 
 # Load shell aliases & functions if they exist
