@@ -51,7 +51,7 @@ export LESS_TERMCAP_ue=$(tput rmul; tput sgr0) # stop underline
 export LESS="-FiR" # -e E --quit-at-eof, -F --quit-if-one-screen, -i --ignore-case, -r R --raw-control-chars, -X --no-init
 export MANPAGER="less"
 export PAGER="less"
-export BAT_CONFIG_PATH="$HOME/dotfiles/tools/bat.conf"
+export BAT_CONFIG_PATH="~/dotfiles/tools/bat.conf"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --ignore-file ~/dotfiles/git/global.gitignore"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
