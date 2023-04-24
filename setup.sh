@@ -8,6 +8,8 @@ REPO_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 
+echo -e "\x1B[32m* Starting $REPO_DIR install at: $(date +%s) *\x1B[0m"
+
 # Terminal config
 files=( "shell/.bashrc" "shell/.zshenv" "shell/.zshrc" "shell/.inputrc" "shell/.editrc" "tools/.prettierrc" "tools/.tmux.conf" "tools/.vimrc" "git/.gitconfig" )
 
@@ -48,4 +50,4 @@ done
 # restore $IFS
 IFS=$SAVEIFS
 
-echo -e "\x1B[32m*Complete*\x1B[0m"
+echo -e "\x1B[32m* Completed dotfiles setup at $(date +%s) *\x1B[0m"

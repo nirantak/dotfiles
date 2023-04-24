@@ -52,7 +52,7 @@ if [[ -d "$PYENV_ROOT" ]]; then
 fi
 
 # Load custom extensions
-extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh ~/dotfiles/tools/grc.zsh)
+extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.iterm2_shell_integration.zsh ~/dotfiles/tools/grc.zsh ~/code/dotfiles-ssh/functions.sh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;

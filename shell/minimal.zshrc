@@ -122,7 +122,7 @@ for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
 done;
 
 # Load custom extensions if they exist
-extensions=(~/.fzf.zsh ~/.iterm2_shell_integration.zsh)
+extensions=(~/.fzf.zsh ~/.iterm2_shell_integration.zsh ~/code/dotfiles-ssh/functions.sh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
