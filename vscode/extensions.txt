@@ -28,6 +28,7 @@ ms-vsliveshare.vsliveshare
 oderwat.indent-rainbow
 PKief.material-icon-theme
 streetsidesoftware.code-spell-checker
+timonwong.shellcheck
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 yzhang.markdown-all-in-one
