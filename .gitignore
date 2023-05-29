@@ -7,6 +7,7 @@ dotfiles_old
 backup.sh
 aliases.local.sh
 work.gitconfig
+*.log
 
 # Folder view configuration files
 .DS_Store
