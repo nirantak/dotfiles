@@ -45,7 +45,7 @@ alias ytf="youtube-dl -F"
 alias dcr="docker-compose run --rm"
 alias dcl="docker-compose logs -ft --tail=20"
 alias dol="docker logs -f"
-alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}'"
+alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}\t{{.Ports}}'"
 alias dtop="docker stats --format 'table {{.Container}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}'"
 
 # Linux Overrides

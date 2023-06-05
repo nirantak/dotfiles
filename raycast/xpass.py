@@ -15,11 +15,11 @@
 # @raycast.authorURL https://nirantak.com
 # @raycast.description Autofill password from 1password wherever the cursor is
 
+import json
 import logging
 import subprocess
 import sys
 from pathlib import Path
-import json
 
 
 class XPass:
@@ -42,10 +42,10 @@ class XPass:
                 capture_output=True,
                 check=True,
             )
+            items: list[dict] = json.loads(out.stdout.decode())
         except Exception as e:
             self.log.error(f"search Exception: {e}")
             raise e
-        items: list[dict] = json.loads(out.stdout.decode())
 
         resp = list(filter(lambda x: search in x["title"].lower(), items))
         if len(resp) < 1:
