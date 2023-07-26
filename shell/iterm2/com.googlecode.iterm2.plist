@@ -3187,7 +3187,7 @@
 			<key>Columns</key>
 			<integer>150</integer>
 			<key>Command</key>
-			<string>ssh ld -t "export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES; tmux -CC new -A -s nirantak"</string>
+			<string>ssh -At ld "tmux -CC new -A -s nirantak"</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
