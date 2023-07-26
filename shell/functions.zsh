@@ -10,17 +10,18 @@ function dalias() {
   alias | grep '__d' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort;
 }
 function dbash() {
-  # Bash into running container
+  # Bash into a running container
   docker exec -it $(docker ps -aqf "name=$1") bash;
 }
 function dip() {
-  # Inspect running container
-  for container in "$@"; do
-    docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" "${container}";
-  done
+  # Inspect running containers
+  (
+    echo -e "Hostname Container IP";
+    docker inspect $(docker ps -aq) --format "{{ .Config.Hostname }} {{ .Name }} {{ .NetworkSettings.IPAddress }}"
+  ) | column -t -o $'\t' | grcat conf.log;
 }
 function dst() {
-  # Show stats for running container
+  # Show stats for running containers
   if [[ -z $1 ]]; then
     docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.PIDs}}';
   else
@@ -38,7 +39,7 @@ function dstop() {
   fi
 }
 function drm() {
-  # Delete containers
+  # Delete stopped containers
   if [[ $# -eq 0 ]]; then
     docker rm $(docker ps -aq --no-trunc);
   else
@@ -48,7 +49,7 @@ function drm() {
   fi
 }
 function drmi() {
-  # Delete images
+  # Delete dangling images
   if [[ $# -eq 0 ]]; then
     docker rmi $(docker images --filter 'dangling=true' -aq --no-trunc);
   else
