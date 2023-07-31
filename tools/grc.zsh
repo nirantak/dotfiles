@@ -93,3 +93,8 @@ done
 
 # Clean up variables
 unset cmds cmd
+
+# Custom aliases
+alias l="pwd && grc ls -C --color"
+alias ls="grc ls --color"
+alias ll="grc ls -ltrahF --color"
