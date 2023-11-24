@@ -2001,7 +2001,7 @@
 			<key>Columns</key>
 			<integer>150</integer>
 			<key>Command</key>
-			<string></string>
+			<string>zsh -l</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -4096,6 +4096,8 @@
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
+	<false/>
+	<key>OpenTmuxDashboardIfHiddenWindows</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>1</integer>
