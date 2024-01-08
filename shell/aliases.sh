@@ -25,12 +25,12 @@ alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip-int="ipconfig getifaddr en0"
 alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs -t vnstat -i"
 alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+alias ports="sudo lsof -iTCP -sTCP:LISTEN -n -P"
 
 # Utilities
 alias note="vim +startinsert ~/Documents/notes.md"
 alias dotfiles="cd ~/dotfiles && git status && code ."
 alias del="sed -i 'N; $ !P; $ !D; $ d' ~/.zsh_history"  # Delete the last command and this command itself from history
-alias reload="~/dotfiles/scripts/reload.scp"
 
 # Tools
 alias b="browser-sync start --server"
