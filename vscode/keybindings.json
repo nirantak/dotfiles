@@ -34,5 +34,39 @@
     "key": "ctrl+alt+left",
     "command": "bracket-pair-colorizer-2.undoBracketSelection",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "editor.gotoNextSymbolFromResult",
+    "when": "hasSymbols"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.gotoNextSymbolFromResult",
+    "when": "hasSymbols"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "f12",
+    "command": "-goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "alt+cmd+e",
+    "command": "workbench.files.action.showActiveFileInExplorer"
   }
 ]

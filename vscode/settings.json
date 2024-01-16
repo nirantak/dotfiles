@@ -10,11 +10,10 @@
   "workbench.editor.decorations.badges": true,
   "workbench.editor.decorations.colors": true,
   "workbench.startupEditor": "welcomePageInEmptyWorkbench",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.empty.hint": "hidden",
   "window.titleBarStyle": "custom",
+  "window.newWindowDimensions": "offset",
+  "window.restoreWindows": "none",
   "telemetry.telemetryLevel": "off",
   "editor.fontFamily": "Jetbrains Mono",
   "editor.fontWeight": "normal",
@@ -44,27 +43,34 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.stickyScroll.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "explorer.autoReveal": false,
+  "explorer.autoRevealExclude": {
+    "build": true,
+    ".gradle": true,
+    ".gopath": true,
+    "vendor": true,
+    "**/node_modules": true
+  },
   "explorer.confirmDelete": false,
   "explorer.incrementalNaming": "smart",
   "breadcrumbs.enabled": true,
-  "terminal.integrated.persistentSessionReviveProcess": "never",
-  "search.showLineNumbers": true,
-  "search.smartCase": true,
-  "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
-  "search.searchEditor.defaultNumberOfContextLines": 5,
-  "search.searchEditor.reusePriorSearchConfiguration": true,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontFamily": "'MesloLGS NF', 'Andale Mono', monospace",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.scrollback": 100000,
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.enableBell": true,
-  "terminal.integrated.macOptionClickForcesSelection": true,
   "terminal.integrated.defaultProfile.linux": "tmux",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.external.osxExec": "/Applications/Warp.app",
+  "terminal.external.osxExec": "/Applications/iTerm.app",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "terminal.explorerKind": "external",
+  "terminal.integrated.enablePersistentSessions": false,
   "files.autoSave": "onWindowChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -89,21 +95,18 @@
     "Dockerfile*": "dockerfile",
     "*.scpt": "shellscript",
     "*.scp": "shellscript",
+    "*.applescript": "shellscript",
     "run": "shellscript",
     "hosts": "properties",
     "*.plist": "xml",
+    "*.tmpl": "html",
+    "*.vue": "html",
     "requirements*.txt": "pip-requirements",
     ".coveragerc": "properties",
     "_headers": "plaintext",
     "_redirects": "plaintext",
     "*.mdx": "markdown"
   },
-  "git.autofetch": true,
-  "git.autoStash": true,
-  "git.branchWhitespaceChar": "_",
-  "git.enableCommitSigning": true,
-  "git.confirmSync": false,
-  "git.mergeEditor": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -119,41 +122,36 @@
     "**/*.venv/**": true,
     "**/.hg/store/**": true
   },
+  "search.showLineNumbers": true,
+  "search.smartCase": true,
+  "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+  "search.searchEditor.defaultNumberOfContextLines": 5,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.exclude": {
+    "build": true,
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.venv": true,
     "**/.git": true,
     "**/*.code-search": true
   },
+  "git.autofetch": true,
+  "git.autoStash": true,
+  "git.branchWhitespaceChar": "_",
+  "git.confirmSync": false,
+  "git.mergeEditor": true,
+  "extensions.ignoreRecommendations": true,
   // Language Settings
-  "python.pythonPath": "python",
   "python.languageServer": "Pylance",
-  "python.linting.maxNumberOfProblems": 50,
-  "python.formatting.provider": "black",
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    ".git/**",
-    "**/__pycache__/**",
-    "**/node_modules/**"
-  ],
   "[python]": {
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
-  },
-  "[ruby]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "mbessey.vscode-rufo"
   },
   "[html]": {
     "editor.formatOnSave": false
@@ -161,11 +159,8 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-  "[plaintext]": {
-    "editor.defaultFormatter": null
-  },
-  // Plugin Settings
   "go.toolsManagement.autoUpdate": true,
+  // Plugin Settings
   "material-icon-theme.activeIconPack": "none",
   "emmet.excludeLanguages": [],
   "emmet.showSuggestionsAsSnippets": true,
@@ -179,6 +174,10 @@
     "rgba(16,48,48,0.3)",
     "rgba(64,64,16,0.3)"
   ],
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.userWords": [
     "Nirantak",
@@ -189,8 +188,15 @@
     "wsiwn",
     "typer"
   ],
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
+  "redhat.telemetry.enabled": false,
+  "cmake.configureOnOpen": true,
+  "remote.SSH.allowLocalServerDownload": true,
+  "remote.SSH.connectTimeout": 45,
+  "remote.SSH.localServerDownload": "auto",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
   }
 }
