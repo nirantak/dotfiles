@@ -1,4 +1,6 @@
 aaron-bond.better-comments
+cssho.vscode-svgviewer
+DavidAnson.vscode-markdownlint
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
@@ -20,7 +22,6 @@ ms-vscode.remote-explorer
 ms-vscode.remote-server
 oderwat.indent-rainbow
 PKief.material-icon-theme
-redhat.vscode-yaml
 streetsidesoftware.code-spell-checker
 timonwong.shellcheck
 VisualStudioExptTeam.vscodeintellicode
