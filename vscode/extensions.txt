@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-cssho.vscode-svgviewer
 DavidAnson.vscode-markdownlint
 eamodio.gitlens
 EditorConfig.EditorConfig
