@@ -20,7 +20,7 @@ elif [[ "$OSTYPE" == "linux-android" ]]; then
 elif [[ "$OSTYPE" == "linux"* ]]; then
   # Linux
   LINUX_RELEASE=$(cat /etc/*-release)
-  if [[ "$LINUX_RELEASE" == *"rhel"* ]]; then
+  if [[ "$LINUX_RELEASE" == *"rhel"* || "$LINUX_RELEASE" == *"Mariner"* ]]; then
     sudo yum update -y --skip-broken
     sudo yum upgrade -y --skip-broken
   else
@@ -48,7 +48,7 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
   if [[ "$LINUX_RELEASE" == *"ubuntu"* ]]; then
     pip3 install -U ipython black flake8 pipx
   fi
-  if [[ "$LINUX_RELEASE" != *"rhel"* ]]; then
+  if [[ "$LINUX_RELEASE" != *"rhel"* && "$LINUX_RELEASE" != *"Mariner"* ]]; then
     sudo npm update -g
   fi
 fi
