@@ -15,12 +15,13 @@
   ui = true
 
 [color "diff"]
-  meta = yellow
+  meta = 11
   frag = magenta bold
   old = red bold
   new = green bold
   commit = yellow bold
   whitespace = red reverse
+  func = 146 bold
 
 [color "diff-highlight"]
   oldNormal = red bold
@@ -39,6 +40,9 @@
   followTags = true
   autoSetupRemote = true
 
+[pull]
+  rebase = true
+
 [rebase]
   autoStash = true
 
@@ -56,6 +60,9 @@
 
 [diff]
   renames = copies
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
 
 [merge]
   stat = true
