@@ -42,11 +42,11 @@ alias ytd="youtube-dl"
 alias ytf="youtube-dl -F"
 
 # Docker
-alias dcr="docker compose run --rm"
-alias dcl="docker compose logs -ft --tail=20"
+alias dcr="docker run --rm -it --entrypoint bash"
 alias dol="docker logs -f"
 alias dps="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Image}}\t{{.Command}}\t{{.Ports}}'"
 alias dtop="docker stats --format 'table {{.Container}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}'"
+alias dcl="docker compose logs -ft --tail=20"
 
 # Linux Overrides
 if [[ "$OSTYPE" == "linux"* ]]; then
