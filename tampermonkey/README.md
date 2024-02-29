@@ -6,5 +6,6 @@
 
 ## Jira Sort
 
-- Script - [jira_sort.js](jira_sort.js)
-- Replace `jira.example.com` in the `@match` param on line 7 with the domain:port for your Jira server.
+- What: Automatically sort comments in a Jira ticket by 'Oldest first'.
+- Where: [jira_sort.js](jira_sort.js)
+- How: Copy the script in Tampermonkey and replace `jira.example.com` in the `@match` param on line 7 with the domain:port for your Jira server.
