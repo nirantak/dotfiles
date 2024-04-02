@@ -20,7 +20,8 @@ alias gc="git checkout"
 alias ss="ssh -At"
 
 # Networking
-alias up="ping 8.8.8.8 -c 3"
+alias up="ping 1.1.1.1 -c 3"
+alias digg="dig +noall +answer"
 alias ip-ext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip-int="ipconfig getifaddr en0"
 alias data="networksetup -listnetworkserviceorder | grep 'Wi-Fi,' | cut -d' ' -f 5 | cut -d')' -f 1 | xargs -t vnstat -i"
