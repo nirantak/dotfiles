@@ -1,0 +1,12 @@
+/*
+  Key Modifiers
+  ^ : Ctrl
+  $ : Shift
+  ~ : Option (Alt)
+  @ : Command (Apple)
+  # : Numeric Keypad
+*/
+
+{
+  "~4" = (insertText:, "₹");
+}
