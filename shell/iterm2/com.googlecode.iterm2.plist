@@ -1718,6 +1718,8 @@
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>Leader</key>
+	<string>0x61-0x80000-0x0</string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3796,7 +3798,7 @@
 			<key>Show Timestamps</key>
 			<integer>0</integer>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Space</key>
 			<integer>0</integer>
 			<key>Status Bar Layout</key>
@@ -4100,7 +4102,7 @@
 	<key>OpenTmuxDashboardIfHiddenWindows</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>PasteSpecialRegex</key>
 	<string></string>
 	<key>PasteSpecialSubstitution</key>
@@ -4155,7 +4157,7 @@
 	<key>SeparateWindowTitlePerTab</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
