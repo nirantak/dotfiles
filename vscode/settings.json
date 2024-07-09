@@ -108,7 +108,8 @@
     ".coveragerc": "properties",
     "_headers": "plaintext",
     "_redirects": "plaintext",
-    "*.mdx": "markdown"
+    "*.mdx": "markdown",
+    "*.dict": "objective-c"
   },
   "files.exclude": {
     "**/.git": true,

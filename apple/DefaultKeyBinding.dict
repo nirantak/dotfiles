@@ -1,10 +1,16 @@
 /*
-  Key Modifiers
+Key Modifiers
   ^ : Ctrl
   $ : Shift
   ~ : Option (Alt)
   @ : Command (Apple)
   # : Numeric Keypad
+
+Docs:
+- https://ss64.com/mac/syntax-keybindings.html
+- https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html
+- https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding?language=objc
+- https://github.com/ttscoff/KeyBindings/blob/master/DefaultKeyBinding.dict
 */
 
 {

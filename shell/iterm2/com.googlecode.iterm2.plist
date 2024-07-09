@@ -2558,7 +2558,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGS-NF-Regular 14</string>
+			<string>MesloLGSNer-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -2622,7 +2622,7 @@
 					<key>auto-rainbow style</key>
 					<integer>0</integer>
 					<key>font</key>
-					<string>MesloLGS-NF-Regular 13</string>
+					<string>MesloLGSNer-Regular 13</string>
 					<key>remove empty components</key>
 					<false/>
 				</dict>
@@ -2666,7 +2666,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>MesloLGS-NF-Regular 13</string>
+								<string>MesloLGSNer-Regular 13</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -2712,7 +2712,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>MesloLGS-NF-Regular 13</string>
+								<string>MesloLGSNer-Regular 13</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -2756,7 +2756,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>MesloLGS-NF-Regular 13</string>
+								<string>MesloLGSNer-Regular 13</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -2798,7 +2798,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>MesloLGS-NF-Regular 13</string>
+								<string>MesloLGSNer-Regular 13</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -2844,7 +2844,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>MesloLGS-NF-Regular 13</string>
+								<string>MesloLGSNer-Regular 13</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -3746,7 +3746,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGS-NF-Regular 14</string>
+			<string>MesloLGSNer-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
