@@ -150,7 +150,7 @@
   "[python]": {
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.formatOnPaste": false,
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
