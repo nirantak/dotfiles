@@ -179,15 +179,9 @@ function mux() {
 
 # Refresh extensions
 function refresh_ext() {
-  curl -sL https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
-  curl -sL https://iterm2.com/shell_integration/bash -o ~/.iterm2_shell_integration.bash
-  curl -sL https://raw.github.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -o ~/.dir_colors
-
-  # Remove comments to reduce file size for SCP
-  sed -i'' '/^[[:space:]]*#/d; /#$/d' ~/.iterm2_shell_integration.bash
-
   cp -fv "$(brew --prefix)/etc/grc.zsh" ~/dotfiles/tools/grc.zsh
 
+  curl -sL https://githubraw.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -o ~/.dir_colors
   if [[ "$OSTYPE" == "darwin"* ]]; then
     gdircolors -b ~/.dir_colors
   else
@@ -202,4 +196,16 @@ function colors () {
     printf '\e[48;5;%dm %03d ' $n $n
   done
   printf '\e[0m \n'
+}
+
+# https://wezfurlong.org/wezterm/shell-integration.html
+function set_term_emulator_variable () {
+  if hash base64 2>/dev/null ; then
+    printf "\033]1337;SetUserVar=%s=%s\007" "$1" "$(echo -n "$2" | base64)"
+  fi
+}
+
+# cleanup to run when the shell exits
+function term_exit_cleanup () {
+  set_term_emulator_variable "OSTYPE" ""
 }

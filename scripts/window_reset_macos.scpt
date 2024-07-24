@@ -29,12 +29,6 @@ tell application "System Events"
   set position of VScode to [_x + _w / 3, _y]
   set size of VScode to [_w * 2 / 3, _h]
 
-  activate application "iTerm2"
-  delay 0.5
-  set iTerm to the front window of application process "iTerm2"
-  set position of iTerm to [_x, _y]
-  set size of iTerm to [_w, _h]
-
   activate application "Microsoft Outlook"
   delay 0.5
   set Outlook to the front window of application process "Microsoft Outlook"

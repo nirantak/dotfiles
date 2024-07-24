@@ -68,7 +68,6 @@
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.defaultProfile.linux": "tmux",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.external.osxExec": "/Applications/iTerm.app",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.macOptionClickForcesSelection": true,
   "terminal.explorerKind": "external",
