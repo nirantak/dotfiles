@@ -49,11 +49,13 @@ config.keys = {
 }
 
 -- Events and statuses
+local colors = wezterm.color.get_builtin_schemes()[config.color_scheme]
 
--- Notify on password prompt
+-- Notify on password prompt (does not work over SSH yet)
 wezterm.on('update-status', function(window, pane)
   local meta = pane:get_metadata() or {}
   local overrides = window:get_config_overrides() or {}
+
   if meta.password_input then
     overrides.color_scheme = 'Red Alert'
     -- window:toast_notification('wezterm', 'Enter password!', nil, 5000)
@@ -64,82 +66,77 @@ wezterm.on('update-status', function(window, pane)
 end)
 
 -- Set left status bar
+--[[
+For it to work over ssh, you need to emit the OSTYPE environment variable
+as a OSC 1337 escape sequence in your remote shell
+like: https://github.com/nirantak/dotfiles/blob/3fd6698d80628a9a24fad765b0dd8dc479c6abb8/shell/.bashrc#L144
+]]--
 wezterm.on('update-status', function(window, pane)
   local ostype = pane:get_user_vars().OSTYPE or ''
+  ostype = ostype:lower()
+  local elements = {
+    { Foreground = { Color = colors.foreground } },
+    { Background = { Color = colors.ansi[5] } },
+  }
+
   if ostype == "" then
-    window:set_left_status(' ? ')
-    return
+    table.insert(elements, { Text = ' ? ' })
+  elseif ostype:find("^darwin") then
+    table.insert(elements, { Text = '  ' })
+  elseif ostype:find("^linux") then
+    table.insert(elements, { Text = ' 🐧' })
+  else
+    table.insert(elements, { Text = ' ? ' })
   end
 
-  if ostype:lower():find("^darwin") then
-    window:set_left_status('  ')
-  elseif ostype:lower():find("^linux") then
-    window:set_left_status(' 🐧 ')
-  else
-    window:set_left_status(' ? ')
-  end
+  window:set_left_status(wezterm.format(elements))
 end)
 
 -- Set right status bar
+--[[
+For it to work over ssh, you need to add the shell integration in your remote shell
+- https://github.com/wez/wezterm/blob/main/assets/shell-integration/wezterm.sh
+- https://wezfurlong.org/wezterm/shell-integration.html
+requires powerline-fonts installed
+]]--
 wezterm.on('update-right-status', function(window, pane)
   local meta = pane:get_metadata() or {}
 
-  -- Hostname based on OSC 7 https://wezfurlong.org/wezterm/shell-integration.html
-  local cwd_uri = pane:get_current_working_dir()
-
-  local cells = {}
-  if cwd_uri then
-    local cwd = ''
-    local hostname = ''
-
-    cwd = cwd_uri.file_path
-    hostname = cwd_uri.host or wezterm.hostname()
-    local dot = hostname:find '[.]'
-    if dot then
-      hostname = hostname:sub(1, dot - 1)
-    end
-
-    if hostname == '' then
-      hostname = wezterm.hostname()
-    end
-
-    table.insert(cells, cwd)
-    table.insert(cells, hostname)
-  end
-
-  -- The powerline < symbol
   local LEFT_ARROW = utf8.char(0xe0b3)
   local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
+  local cwd_uri = pane:get_current_working_dir()
+  if not cwd_uri then
+    return
+  end
 
-  -- Color palette for the backgrounds of each cell
-  local text_fg = '#c0c0c0'
-  local colors = {
-    '#3c1361',
-    '#52307c',
-    '#663a82',
-    '#7c5295',
-    '#b491c8',
+  local hostname = cwd_uri.host or wezterm.hostname()
+  local hostname_color = colors.ansi[5]
+
+  if hostname:find("corp.") then
+    hostname_color = colors.ansi[3]
+  elseif hostname:find("prod.") then
+    hostname_color = colors.ansi[2]
+  end
+  hostname = hostname:gsub("%.%w*%.%w*$", "")
+
+  -- wezterm.log_info('cwd_uri: ', cwd_uri, ' parsed hostname: ', hostname)
+  -- wezterm.log_info(config.color_scheme, ' colors: ', colors.background, colors.foreground)
+
+  local elements = {
+    -- File path
+    { Foreground = { Color = colors.background } },
+    { Text = SOLID_LEFT_ARROW },
+    { Foreground = { Color = colors.foreground } },
+    { Background = { Color = colors.background } },
+    { Text = ' ' .. cwd_uri.file_path .. ' ' },
+
+    -- Hostname with top 2 levels of domain segments removed
+    { Foreground = { Color = hostname_color } },
+    { Text = SOLID_LEFT_ARROW },
+    { Foreground = { Color = colors.foreground } },
+    { Background = { Color = hostname_color } },
+    { Text = ' ' .. hostname .. ' ' },
   }
-
-  -- Translate a cell into elements
-  local elements = {}
-  local num_cells = 0
-  function push(text, is_last)
-    local cell_no = num_cells + 1
-    table.insert(elements, { Foreground = { Color = text_fg } })
-    table.insert(elements, { Background = { Color = colors[cell_no] } })
-    table.insert(elements, { Text = ' ' .. text .. ' ' })
-    if not is_last then
-      table.insert(elements, { Foreground = { Color = colors[cell_no + 1] } })
-      table.insert(elements, { Text = SOLID_LEFT_ARROW })
-    end
-    num_cells = num_cells + 1
-  end
-
-  while #cells > 0 do
-    local cell = table.remove(cells, 1)
-    push(cell, #cells == 0)
-  end
 
   window:set_right_status(wezterm.format(elements))
 

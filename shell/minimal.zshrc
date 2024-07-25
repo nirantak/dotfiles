@@ -35,6 +35,7 @@ setopt HIST_REDUCE_BLANKS
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export COLUMNS
+export HOSTNAME="${HOSTNAME:-$HOST}"
 
 # Editor Settings
 export EDITOR="vim"
