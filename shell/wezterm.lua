@@ -46,6 +46,26 @@ config.keys = {
   { key = 'D', mods = 'CMD|SHIFT', action = act.SplitVertical{domain = 'CurrentPaneDomain'} },
   { key = 'LeftArrow', mods = 'OPT', action = act{SendString='\x1bb'} },
   { key = 'RightArrow', mods = 'OPT', action = act{SendString='\x1bf'} },
+  { key = 'C', mods = 'CMD|SHIFT', action = act.ActivateCopyMode },
+}
+
+local copy_mode = nil
+local custom_copy_mode = {
+  { key = 'c', mods = 'NONE', action = act.CopyMode{SetSelectionMode = 'Cell'} },
+  { key = 'w', mods = 'NONE', action = act.CopyMode{SetSelectionMode = 'Word'} },
+  { key = 'l', mods = 'NONE', action = act.CopyMode{SetSelectionMode = 'Line'} },
+  { key = 'b', mods = 'NONE', action = act.CopyMode{SetSelectionMode = 'Block'} },
+}
+
+if wezterm.gui then
+  copy_mode = wezterm.gui.default_key_tables().copy_mode
+  for _, v in ipairs(custom_copy_mode) do
+    table.insert(copy_mode, v)
+  end
+end
+
+config.key_tables = {
+  copy_mode = copy_mode,
 }
 
 -- Events and statuses
