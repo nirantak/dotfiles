@@ -6,7 +6,6 @@ editorconfig.editorconfig
 esbenp.prettier-vscode
 github.copilot
 github.copilot-chat
-github.vscode-github-actions
 golang.go
 mechatroner.rainbow-csv
 ms-python.black-formatter
