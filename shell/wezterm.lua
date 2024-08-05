@@ -168,4 +168,11 @@ end)
 
 --[[ User Config :: End ]]--
 
+local ok, custom_wezterm_config = pcall(require, 'custom_wezterm_config')
+if ok then
+  -- If present, apply custom configuration overrides from
+  -- ~/.config/wezterm/custom_wezterm_config.lua
+  custom_wezterm_config.apply_to_config(config)
+end
+
 return config

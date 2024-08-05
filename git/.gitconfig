@@ -81,6 +81,7 @@
   changes = diff --name-status
   stat = diff --stat
   whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
+  gomod = show --quiet --abbrev=12 --date="format:%Y%m%d%H%M%S" --format="v0.0.0-%cd-%h"
 
 [github]
   user = nirantak
