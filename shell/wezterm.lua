@@ -22,6 +22,7 @@ config.initial_cols = 80
 config.initial_rows = 20
 config.enable_scroll_bar = true
 config.use_fancy_tab_bar = false
+config.tab_max_width = 20
 
 config.pane_focus_follows_mouse = true
 config.window_close_confirmation = 'AlwaysPrompt'

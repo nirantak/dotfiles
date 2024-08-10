@@ -101,6 +101,7 @@
     "run": "shellscript",
     "hosts": "properties",
     "*.plist": "xml",
+    "*.src": "xml",
     "*.tmpl": "html",
     "*.vue": "html",
     "requirements*.txt": "pip-requirements",
