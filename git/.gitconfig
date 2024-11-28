@@ -12,7 +12,10 @@
   editor = vim
   excludesfile = ~/dotfiles/git/global.gitignore
   autocrlf = input
-  pager = diff-so-fancy | less --tabs=4 -FiR
+  pager = delta
+
+[include]
+  path = ~/.config/themes/themes.gitconfig
 
 [status]
   submoduleSummary = true
@@ -21,21 +24,6 @@
   diff = auto
   status = auto
   ui = true
-
-[color "diff"]
-  meta = 11
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  commit = yellow bold
-  whitespace = red reverse
-  func = 146 bold
-
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
 
 [commit]
   gpgSign = true
@@ -64,7 +52,6 @@
 
 [blame]
   date = human
-  ignoreRevsFile = .git-blame-ignore-revs
 
 [fetch]
   prune = true
@@ -81,7 +68,16 @@
   colorMovedWS = allow-indentation-change
 
 [interactive]
-  diffFilter = diff-so-fancy --patch
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  true-color = always
+  side-by-side = true
+  line-numbers = true
+  hyperlinks = true
+  hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+  features = gruvmax-fang
 
 [merge]
   stat = true

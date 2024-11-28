@@ -60,6 +60,7 @@
     "sound": "on"
   },
   "security.workspace.trust.untrustedFiles": "newWindow",
+  "security.promptForLocalFileProtocolHandling": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontFamily": "'MesloLGS NF', 'Andale Mono', monospace",

@@ -179,13 +179,16 @@ function mux() {
 
 # Refresh extensions
 function refresh_ext() {
+  mkdir -p ~/.config/themes
   cp -fv "$(brew --prefix)/etc/grc.zsh" ~/dotfiles/tools/grc.zsh
 
-  curl -sL https://githubraw.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -o ~/.dir_colors
+  curl -sL https://githubraw.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -o ~/.config/themes/.dir_colors
+  curl -sL https://githubraw.com/dandavison/delta/main/themes.gitconfig -o ~/.config/themes/themes.gitconfig
+
   if [[ "$OSTYPE" == "darwin"* ]]; then
-    gdircolors -b ~/.dir_colors
+    gdircolors -b ~/.config/themes/.dir_colors
   else
-    dircolors -b ~/.dir_colors
+    dircolors -b ~/.config/themes/.dir_colors
   fi
 }
 
