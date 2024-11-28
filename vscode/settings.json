@@ -109,7 +109,9 @@
     "_headers": "plaintext",
     "_redirects": "plaintext",
     "*.mdx": "markdown",
-    "*.dict": "objective-c"
+    "*.dict": "objective-c",
+    "application.cfg": "xml",
+    "*.ivy": "xml"
   },
   "files.exclude": {
     "**/.git": true,
@@ -144,6 +146,7 @@
   "git.branchWhitespaceChar": "_",
   "git.confirmSync": false,
   "git.mergeEditor": true,
+  "git.openRepositoryInParentFolders": "never",
   "extensions.ignoreRecommendations": true,
   // Language Settings
   "python.languageServer": "Pylance",

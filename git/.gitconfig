@@ -1,13 +1,21 @@
+# Ref: https://jvns.ca/blog/2024/02/16/popular-git-config-options/
+
 [user]
   name = Nirantak Raghav
   email = me@nirantak.com
   signingkey = 764B054CBFE95423
+
+[init]
+  defaultBranch = main
 
 [core]
   editor = vim
   excludesfile = ~/dotfiles/git/global.gitignore
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -FiR
+
+[status]
+  submoduleSummary = true
 
 [color]
   diff = auto
@@ -32,8 +40,12 @@
 [commit]
   gpgSign = true
 
+[branch]
+  sort = -committerdate
+
 [tag]
   gpgSign = true
+  sort = taggerdate
 
 [push]
   default = upstream
@@ -45,27 +57,35 @@
 
 [rebase]
   autoStash = true
+  updateRefs = true
 
 [log]
   date = human
 
 [blame]
   date = human
+  ignoreRevsFile = .git-blame-ignore-revs
 
 [fetch]
   prune = true
+  prunetags = true
 
 [remote "origin"]
   prune = true
 
 [diff]
   renames = copies
+  algorithm = histogram
+  submodule = log
+  colorMoved = default
+  colorMovedWS = allow-indentation-change
 
 [interactive]
   diffFilter = diff-so-fancy --patch
 
 [merge]
   stat = true
+  conflictstyle = zdiff3
 
 [advice]
   statusHints = false
@@ -82,6 +102,12 @@
   stat = diff --stat
   whois = log -i -1 --pretty="format:%an <%ae>" --author="$1"
   gomod = show --quiet --abbrev=12 --date="format:%Y%m%d%H%M%S" --format="v0.0.0-%cd-%h"
+
+[submodule]
+  recurse = true
+
+[rerere]
+  enabled = true
 
 [github]
   user = nirantak
