@@ -14,7 +14,7 @@ setopt correct
 zstyle ':omz:update' mode disabled
 
 # Note: zsh-syntax-highlighting must be the last plugin sourced
-plugins=(command-not-found git z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(command-not-found git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -50,6 +50,8 @@ if [[ -d "$PYENV_ROOT" ]]; then
   eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
 fi
+
+eval "$(zoxide init zsh)"
 
 # Load custom extensions
 extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.wezterm_integration.sh ~/dotfiles/tools/grc.zsh ~/code/dotfiles-ssh/functions.sh)
