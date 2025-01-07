@@ -26,8 +26,8 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorSurroundingLines": 5,
   "editor.snippetSuggestions": "top",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
   "editor.rulers": [80],
   "editor.parameterHints.enabled": false,
   "editor.suggestSelection": "first",
@@ -95,6 +95,7 @@
     "*.cnf": "properties",
     "*.conf.*": "properties",
     "*.service": "properties",
+    "*.config": "properties",
     "Dockerfile*": "dockerfile",
     "*.scpt": "shellscript",
     "*.scp": "shellscript",
@@ -204,8 +205,14 @@
   "remote.SSH.localServerDownload": "auto",
   "github.copilot.enable": {
     "*": true,
-    "plaintext": true,
+    "plaintext": false,
     "markdown": false,
     "scminput": false
-  }
+  },
+  "sonarlint.connectedMode.connections.sonarqube": [
+    {
+      "serverUrl": "https://servicessonar.microsoft.com",
+      "connectionId": "https-servicessonar-microsoft-com"
+    }
+  ]
 }
