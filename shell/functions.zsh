@@ -200,15 +200,3 @@ function colors () {
   done
   printf '\e[0m \n'
 }
-
-# https://wezfurlong.org/wezterm/shell-integration.html
-function set_term_emulator_variable () {
-  if hash base64 2>/dev/null ; then
-    printf "\033]1337;SetUserVar=%s=%s\007" "$1" "$(echo -n "$2" | base64)"
-  fi
-}
-
-# cleanup to run when the shell exits
-function term_exit_cleanup () {
-  set_term_emulator_variable "OSTYPE" ""
-}

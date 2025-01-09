@@ -120,26 +120,11 @@ bind '"\e[A": history-search-backward' 2>/dev/null
 bind '"\e[B": history-search-forward' 2>/dev/null
 
 # Load shell aliases & functions
-for file in ~/dotfiles-ssh/{.wezterm_integration.sh,functions.sh}; do
+for file in ~/dotfiles-ssh/{functions.sh}; do
   [[ -f "$file" ]] && source "$file";
 done;
 unset file
 
-# https://wezfurlong.org/wezterm/shell-integration.html
-set_term_emulator_variable() {
-  if hash base64 2>/dev/null ; then
-    printf "\033]1337;SetUserVar=%s=%s\007" "$1" "$(echo -n "$2" | base64)"
-  fi
-}
-
-# cleanup to run when the shell exits
-term_exit_cleanup() {
-  set_term_emulator_variable "OSTYPE" ""
-}
-
 if [[ "$HOSTNAME" != *"linkedin.com" ]]; then
   export TERM='xterm-256color'
 fi
-
-set_term_emulator_variable "OSTYPE" "$OSTYPE"
-trap term_exit_cleanup EXIT

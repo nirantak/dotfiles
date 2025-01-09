@@ -54,13 +54,11 @@ fi
 eval "$(zoxide init zsh)"
 
 # Load custom extensions
-extensions=(~/.p10k.zsh ~/.fzf.zsh ~/.wezterm_integration.sh ~/dotfiles/tools/grc.zsh ~/code/dotfiles-ssh/functions.sh)
+extensions=(~/.p10k.zsh ~/.fzf.zsh ~/dotfiles/tools/grc.zsh ~/code/dotfiles-ssh/functions.sh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
 unset extensions file
-
-set_term_emulator_variable "OSTYPE" "$OSTYPE"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 # Profiling ZSH Performance

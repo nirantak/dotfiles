@@ -123,15 +123,10 @@ for file in ~/dotfiles/shell/{aliases.sh,functions.zsh,aliases.local.sh}; do
 done;
 
 # Load custom extensions if they exist
-extensions=(~/.fzf.zsh ~/.wezterm_integration.sh ~/dotfiles/tools/grc.zsh ~/code/dotfiles-ssh/functions.sh)
+extensions=(~/.fzf.zsh ~/dotfiles/tools/grc.zsh ~/code/dotfiles-ssh/functions.sh)
 for file in ${extensions[@]}; do
   [[ -f "$file" ]] && source "$file";
 done;
 unset extensions file
 
 PROMPT='%{$fg[cyan]%}%~ $(git_prompt_info)%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜) %{$reset_color%}'
-
-if type set_term_emulator_variable &> /dev/null; then
-  set_term_emulator_variable "OSTYPE" "$OSTYPE"
-  trap term_exit_cleanup EXIT
-fi

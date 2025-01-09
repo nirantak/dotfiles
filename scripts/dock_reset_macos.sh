@@ -22,7 +22,7 @@ if [[ "$MODE" == "work" ]]; then
     "$(__dock_item /Applications/Microsoft\ Outlook.app)" \
     "$(__dock_item /Applications/Slack.app)" \
     "$(__dock_item /Applications/Visual\ Studio\ Code.app)" \
-    "$(__dock_item /Applications/WezTerm.app)" \
+    "$(__dock_item /Applications/Ghostty.app)" \
     "$(__dock_item /Applications/Obsidian.app)" \
     "$(__dock_item /System/Applications/Utilities/Activity\ Monitor.app)" \
     "$(__dock_item /System/Applications/System\ Settings.app)"
@@ -32,7 +32,7 @@ elif [[ "$MODE" == "personal" ]]; then
     "$(__dock_item /Applications/Brave\ Browser.app)" \
     "$(__dock_item /Applications/Spotify.app)" \
     "$(__dock_item /Applications/Obsidian.app)" \
-    "$(__dock_item /Applications/WezTerm.app)" \
+    "$(__dock_item /Applications/Ghostty.app)" \
     "$(__dock_item /Applications/Visual\ Studio\ Code.app)" \
     "$(__dock_item /System/Applications/Utilities/Activity\ Monitor.app)" \
     "$(__dock_item /System/Applications/System\ Settings.app)"
