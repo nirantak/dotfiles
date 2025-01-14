@@ -13,6 +13,10 @@ function dbash() {
   # Bash into a running container
   docker exec -it $(docker ps -aqf "name=$1") bash;
 }
+function dash() {
+  # sh into a running container, for alpine images that dont have bash
+  docker exec -it $(docker ps -aqf "name=$1") sh;
+}
 function dip() {
   # Inspect running containers
   (
