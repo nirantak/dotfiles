@@ -86,16 +86,18 @@
     "*.yml.*": "yaml",
     "*.yaml.*": "yaml",
     ".ansible-lint": "yaml",
-    "Pipfile": "toml",
     "*.env": "shellscript",
     ".env.*": "shellscript",
     "*.dat": "CSV (pipe)",
     ".slugignore": "ignore",
     ".flake8": "properties",
     "*.cnf": "properties",
+    "*.cnf.j2": "properties",
     "*.conf.*": "properties",
     "*.service": "properties",
+    "*.service.j2": "properties",
     "*.config": "properties",
+    "*.config.j2": "properties",
     "Dockerfile*": "dockerfile",
     "*.scpt": "shellscript",
     "*.scp": "shellscript",
@@ -113,7 +115,8 @@
     "*.mdx": "markdown",
     "*.dict": "objective-c",
     "application.cfg": "xml",
-    "*.ivy": "xml"
+    "*.ivy": "xml",
+    "*.sql.j2": "sql"
   },
   "files.exclude": {
     "**/.git": true,
@@ -121,6 +124,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
+    "**/__pycache__": true,
     "**/*.venv": true
   },
   "files.watcherExclude": {
@@ -128,6 +132,7 @@
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true,
     "**/*.venv/**": true,
+    "**/__pycache__": true,
     "**/.hg/store/**": true
   },
   "search.showLineNumbers": true,
@@ -139,8 +144,10 @@
     "build": true,
     "**/node_modules": true,
     "**/bower_components": true,
+    "**/config/external": true,
     "**/*.venv": true,
     "**/.git": true,
+    "**/__pycache__": true,
     "**/*.code-search": true
   },
   "git.autofetch": true,
@@ -149,6 +156,7 @@
   "git.confirmSync": false,
   "git.mergeEditor": true,
   "git.openRepositoryInParentFolders": "never",
+  "git.replaceTagsWhenPull": true,
   "extensions.ignoreRecommendations": true,
   // Language Settings
   "python.languageServer": "Pylance",
@@ -171,7 +179,6 @@
   "go.toolsManagement.autoUpdate": true,
   // Plugin Settings
   "material-icon-theme.activeIconPack": "none",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "emmet.excludeLanguages": [],
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
@@ -195,11 +202,8 @@
     "httpx",
     "dotenv",
     "asyncio",
-    "wsiwn",
     "typer"
   ],
-  "redhat.telemetry.enabled": false,
-  "cmake.configureOnOpen": true,
   "remote.SSH.allowLocalServerDownload": true,
   "remote.SSH.connectTimeout": 45,
   "remote.SSH.localServerDownload": "auto",
@@ -209,10 +213,5 @@
     "markdown": false,
     "scminput": false
   },
-  "sonarlint.connectedMode.connections.sonarqube": [
-    {
-      "serverUrl": "https://servicessonar.microsoft.com",
-      "connectionId": "https-servicessonar-microsoft-com"
-    }
-  ]
+  "github.copilot.nextEditSuggestions.enabled": true
 }

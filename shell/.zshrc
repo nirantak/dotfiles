@@ -60,6 +60,9 @@ for file in ${extensions[@]}; do
 done;
 unset extensions file
 
+# Set tab width
+tabs -Txterm-ghostty -4
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 # Profiling ZSH Performance
 # zprof

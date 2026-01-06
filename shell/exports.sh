@@ -42,7 +42,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export NO_CLI_METRICS=''
 
-export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.poetry/bin:$PYENV_ROOT/bin:/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$PYENV_ROOT/bin:/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
 if [[ "$OSTYPE" == "linux"* ]]; then
   export PATH="$PATH:/snap/bin:/usr/local/go/bin"
 else

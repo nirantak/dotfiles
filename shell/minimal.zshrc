@@ -129,4 +129,7 @@ for file in ${extensions[@]}; do
 done;
 unset extensions file
 
+# Set tab width
+tabs -Txterm-ghostty -4
+
 PROMPT='%{$fg[cyan]%}%~ $(git_prompt_info)%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜) %{$reset_color%}'
