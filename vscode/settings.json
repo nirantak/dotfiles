@@ -11,6 +11,7 @@
   "workbench.editor.decorations.colors": true,
   "workbench.startupEditor": "welcomePageInEmptyWorkbench",
   "workbench.editor.empty.hint": "hidden",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "window.titleBarStyle": "custom",
   "window.newWindowDimensions": "offset",
   "window.restoreWindows": "none",
@@ -213,5 +214,6 @@
     "markdown": false,
     "scminput": false
   },
-  "github.copilot.nextEditSuggestions.enabled": true
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.viewSessions.orientation": "stacked"
 }
