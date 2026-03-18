@@ -12,11 +12,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew upgrade --cask
   brew list --cask | grep -Ev "font-victor-mono|font-source-code-pro" | xargs brew upgrade --cask
   brew autoremove && brew cleanup
-elif [[ "$OSTYPE" == "linux-android" ]]; then
-  # Termux
-  apt update
-  apt upgrade -y
-  apt autoremove && apt autoclean
 elif [[ "$OSTYPE" == "linux"* ]]; then
   # Linux
   LINUX_RELEASE=$(cat /etc/*-release)
@@ -34,24 +29,8 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
   fi
 fi
 
-echo -e "\n \x1B[32m Updating PIP and NPM Packages \x1B[0m"
-pip3 install -U pip wheel setuptools
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  pip install -U ipython black flake8
-  pipx upgrade-all
-  npm update -g
-elif [[ "$OSTYPE" == "linux-android" ]]; then
-  pip install -U ipython httpie youtube-dl
-elif [[ "$OSTYPE" == "linux"* ]]; then
-  pipx upgrade-all
-  if [[ "$LINUX_RELEASE" == *"ubuntu"* ]]; then
-    pip3 install -U ipython black flake8 pipx
-  fi
-  if [[ "$LINUX_RELEASE" != *"rhel"* && "$LINUX_RELEASE" != *"Mariner"* ]]; then
-    sudo npm update -g
-  fi
-fi
+echo -e "\n \x1B[32m Updating Language Packages \x1B[0m"
+pipx upgrade-all
 
 echo -e "\n \x1B[32m Updating Shell \x1B[0m"
 env ZSH=$ZSH sh $ZSH/tools/upgrade.sh
