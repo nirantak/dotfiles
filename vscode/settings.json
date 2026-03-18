@@ -46,6 +46,7 @@
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.lightbulb.enabled": "onCode",
+  "editor.codeActionsOnSave": {},
   "explorer.autoReveal": false,
   "explorer.autoRevealExclude": {
     "build": true,
@@ -117,7 +118,8 @@
     "*.dict": "objective-c",
     "application.cfg": "xml",
     "*.ivy": "xml",
-    "*.sql.j2": "sql"
+    "*.sql.j2": "sql",
+    "*.proto": "java"
   },
   "files.exclude": {
     "**/.git": true,
@@ -215,5 +217,6 @@
     "scminput": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "linkedin-extensions.directory": "/Users/nraghav/.vscode-linkedin-extensions"
 }

@@ -27,7 +27,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # Python https://docs.python.org/3/using/cmdline.html#environment-variables
 export PYTHONIOENCODING="UTF-8"
 export PYTHONUNBUFFERED=1
-export PYENV_ROOT="$HOME/.pyenv"
 
 # NodeJS https://nodejs.org/api/repl.html#repl_environment_variable_options
 export NODE_REPL_HISTORY_SIZE="100000"
@@ -42,7 +41,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 export NO_CLI_METRICS=''
 
-export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$PYENV_ROOT/bin:/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:/bin:/usr/local/sbin:/usr/local/opt/mysql-client/bin:$PATH"
 if [[ "$OSTYPE" == "linux"* ]]; then
   export PATH="$PATH:/snap/bin:/usr/local/go/bin"
 else

@@ -58,11 +58,6 @@ env ZSH=$ZSH sh $ZSH/tools/upgrade.sh
 cd $ZSH/custom/plugins/zsh-autosuggestions && git pull --ff-only
 cd $ZSH/custom/plugins/zsh-syntax-highlighting && git pull --ff-only
 
-if [[ -d "$PYENV_ROOT" ]]; then
-  echo -e "\n \x1B[32m Updating Pyenv \x1B[0m"
-  pyenv update
-fi
-
 if [[ "$OSTYPE" == "linux"* && $(hostname) == "pie.run" ]]; then
   echo -e "\n \e[32m Updating PiHole \e[0m"
   pihole -up

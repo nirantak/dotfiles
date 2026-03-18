@@ -59,7 +59,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # Python https://docs.python.org/3/using/cmdline.html#environment-variables
 export PYTHONIOENCODING="UTF-8"
 export PYTHONUNBUFFERED=1
-export PYENV_ROOT="$HOME/.pyenv"
 
 # NodeJS https://nodejs.org/api/repl.html#repl_environment_variable_options
 export NODE_REPL_HISTORY_SIZE="100000"
@@ -97,11 +96,6 @@ alias flush_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 export GPG_TTY=$(tty)
 export PATH="$HOME/.local/bin:/sbin:/usr/sbin:$PATH"
-
-if [[ -d "$PYENV_ROOT" ]]; then
-  export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
 
 if [[ "$OSTYPE" == "linux"* ]]; then
   alias u="sudo apt update && sudo apt upgrade"
