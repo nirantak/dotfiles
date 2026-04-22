@@ -3,6 +3,9 @@
   "permissions": {
     "allow": [
       "Bash(git show:*)",
+      "Bash(git status:*)",
+      "Bash(git log *)",
+      "Bash(gh pr view:*)",
       "Bash(python3:*)",
       "Bash(pytest:*)",
       "Bash(ls:*)",
@@ -32,5 +35,5 @@
     "gopls-lsp@claude-plugins-official": true,
     "jdtls-lsp@claude-plugins-official": true
   },
-  "effortLevel": "high"
+  "effortLevel": "xhigh"
 }
