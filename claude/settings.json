@@ -1,10 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "language": "english",
+  "model": "opus[1m]",
+  "effortLevel": "xhigh",
+  "skipAutoPermissionPrompt": true,
+  "alwaysThinkingEnabled": true,
+  "showThinkingSummaries": true,
+  "viewMode": "default",
+  "tui": "fullscreen",
+  "env": {
+    "MCP_TIMEOUT": "120000",
+    "CLAUDE_CODE_FORK_SUBAGENT": "1"
+  },
+  "worktree": {
+    "bgIsolation": "none"
+  },
   "permissions": {
     "allow": [
       "Bash(git show:*)",
       "Bash(git status:*)",
-      "Bash(git log *)",
+      "Bash(git log:*)",
       "Bash(gh pr view:*)",
       "Bash(python3:*)",
       "Bash(pytest:*)",
@@ -12,10 +27,10 @@
       "Bash(cat:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(/usr/bin/strings:*)"
+      "Bash(/usr/bin/strings:*)",
+      "Read(//tmp/**)"
     ]
   },
-  "model": "opus[1m]",
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
@@ -31,9 +46,8 @@
     "explanatory-output-style@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
-    "slack@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
-    "jdtls-lsp@claude-plugins-official": true
-  },
-  "effortLevel": "xhigh"
+    "greptile@claude-plugins-official": true,
+    "semgrep@claude-plugins-official": true
+  }
 }
