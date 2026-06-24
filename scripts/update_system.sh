@@ -8,9 +8,9 @@ echo -e "\n \x1B[32m Updating System Packages \x1B[0m"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # macOS
   brew update
-  brew upgrade
-  brew upgrade --cask
-  brew list --cask | grep -Ev "font-victor-mono|font-source-code-pro" | xargs brew upgrade --cask
+  brew upgrade --yes
+  brew upgrade --yes --cask
+  brew list --cask | grep -Ev "font-victor-mono|font-source-code-pro" | xargs brew upgrade --yes --cask
   brew autoremove && brew cleanup
 elif [[ "$OSTYPE" == "linux"* ]]; then
   # Linux
