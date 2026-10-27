@@ -29,16 +29,7 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
   fi
 fi
 
-echo -e "\n \x1B[32m Updating Language Packages \x1B[0m"
-pipx upgrade-all
-
 echo -e "\n \x1B[32m Updating Shell \x1B[0m"
 env ZSH=$ZSH sh $ZSH/tools/upgrade.sh
 cd $ZSH/custom/plugins/zsh-autosuggestions && git pull --ff-only
 cd $ZSH/custom/plugins/zsh-syntax-highlighting && git pull --ff-only
-
-if [[ "$OSTYPE" == "linux"* && $(hostname) == "pie.run" ]]; then
-  echo -e "\n \e[32m Updating PiHole \e[0m"
-  pihole -up
-  pihole -g
-fi

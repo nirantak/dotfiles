@@ -1,19 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "language": "english",
-  "model": "opus[1m]",
-  "effortLevel": "xhigh",
-  "skipAutoPermissionPrompt": true,
-  "alwaysThinkingEnabled": true,
-  "showThinkingSummaries": true,
-  "viewMode": "default",
-  "tui": "fullscreen",
   "env": {
     "MCP_TIMEOUT": "120000",
     "CLAUDE_CODE_FORK_SUBAGENT": "1"
-  },
-  "worktree": {
-    "bgIsolation": "none"
   },
   "permissions": {
     "allow": [
@@ -31,6 +20,10 @@
       "Read(//tmp/**)"
     ]
   },
+  "model": "opus[1m]",
+  "worktree": {
+    "bgIsolation": "none"
+  },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
@@ -46,8 +39,13 @@
     "explanatory-output-style@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true,
-    "greptile@claude-plugins-official": true,
-    "semgrep@claude-plugins-official": true
-  }
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "viewMode": "default",
+  "language": "english",
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "xhigh",
+  "tui": "fullscreen",
+  "showThinkingSummaries": true,
+  "skipAutoPermissionPrompt": true
 }
